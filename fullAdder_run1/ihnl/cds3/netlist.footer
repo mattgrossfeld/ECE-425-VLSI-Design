@@ -1,0 +1,5 @@
+halfAdder I5 ( net12, net11, a, b);
+halfAdder I4 ( net15, sum, net11, c);
+nand2 I3 ( cout, net12, net15);
+
+endmodule

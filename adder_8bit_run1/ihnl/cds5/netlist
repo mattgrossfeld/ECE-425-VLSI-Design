@@ -1,0 +1,25 @@
+// Library - ece425mp1, Cell - fullAdder_backup, View - schematic
+// LAST TIME SAVED: Feb 28 17:56:27 2019
+// NETLIST TIME: Feb 28 17:58:25 2019
+`timescale 1ns / 1ns 
+
+module fullAdder_backup ( c_out, s, a, b, c );
+
+output  c_out, s;
+
+input  a, b, c;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "fullAdder_backup";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+xor2 I7 ( net12, a, b);
+xor2 I6 ( s, net12, c);
+nand2 I5 ( c_out, net012, net013);
+nand2 I4 ( net012, a, b);
+nand2 I3 ( net013, net12, c);
+
+endmodule

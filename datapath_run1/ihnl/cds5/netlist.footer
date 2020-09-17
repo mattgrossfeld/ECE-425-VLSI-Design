@@ -1,0 +1,5 @@
+aoi22 I1 ( net1, a, net3, b, sel);
+inv I3 ( net3, sel);
+inv I2 ( y, net1);
+
+endmodule

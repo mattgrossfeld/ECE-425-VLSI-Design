@@ -1,0 +1,4 @@
+xor2 I0 ( sum, a, b);
+nand2 I1 ( cout_n, a, b);
+
+endmodule

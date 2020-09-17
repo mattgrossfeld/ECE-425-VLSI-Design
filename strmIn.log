@@ -1,0 +1,406 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream In
+Program   : @(#)$CDS: strmin version 6.1.7-64b 07/05/2016 21:07 (sjfhw308) $
+          : sub-version  IC6.1.7-64b.500.5 
+Started at: 02-May-2019  17:45:52
+User Name : grossfe2
+Host Name : linux-06.ews.illinois.edu
+Directory : /home/grossfe2/ece425.work
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-75): Target library 'ece425mp3' is attached to the technology library 'NCSU_TechLib_tsmc03d'. Therefore, the technology file is opened in read-only mode. All the undefined layer-purpose pairs will be dropped.
+WARNING (XSTRM-107): Existing cells in the target library will be overwritten if the cell names in the Stream file and the target library are the same. To prevent this, set the '-writeMode' option to 'noOverwrite'.
+INFO (XSTRM-217): Reading the layer map file, /home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '25:0' at line '11'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '25:0' at line '12'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '47:0' at line '15'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '47:0' at line '16'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '48:0' at line '19'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '48:0' at line '20'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '46:0' at line '23'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '46:0' at line '24'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '49:0' at line '27'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '49:0' at line '28'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '49:0' at line '29'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '49:0' at line '30'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '49:0' at line '31'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '149:0' at line '33'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '149:0' at line '34'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '50:0' at line '38'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '50:0' at line '39'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '50:0' at line '40'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '51:0' at line '43'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '51:0' at line '44'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '51:0' at line '45'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '51:0' at line '46'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '51:0' at line '47'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '151:0' at line '49'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '151:0' at line '50'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '61:0' at line '53'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '61:0' at line '54'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '61:0' at line '55'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '62:0' at line '58'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '62:0' at line '59'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '62:0' at line '60'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '62:0' at line '61'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '62:0' at line '62'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '162:0' at line '64'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '162:0' at line '65'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '30:0' at line '68'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '30:0' at line '69'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '30:0' at line '70'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '31:0' at line '73'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '31:0' at line '74'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '31:0' at line '75'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '31:0' at line '76'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '31:0' at line '77'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '131:0' at line '79'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '131:0' at line '80'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '32:0' at line '83'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '32:0' at line '84'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '32:0' at line '85'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '33:0' at line '88'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '33:0' at line '89'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '33:0' at line '90'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '33:0' at line '91'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '33:0' at line '92'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '133:0' at line '94'. Therefore, this entry will be ignored during translation.
+WARNING (XSTRM-31): Layer map file '/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map' contains a duplicate entry for Stream layer:datatype '133:0' at line '95'. Therefore, this entry will be ignored during translation.
+INFO (XSTRM-163): You have not used the viaMap option. If a viaMap file, corresponding techfile or technology library exist, then use the -viaMap option for creating oaVia instances in the Streamed-In library. Using the -viaMap option improves performance and VM usage of applications using the Streamed-In design. For details on the viaMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Options:
+	library				ece425mp3
+	strmFile			/home/grossfe2/ece425.work/controller.gds
+	logFile				strmIn.log
+	view				layout
+	case				Preserve
+	layerMap			/home/grossfe2/ece425.work/vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map
+	propSeparator			,
+
+WARNING (XSTRM-267): The referenced cell "filler" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "nor3_1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "mux2_1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "nand2_1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "or2_1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "nor4_1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "nand4_1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "inv_1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "nor2_4" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "inv_2" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "nor2_2" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "inv_4" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "nor2_1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "nand2_2" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+WARNING (XSTRM-267): The referenced cell "invzp_1" was not found. The OpenAccess design data was created for this cell without any reference. Ensure that the referenced cell exists and library is defined in the cds.lib file.
+INFO (XSTRM-80075): Via detection cannot use a stdViaDef for "M2_M1" due to rounding errors. A customViaDef has been used instead. Use the -dbuPerUU option to increase the DBUperUU to enable detection of stdViaDef.
+WARNING (XSTRM-81000): Via detection cannot create new via definition for "M2_M1" because the technology database is not writable. The candidate via cell will be mapped to regular cell and the references to it instances.
+INFO (XSTRM-80075): Via detection cannot use a stdViaDef for "M3_M2" due to rounding errors. A customViaDef has been used instead. Use the -dbuPerUU option to increase the DBUperUU to enable detection of stdViaDef.
+WARNING (XSTRM-81000): Via detection cannot create new via definition for "M3_M2" because the technology database is not writable. The candidate via cell will be mapped to regular cell and the references to it instances.
+INFO (XSTRM-80075): Via detection cannot use a stdViaDef for "M4_M3" due to rounding errors. A customViaDef has been used instead. Use the -dbuPerUU option to increase the DBUperUU to enable detection of stdViaDef.
+WARNING (XSTRM-81000): Via detection cannot create new via definition for "M4_M3" because the technology database is not writable. The candidate via cell will be mapped to regular cell and the references to it instances.
+INFO (XSTRM-80075): Via detection cannot use a stdViaDef for "M5_M4" due to rounding errors. A customViaDef has been used instead. Use the -dbuPerUU option to increase the DBUperUU to enable detection of stdViaDef.
+WARNING (XSTRM-81000): Via detection cannot create new via definition for "M5_M4" because the technology database is not writable. The candidate via cell will be mapped to regular cell and the references to it instances.
+INFO (XSTRM-80075): Via detection cannot use a stdViaDef for "controller_VIA0" due to rounding errors. A customViaDef has been used instead. Use the -dbuPerUU option to increase the DBUperUU to enable detection of stdViaDef.
+WARNING (XSTRM-81000): Via detection cannot create new via definition for "controller_VIA0" because the technology database is not writable. The candidate via cell will be mapped to regular cell and the references to it instances.
+INFO (XSTRM-80075): Via detection cannot use a stdViaDef for "controller_VIA1" due to rounding errors. A customViaDef has been used instead. Use the -dbuPerUU option to increase the DBUperUU to enable detection of stdViaDef.
+WARNING (XSTRM-81000): Via detection cannot create new via definition for "controller_VIA1" because the technology database is not writable. The candidate via cell will be mapped to regular cell and the references to it instances.
+INFO (XSTRM-284): Data precision might be lost because the value (1000) set for 'dbuPerUU' in the technology database does not match the units (100) set in the GDSII file.
+INFO (XSTRM-220): 1. Translating STRUCTURE M2_M1 as cellView ece425mp3/M2_M1/layout.
+INFO (XSTRM-220): 2. Translating STRUCTURE M3_M2 as cellView ece425mp3/M3_M2/layout.
+INFO (XSTRM-220): 3. Translating STRUCTURE M4_M3 as cellView ece425mp3/M4_M3/layout.
+INFO (XSTRM-220): 4. Translating STRUCTURE M5_M4 as cellView ece425mp3/M5_M4/layout.
+INFO (XSTRM-220): 5. Translating STRUCTURE controller_VIA0 as cellView ece425mp3/controller_VIA0/layout.
+INFO (XSTRM-220): 6. Translating STRUCTURE controller_VIA1 as cellView ece425mp3/controller_VIA1/layout.
+INFO (XSTRM-220): 7. Translating STRUCTURE controller as cellView ece425mp3/controller/layout.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal4/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal3/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal1/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+WARNING (XSTRM-58): Failed to create the new layer purpose pair 'name:metal2/net'. It will be skipped and all the shapes on this LPP will be dropped.
+
+Summary of Objects Translated:
+	Instances:                              946
+	CustomVias:                             0
+	StandardVias:                           0
+	CdsGenVias:                             0
+	Arrays:                                 0
+	Polygons:                               0
+	Paths:                                  916
+	PathSegs:                               0
+	Rectangles:                             155
+	Text:                                   0
+	Node:                                   0
+	Line:                                   0
+	Cells:                                  7
+
+Elapsed Time: 3.1s   User Time: 1.2s   CPU Time: 0.1s   Peak VM: 76644KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '350' warning(s) found.

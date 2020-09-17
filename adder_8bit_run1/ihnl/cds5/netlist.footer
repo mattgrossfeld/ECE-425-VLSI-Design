@@ -1,0 +1,7 @@
+xor2 I7 ( net12, a, b);
+xor2 I6 ( s, net12, c);
+nand2 I5 ( c_out, net012, net013);
+nand2 I4 ( net012, a, b);
+nand2 I3 ( net013, net12, c);
+
+endmodule

@@ -1,0 +1,5 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(18Mar2019:19:17:30):( /software/cadence-Aug2016/INCISIVE152/tools.lnx86/bin/ncxlmode +delay_mode_path +typdelays -l simout.tmp /home/grossfe2/ece425.work/latch_run1/testfixture.template -f /home/grossfe2/ece425.work/latch_run1/verilog.inpfiles +nostdout +nocopyright +compile +ncvlogargs+ -neverwarn -nostdout -nocopyright  )

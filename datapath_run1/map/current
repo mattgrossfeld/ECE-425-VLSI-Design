@@ -1,0 +1,67 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "datapath"
+  repList "behavioral functional schematic symbol"
+  stopList "behavioral functional symbol"
+  globalList "vdd! gnd!"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  prefixHierarchyWithCV "YES"
+  netlistDir "/home/grossfe2/ece425.work/datapath_run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( defbus
+( "p" 3 0  "p" 3 0  )
+( "d" 3 0  "d" 3 0  )
+( "c" 3 0  "c" 3 0  )
+( "y" 3 0  "y" 3 0  )
+( "f" 3 0  "f" 3 0  )
+( "select_a_hi" 15 0  "select_a_hi" 15 0  )
+( "func_sel" 2 0  "func_sel" 2 0  )
+( "f_sel" 1 0  "f_sel" 1 0  )
+( "select_b_hi" 15 0  "select_b_hi" 15 0  )
+( "s_sel" 1 0  "s_sel" 1 0  )
+( "q_sel" 1 0  "q_sel" 1 0  )
+( "r_sel" 1 0  "r_sel" 1 0  )
+ )
+( net
+( "vdd!" "cds_globals.vdd_" )
+( "gnd!" "cds_globals.gnd_" )
+ )
+( model
+( "ece425mp2/regbit/schematic" "regbit" )
+( "ece425mp2/datapath/schematic" "datapath" )
+( "ece425mp1/xor2/schematic" "xor2" )
+( "ece425mp2/logic/schematic" "logic" )
+( "ece425mp2/mux21/schematic" "mux21" )
+( "ece425mp1/aoi22/schematic" "aoi22" )
+( "ece425mp2/mux41/schematic" "mux41" )
+( "ece425mp2/q_reg/schematic" "q_reg" )
+( "ece425mp2/latch/schematic" "latch" )
+( "ece425mp2/alu/schematic" "alu" )
+( "ece425mp2/add/schematic" "add" )
+( "ece425mp2/mux31/schematic" "mux31" )
+( "ece425mp2/bitslice/schematic" "bitslice" )
+( "ece425mp2/regfile/schematic" "regfile" )
+ )
+( "regbit" "ihnl/cds8/map" )
+( "alu" "ihnl/cds6/map" )
+( "q_reg" "ihnl/cds10/map" )
+( "logic" "ihnl/cds2/map" )
+( "aoi22" "ihnl/cds3/map" )
+( "mux21" "ihnl/cds5/map" )
+( "latch" "ihnl/cds7/map" )
+( "add" "ihnl/cds1/map" )
+( "bitslice" "ihnl/cds12/map" )
+( "mux31" "ihnl/cds11/map" )
+( "regfile" "ihnl/cds9/map" )
+( "mux41" "ihnl/cds4/map" )
+( "xor2" "ihnl/cds0/map" )
+( "datapath" "ihnl/cds13/map" )
+ )

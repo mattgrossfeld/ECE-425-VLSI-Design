@@ -1,0 +1,37 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.7 - CAT35 05/21/2016 02:35 (sjfnl027) $
+\o Sub version:		sub-version  IC6.1.7 - CAT35.15s020 
+\o Arguments:		-display :106 -mpssession virtuoso29783 -mpshost linux-08.ews.illinois.edu -namespace CDBA -cdslib /home/grossfe2/ece425.work/cds.lib 
+\o Working Directory:	linux-08.ews.illinois.edu:/home/grossfe2/ece425.work
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		4.8.5
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "basic"
+\a nrResizeWindow(cdsLibEditor list(26 164 500 400))
+\a nrListItemAction(cdsLibEditor->mainTable 14 0)
+\o Active cell: 14 0 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 14 0 "ece425mp3")
+\a nrListItemAction(cdsLibEditor->mainTable 14 1)
+\o Active cell: 14 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 14 1 "ece425mp3")
+\a nrSetWindowVisibility(needCreateDialog "show")
+\a nrListItemAction(cdsLibEditor->mainTable 15 0)
+\o Active cell: 15 0 ""
+\a nrSetCurrentWindow(needCreateDialog)
+\a nrResizeWindow(needCreateDialog list(23 266 506 180))
+\a needCreateDialog->noButton->value = t
+\a nrListItemRename(cdsLibEditor->mainTable, 15 0 "")
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 14 1)
+\o Active cell: 14 1 "ece425mp3"
+\a nrListItemAction(cdsLibEditor->mainTable 15 0)
+\o Active cell: 15 0 ""
+\a cdsLibEditor->fileExitButton->value = t
+\o QUESTION (CLE-205): You have made changes which have not been saved. \n\nWould you like to save your changes? 
+\a nrSetWindowVisibility(needSaveDialog "show")
+\a nrResizeWindow(needSaveDialog list(92 281 369 136))
+\a nrSetCurrentWindow(needSaveDialog)
+\a needSaveDialog->yesButton->value = t
+\a nrSetWindowVisibility(cdsLibEditor "hide")
+\a exit(0)

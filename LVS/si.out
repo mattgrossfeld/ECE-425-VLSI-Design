@@ -1,0 +1,170 @@
+@(#)$CDS: LVS version 6.1.7-64b 07/05/2016 20:10 (sjfhw313) $
+
+Command line: /software/cadence-Aug2016/IC617/tools.lnx86/dfII/bin/64bit/LVS -dir /home/grossfe2/ece425.work/LVS -l -s -t /home/grossfe2/ece425.work/LVS/layout /home/grossfe2/ece425.work/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+
+    Net-list summary for /home/grossfe2/ece425.work/LVS/layout/netlist
+       count
+        852             nets
+        86              terminals
+        928             pmos
+        928             nmos
+
+    Net-list summary for /home/grossfe2/ece425.work/LVS/schematic/netlist
+       count
+        852             nets
+        86              terminals
+        928             pmos
+        928             nmos
+
+
+    Terminal correspondence points
+    N801      N18       c<0>
+    N788      N62       c<1>
+    N782      N22       c<2>
+    N770      N52       c<3>
+    N837      N43       cin
+    N848      N10       d<0>
+    N834      N4        d<1>
+    N825      N57       d<2>
+    N814      N15       d<3>
+    N841      N40       f0_in
+    N812      N71       f3_in
+    N772      N34       f<0>
+    N849      N11       f<1>
+    N835      N29       f<2>
+    N827      N32       f<3>
+    N773      N17       f_sel<0>
+    N851      N16       f_sel<1>
+    N780      N9        func_sel<0>
+    N768      N20       func_sel<1>
+    N844      N24       func_sel<2>
+    N775      N0        gnd!
+    N847      N64       inv_r
+    N845      N67       inv_s
+    N778      N41       iq_master_en
+    N798      N54       iq_slave_en
+    N776      N69       ireg_a_wr
+    N823      N58       ireg_b_wr
+    N838      N37       ireg_wr
+    N817      N65       p<0>
+    N808      N68       p<1>
+    N802      N74       p<2>
+    N789      N35       p<3>
+    N816      N50       q0_in
+    N796      N44       q0_out
+    N790      N38       q3_in
+    N774      N2        q3_out
+    N791      N48       q_master_en
+    N800      N23       q_sel<0>
+    N787      N31       q_sel<1>
+    N850      N72       q_slave_en
+    N829      N70       r_sel<0>
+    N820      N36       r_sel<1>
+    N831      N60       reg_a_wr
+    N794      N51       reg_b_wr
+    N840      N59       reg_wr
+    N783      N6        s_sel<0>
+    N771      N7        s_sel<1>
+    N826      N56       select_a_hi<0>
+    N839      N47       select_a_hi<10>
+    N828      N55       select_a_hi<11>
+    N818      N53       select_a_hi<12>
+    N809      N5        select_a_hi<13>
+    N803      N25       select_a_hi<14>
+    N792      N14       select_a_hi<15>
+    N815      N30       select_a_hi<1>
+    N807      N12       select_a_hi<2>
+    N797      N19       select_a_hi<3>
+    N785      N61       select_a_hi<4>
+    N779      N33       select_a_hi<5>
+    N767      N39       select_a_hi<6>
+    N843      N13       select_a_hi<7>
+    N832      N63       select_a_hi<8>
+    N822      N27       select_a_hi<9>
+    N813      N87       select_b_hi<0>
+    N786      N77       select_b_hi<10>
+    N781      N76       select_b_hi<11>
+    N769      N49       select_b_hi<12>
+    N846      N3        select_b_hi<13>
+    N833      N21       select_b_hi<14>
+    N824      N46       select_b_hi<15>
+    N806      N86       select_b_hi<1>
+    N795      N85       select_b_hi<2>
+    N784      N84       select_b_hi<3>
+    N777      N83       select_b_hi<4>
+    N766      N82       select_b_hi<5>
+    N842      N81       select_b_hi<6>
+    N830      N80       select_b_hi<7>
+    N821      N79       select_b_hi<8>
+    N811      N78       select_b_hi<9>
+    N805      N1        vdd!
+    N819      N73       y<0>
+    N810      N75       y<1>
+    N804      N66       y<2>
+    N793      N26       y<3>
+    N799      N42       y_sel
+    N836      N28       zero
+
+Devices in the netlist but not in the rules:
+        pmos nmos
+
+The net-lists match.
+
+                             layout  schematic
+                                instances
+        un-matched              0       0      
+        rewired                 0       0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  1856    1856   
+        total                   1856    1856   
+
+                                  nets
+        un-matched              0       0      
+        merged                  0       0      
+        pruned                  0       0      
+        active                  852     852    
+        total                   852     852    
+
+                                terminals
+        un-matched              0       0      
+        matched but
+        different type          0       0      
+        total                   86      86     
+
+
+Probe files from /home/grossfe2/ece425.work/LVS/schematic
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /home/grossfe2/ece425.work/LVS/layout
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:

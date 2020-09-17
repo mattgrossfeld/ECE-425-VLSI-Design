@@ -1,0 +1,18 @@
+// Library - ece425mp1, Cell - halfAdder_backup, View - schematic
+// LAST TIME SAVED: Feb 27 21:03:22 2019
+// NETLIST TIME: Feb 27 21:03:39 2019
+`timescale 1ns / 1ns 
+
+module halfAdder_backup ( carry, sum, a, b );
+
+output  carry, sum;
+
+input  a, b;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "halfAdder_backup";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

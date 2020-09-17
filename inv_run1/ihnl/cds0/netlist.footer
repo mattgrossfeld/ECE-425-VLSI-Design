@@ -1,0 +1,4 @@
+nfet N1 ( y, cds_globals.gnd_, a);
+pfet P1 ( y, cds_globals.vdd_, a);
+
+endmodule

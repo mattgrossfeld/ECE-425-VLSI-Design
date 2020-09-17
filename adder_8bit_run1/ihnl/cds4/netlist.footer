@@ -1,0 +1,10 @@
+fullAdder_backup I15 ( cout, sum[7], a[7], b[7], net13);
+fullAdder_backup I14 ( net13, sum[6], a[6], b[6], net18);
+fullAdder_backup I13 ( net18, sum[5], a[5], b[5], net22);
+fullAdder_backup I12 ( net22, sum[4], a[4], b[4], net28);
+fullAdder_backup I11 ( net28, sum[3], a[3], b[3], net32);
+fullAdder_backup I10 ( net32, sum[2], a[2], b[2], net38);
+fullAdder_backup I9 ( net38, sum[1], a[1], b[1], net42);
+fullAdder_backup I8 ( net42, sum[0], a[0], b[0], cin);
+
+endmodule

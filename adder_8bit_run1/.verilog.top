@@ -1,0 +1,19 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  cout;
+
+reg  cin;
+
+wire [7:0]  sum;
+
+reg [7:0]  a;
+reg [7:0]  b;
+
+
+
+adder_8bit top(cout, sum, a, b, cin); 
+ 

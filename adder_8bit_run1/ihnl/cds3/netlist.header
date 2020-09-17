@@ -1,0 +1,18 @@
+// Library - ece425mp1, Cell - fullAdder, View - schematic
+// LAST TIME SAVED: Feb 23 16:11:46 2019
+// NETLIST TIME: Feb 23 17:44:46 2019
+`timescale 1ns / 1ns 
+
+module fullAdder ( c_out, s, a, b, c );
+
+output  c_out, s;
+
+input  a, b, c;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "fullAdder";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

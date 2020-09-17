@@ -1,0 +1,6 @@
+CADENCE IHNL11146
+
+ece425mp1 xor2 schematic cds0
+ece425mp1 nand2 schematic cds1
+ece425mp1 adder_8bit schematic cds4
+ece425mp1 fullAdder_backup schematic cds5

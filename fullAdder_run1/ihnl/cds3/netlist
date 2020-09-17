@@ -1,0 +1,23 @@
+// Library - ece425mp1, Cell - fullAdder, View - schematic
+// LAST TIME SAVED: Mar  4 21:45:38 2019
+// NETLIST TIME: Mar  4 21:46:45 2019
+`timescale 1ns / 1ns 
+
+module fullAdder ( cout, sum, a, b, c );
+
+output  cout, sum;
+
+input  a, b, c;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "fullAdder";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+halfAdder I5 ( net12, net11, a, b);
+halfAdder I4 ( net15, sum, net11, c);
+nand2 I3 ( cout, net12, net15);
+
+endmodule

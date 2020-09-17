@@ -1,0 +1,4 @@
+latch I1 ( q, net10, q_slave_en, iq_slave_en);
+latch I0 ( net10, d, q_master_en, iq_master_en);
+
+endmodule

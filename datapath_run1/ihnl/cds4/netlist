@@ -1,0 +1,26 @@
+// Library - ece425mp2, Cell - mux41, View - schematic
+// LAST TIME SAVED: Mar 20 23:07:35 2019
+// NETLIST TIME: Mar 29 09:29:53 2019
+`timescale 1ns / 1ns 
+
+module mux41 ( y, a, b, c, d, sel0, sel1 );
+
+output  y;
+
+input  a, b, c, d, sel0, sel1;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "mux41";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+aoi22 I3 ( net19, a, net22, b, sel0);
+aoi22 I2 ( net18, c, net21, d, sel0);
+aoi22 I4 ( y, net19, net20, net18, sel1);
+inv I7 ( net21, sel0);
+inv I6 ( net22, sel0);
+inv I5 ( net20, sel1);
+
+endmodule

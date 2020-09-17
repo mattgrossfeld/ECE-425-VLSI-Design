@@ -1,0 +1,24 @@
+// Verilog HDL and netlist files of
+// "ece425mp2 latch schematic"
+
+// HDL models
+
+// HDL file - ece425mp2, bitcell, functional.
+/home/grossfe2/ece425.work/ece425mp2/bitcell/functional/verilog.v
+
+// HDL file - ece425mp2, tx_gate, functional.
+/home/grossfe2/ece425.work/ece425mp2/tx_gate/functional/verilog.v
+
+// HDL file - NCSU_Digital_Parts, inv, functional.
+/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/inv/functional/verilog.v
+
+
+// End HDL models
+
+// Netlisted models
+
+// netlist file - ece425mp2, latch, schematic.
+ihnl/cds0/netlist
+
+
+// End HDL models

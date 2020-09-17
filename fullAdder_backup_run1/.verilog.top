@@ -1,0 +1,14 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  c_out, s;
+
+reg  a, b, c;
+
+
+
+fullAdder_backup top(c_out, s, a, b, c); 
+ 

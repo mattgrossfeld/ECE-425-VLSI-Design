@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      grossfe2
+HostName                       dcl-l440-17.ews.illinois.edu
+ProcessIdentifier              541919
+ProcessCreationTime_UTC        1553869772
+ProcessCreationTime_Readable   Fri Mar 29 09:29:32 2019 CDT
+AppIdentifier                  /software/cadence-Aug2016/IC617/tools/dfII/bin/64bit/libManager
+OSType                         lnx86
+ReasonForPlacingEditLock       log file
+FilePathUsedToEditLock         /home/grossfe2/ece425.work/libManager.log.1
+TimeEditLocked                 Fri Mar 29 09:29:32 2019 CDT

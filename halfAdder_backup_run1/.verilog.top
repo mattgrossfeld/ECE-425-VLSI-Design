@@ -1,0 +1,14 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  carry, sum;
+
+reg  a, b;
+
+
+
+halfAdder_backup top(carry, sum, a, b); 
+ 

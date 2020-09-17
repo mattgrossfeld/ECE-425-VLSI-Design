@@ -1,0 +1,10 @@
+CADENCE IHNL11140
+$model
+ece425mp1/inv/schematic inv
+$endmodel
+$net
+gnd! cds_globals.gnd_
+vdd! cds_globals.vdd_
+$endnet
+$param
+$endparam

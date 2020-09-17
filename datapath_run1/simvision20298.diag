@@ -1,0 +1,81 @@
+*** Message Type: info ***
+When: Thu Mar 28 21:23:15 CDT 2019
+SimVision started.
+Version: TOOL:  simvision       15.20-s008
+User: grossfe2
+Host: linux-a1.ews.illinois.edu
+Platform: Linux/x86_64/3.10.0-957.1.3.el7.x86_64
+Started: Thu Mar 28 21:23:15 CDT 2019
+Command: /software/cadence-Aug2016/INCISIVE152/tools.lnx86/simvision/bin/simvision.exe -connect dc:linux-a1.ews.illinois.edu:45988 -mpssession virtuoso14013 -nocopyright -mpshost linux-a1.ews.illinois.edu
+Work Directory: /home/grossfe2/ece425.work/datapath_run1
+ 
+*** Message Type: info ***
+When: Thu Mar 28 21:23:16 CDT 2019
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Thu Mar 28 21:23:17 CDT 2019
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Thu Mar 28 21:23:18 CDT 2019
+Connect to Simulator
+      Design: worklib.test:template
+   Languages: verilog
+   Simulator: NC-Sim
+     Version: TOOL:      ncsim   15.20-s008
+        User: grossfe2
+        Host: linux-a1.ews.illinois.edu
+Time Started: Thu Mar 28 21:23:14 CDT 2019
+  Process ID: 20296
+   Directory: /home/grossfe2/ece425.work/datapath_run1
+     Command: ncxlmode +delay_mode_path +typdelays -l simout.tmp /home/grossfe2/ece425.work/datapath_run1/testfixture.template -f /home/grossfe2/ece425.work/datapath_run1/verilog.inpfiles +nostdout +nocopyright {+ncvlogargs+ -neverwarn -nostdout -nocopyright } {+ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright} {+ncsimargs+ -neverwarn  -nocopyright -gui -input /home/grossfe2/ece425.work/datapath_run1/.simTmpNCCmd } +mpssession+virtuoso14013 +mpshost+linux-a1.ews.illinois.edu
+
+ 
+*** Message Type: info ***
+When: Thu Mar 28 21:23:21 CDT 2019
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Thu Mar 28 21:23:27 CDT 2019
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: error ***
+When: Fri Mar 29 09:31:27 CDT 2019
+error getting working directory name: no such file or directory
+    while executing
+"pwd"
+    (object "::application" method "::Application::auto-save" body line 10)
+    invoked from within
+"::application auto-save"
+    (in namespace inscope "::Application" script line 1)
+    invoked from within
+"namespace inscope ::Application {::application auto-save}"
+    ("after" script)
+ 
+*** Message Type: error ***
+When: Fri Mar 29 09:31:27 CDT 2019
+error getting working directory name: no such file or directory
+    while executing
+"pwd"
+    (object "::application" method "::Application::auto-save" body line 10)
+    invoked from within
+"::application auto-save"
+    (in namespace inscope "::Application" script line 1)
+    invoked from within
+"namespace inscope ::Application {::application auto-save}"
+    ("after" script)
+ 
+*** Message Type: error ***
+When: Fri Mar 29 09:39:27 CDT 2019
+error getting working directory name: no such file or directory
+    while executing
+"pwd"
+    (object "::application" method "::Application::auto-save" body line 10)
+    invoked from within
+"::application auto-save"
+    (in namespace inscope "::Application" script line 1)
+    invoked from within
+"namespace inscope ::Application {::application auto-save}"
+    ("after" script)
+ 

@@ -1,0 +1,32 @@
+// Library - ece425mp2, Cell - bitslice, View - schematic
+// LAST TIME SAVED: Mar 29 17:07:20 2019
+// NETLIST TIME: Mar 29 17:07:35 2019
+`timescale 1ns / 1ns 
+
+module bitslice ( cout, f, p, q, y, cin, d, f_left, f_right, f_sel,
+     func_sel, inv_r, inv_s, iq_master_en, iq_slave_en, ireg_a_wr,
+     ireg_b_wr, ireg_wr, q_left, q_master_en, q_right, q_sel,
+     q_slave_en, r_sel, reg_a_wr, reg_b_wr, reg_wr, s_sel, select_a_hi,
+     select_b_hi, y_sel, zero );
+
+output  cout, f, p, q, y;
+
+input  cin, d, f_left, f_right, inv_r, inv_s, iq_master_en,
+     iq_slave_en, ireg_a_wr, ireg_b_wr, ireg_wr, q_left, q_master_en,
+     q_right, q_slave_en, reg_a_wr, reg_b_wr, reg_wr, y_sel, zero;
+
+input [15:0]  select_b_hi;
+input [2:0]  func_sel;
+input [15:0]  select_a_hi;
+input [1:0]  f_sel;
+input [1:0]  s_sel;
+input [1:0]  q_sel;
+input [1:0]  r_sel;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "bitslice";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

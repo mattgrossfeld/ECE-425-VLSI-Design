@@ -1,0 +1,2684 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 38 24 574 768
+%%Title: Enscript Output
+%%For: Matthew Grossfeld
+%%Creator: GNU Enscript 1.6.6
+%%CreationDate: Thu May  2 18:07:30 2019
+%%Orientation: Portrait
+%%Pages: (atend)
+%%DocumentMedia: Letter 612 792 0 () ()
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Enscript-Prolog 1.6 6
+%
+% Procedures.
+%
+
+/_S {	% save current state
+  /_s save def
+} def
+/_R {	% restore from saved state
+  _s restore
+} def
+
+/S {	% showpage protecting gstate
+  gsave
+  showpage
+  grestore
+} bind def
+
+/MF {	% fontname newfontname -> -	make a new encoded font
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  % insert only valid encoding vectors
+  encoding_vector length 256 eq {
+    newfont /Encoding encoding_vector put
+  } if
+
+  newfontname newfont definefont pop
+} def
+
+/MF_PS { % fontname newfontname -> -	make a new font preserving its enc
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  newfontname newfont definefont pop
+} def
+
+/SF { % fontname width height -> -	set a new font
+  /height exch def
+  /width exch def
+
+  findfont
+  [width 0 0 height 0 0] makefont setfont
+} def
+
+/SUF { % fontname width height -> -	set a new user font
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF
+  /F-gs-user-font width height SF
+} def
+
+/SUF_PS { % fontname width height -> -	set a new user font preserving its enc
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF_PS
+  /F-gs-user-font width height SF
+} def
+
+/M {moveto} bind def
+/s {show} bind def
+
+/Box {	% x y w h -> -			define box path
+  /d_h exch def /d_w exch def /d_y exch def /d_x exch def
+  d_x d_y  moveto
+  d_w 0 rlineto
+  0 d_h rlineto
+  d_w neg 0 rlineto
+  closepath
+} def
+
+/bgs {	% x y height blskip gray str -> -	show string with bg color
+  /str exch def
+  /gray exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    gray setgray
+    fill
+  grestore
+  x y M str s
+} def
+
+/bgcs { % x y height blskip red green blue str -> -  show string with bg color
+  /str exch def
+  /blue exch def
+  /green exch def
+  /red exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    red green blue setrgbcolor
+    fill
+  grestore
+  x y M str s
+} def
+
+% Highlight bars.
+/highlight_bars {	% nlines lineheight output_y_margin gray -> -
+  gsave
+    setgray
+    /ymarg exch def
+    /lineheight exch def
+    /nlines exch def
+
+    % This 2 is just a magic number to sync highlight lines to text.
+    0 d_header_y ymarg sub 2 sub translate
+
+    /cw d_output_w cols div def
+    /nrows d_output_h ymarg 2 mul sub lineheight div cvi def
+
+    % for each column
+    0 1 cols 1 sub {
+      cw mul /xp exch def
+
+      % for each rows
+      0 1 nrows 1 sub {
+        /rn exch def
+        rn lineheight mul neg /yp exch def
+        rn nlines idiv 2 mod 0 eq {
+	  % Draw highlight bar.  4 is just a magic indentation.
+	  xp 4 add yp cw 8 sub lineheight neg Box fill
+	} if
+      } for
+    } for
+
+  grestore
+} def
+
+% Line highlight bar.
+/line_highlight {	% x y width height gray -> -
+  gsave
+    /gray exch def
+    Box gray setgray fill
+  grestore
+} def
+
+% Column separator lines.
+/column_lines {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h translate
+    /cw d_output_w cols div def
+    1 1 cols 1 sub {
+      cw mul 0 moveto
+      0 d_output_h rlineto stroke
+    } for
+  grestore
+} def
+
+% Column borders.
+/column_borders {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h moveto
+    0 d_output_h rlineto
+    d_output_w 0 rlineto
+    0 d_output_h neg rlineto
+    closepath stroke
+  grestore
+} def
+
+% Do the actual underlay drawing
+/draw_underlay {
+  ul_style 0 eq {
+    ul_str true charpath stroke
+  } {
+    ul_str show
+  } ifelse
+} def
+
+% Underlay
+/underlay {	% - -> -
+  gsave
+    0 d_page_h translate
+    d_page_h neg d_page_w atan rotate
+
+    ul_gray setgray
+    ul_font setfont
+    /dw d_page_h dup mul d_page_w dup mul add sqrt def
+    ul_str stringwidth pop dw exch sub 2 div ul_h_ptsize -2 div moveto
+    draw_underlay
+  grestore
+} def
+
+/user_underlay {	% - -> -
+  gsave
+    ul_x ul_y translate
+    ul_angle rotate
+    ul_gray setgray
+    ul_font setfont
+    0 0 ul_h_ptsize 2 div sub moveto
+    draw_underlay
+  grestore
+} def
+
+% Page prefeed
+/page_prefeed {		% bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} def
+
+% Wrapped line markers
+/wrapped_line_mark {	% x y charwith charheight type -> -
+  /type exch def
+  /h exch def
+  /w exch def
+  /y exch def
+  /x exch def
+
+  type 2 eq {
+    % Black boxes (like TeX does)
+    gsave
+      0 setlinewidth
+      x w 4 div add y M
+      0 h rlineto w 2 div 0 rlineto 0 h neg rlineto
+      closepath fill
+    grestore
+  } {
+    type 3 eq {
+      % Small arrows
+      gsave
+        .2 setlinewidth
+        x w 2 div add y h 2 div add M
+        w 4 div 0 rlineto
+        x w 4 div add y lineto stroke
+
+        x w 4 div add w 8 div add y h 4 div add M
+        x w 4 div add y lineto
+	w 4 div h 8 div rlineto stroke
+      grestore
+    } {
+      % do nothing
+    } ifelse
+  } ifelse
+} def
+
+% EPSF import.
+
+/BeginEPSF {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [ ] 0 setdash newpath
+  /languagelevel where {
+    pop languagelevel
+    1 ne {
+      false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/EndEPSF {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+%%EndResource
+%%BeginResource: procset Enscript-Encoding-88591 1.6 6
+/encoding_vector [
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclam       	/quotedbl     	/numbersign   	
+/dollar       	/percent      	/ampersand    	/quoteright   	
+/parenleft    	/parenright   	/asterisk     	/plus         	
+/comma        	/hyphen       	/period       	/slash        	
+/zero         	/one          	/two          	/three        	
+/four         	/five         	/six          	/seven        	
+/eight        	/nine         	/colon        	/semicolon    	
+/less         	/equal        	/greater      	/question     	
+/at           	/A            	/B            	/C            	
+/D            	/E            	/F            	/G            	
+/H            	/I            	/J            	/K            	
+/L            	/M            	/N            	/O            	
+/P            	/Q            	/R            	/S            	
+/T            	/U            	/V            	/W            	
+/X            	/Y            	/Z            	/bracketleft  	
+/backslash    	/bracketright 	/asciicircum  	/underscore   	
+/quoteleft    	/a            	/b            	/c            	
+/d            	/e            	/f            	/g            	
+/h            	/i            	/j            	/k            	
+/l            	/m            	/n            	/o            	
+/p            	/q            	/r            	/s            	
+/t            	/u            	/v            	/w            	
+/x            	/y            	/z            	/braceleft    	
+/bar          	/braceright   	/tilde        	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclamdown   	/cent         	/sterling     	
+/currency     	/yen          	/brokenbar    	/section      	
+/dieresis     	/copyright    	/ordfeminine  	/guillemotleft	
+/logicalnot   	/hyphen       	/registered   	/macron       	
+/degree       	/plusminus    	/twosuperior  	/threesuperior	
+/acute        	/mu           	/paragraph    	/bullet       	
+/cedilla      	/onesuperior  	/ordmasculine 	/guillemotright	
+/onequarter   	/onehalf      	/threequarters	/questiondown 	
+/Agrave       	/Aacute       	/Acircumflex  	/Atilde       	
+/Adieresis    	/Aring        	/AE           	/Ccedilla     	
+/Egrave       	/Eacute       	/Ecircumflex  	/Edieresis    	
+/Igrave       	/Iacute       	/Icircumflex  	/Idieresis    	
+/Eth          	/Ntilde       	/Ograve       	/Oacute       	
+/Ocircumflex  	/Otilde       	/Odieresis    	/multiply     	
+/Oslash       	/Ugrave       	/Uacute       	/Ucircumflex  	
+/Udieresis    	/Yacute       	/Thorn        	/germandbls   	
+/agrave       	/aacute       	/acircumflex  	/atilde       	
+/adieresis    	/aring        	/ae           	/ccedilla     	
+/egrave       	/eacute       	/ecircumflex  	/edieresis    	
+/igrave       	/iacute       	/icircumflex  	/idieresis    	
+/eth          	/ntilde       	/ograve       	/oacute       	
+/ocircumflex  	/otilde       	/odieresis    	/divide       	
+/oslash       	/ugrave       	/uacute       	/ucircumflex  	
+/udieresis    	/yacute       	/thorn        	/ydieresis    	
+] def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Courier
+/HFpt_w 10 def
+/HFpt_h 10 def
+/Courier-Bold /HF-gs-font MF
+/HF /HF-gs-font findfont [HFpt_w 0 0 HFpt_h 0 0] makefont def
+/Courier /F-gs-font MF
+/F-gs-font 10 10 SF
+/#copies 1 def
+% Pagedevice definitions:
+gs_languagelevel 1 gt {
+  <<
+    /PageSize [612 792] 
+  >> setpagedevice
+} if
+%%BeginResource: procset Enscript-Header-simple 1.6 6
+
+/do_header {	% print default simple header
+  gsave
+    d_header_x d_header_y HFpt_h 3 div add translate
+
+    HF setfont
+    user_header_p {
+      5 0 moveto user_header_left_str show
+
+      d_header_w user_header_center_str stringwidth pop sub 2 div
+      0 moveto user_header_center_str show
+
+      d_header_w user_header_right_str stringwidth pop sub 5 sub
+      0 moveto user_header_right_str show
+    } {
+      fname length fmodstr length add pagenumstr length add 95 6 idiv add d_header_w 6 idiv le{
+        5 0 moveto fname show
+        45 0 rmoveto fmodstr show
+        45 0 rmoveto pagenumstr show
+      } {
+        5 0 moveto fmodstr show
+        45 0 rmoveto pagenumstr show
+        fname length d_header_w 6 idiv idiv 1 add 10 mul 5 exch moveto
+        1 1 fname length d_header_w 6 idiv idiv
+        {
+          dup fname exch 1 sub d_header_w 6 idiv mul d_header_w 6 idiv getinterval show
+          5 exch 10 mul fname length d_header_w 6 idiv idiv 1 add 10 mul exch sub moveto
+        } for
+        5 10 moveto
+        fname fname length d_header_w 6 idiv idiv d_header_w 6 idiv mul dup fname length exch sub getinterval show
+      }ifelse
+    }ifelse
+
+  grestore
+} def
+%%EndResource
+/d_page_w 536 def
+/d_page_h 744 def
+/d_header_x 0 def
+/d_header_y 700 def
+/d_header_w 536 def
+/d_header_h 44 def
+/d_footer_x 0 def
+/d_footer_y 0 def
+/d_footer_w 536 def
+/d_footer_h 0 def
+/d_output_w 536 def
+/d_output_h 700 def
+/cols 1 def
+%%EndSetup
+%%Page: (1) 1
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(###############################################################) s
+5 676 M
+(#  Generated by:      Cadence Encounter 14.28-s033_1) s
+5 665 M
+(#  OS:                Linux x86_64\(Host ID linux-06.ews.illinois.edu\)) s
+5 654 M
+(#  Generated on:      Thu May  2 17:37:56 2019) s
+5 643 M
+(#  Design:            controller) s
+5 632 M
+(#  Command:           summaryReport -noHtml -outfile summaryReport.rpt) s
+5 621 M
+(###############################################################) s
+5 588 M
+(==============================) s
+5 577 M
+(General Design Information) s
+5 566 M
+(==============================) s
+5 555 M
+(Design Status: Routed  ) s
+5 544 M
+(Design Name: controller  ) s
+5 533 M
+(# Instances: 112  ) s
+5 522 M
+(# Hard Macros: 0  ) s
+5 511 M
+(# Std Cells: 112  ) s
+5 500 M
+(    ------------------------------) s
+5 489 M
+(    Standard Cells in Netlist) s
+5 478 M
+(    ------------------------------) s
+5 467 M
+(               Cell Type   Instance Count  Area \(um^2\)  ) s
+5 456 M
+(                   inv_1               20         979.7760  ) s
+5 445 M
+(                   inv_2                6         293.9328  ) s
+5 434 M
+(                   inv_4                6         293.9328  ) s
+5 423 M
+(                 invzp_1                8         653.1840  ) s
+5 412 M
+(                  mux2_1                4         457.2288  ) s
+5 401 M
+(                 nand2_1                7         457.2288  ) s
+5 390 M
+(                 nand2_2               12         783.8208  ) s
+5 379 M
+(                 nand4_1                1          81.6480  ) s
+5 368 M
+(                  nor2_1               33        1616.6304  ) s
+5 357 M
+(                  nor2_2                8         391.9104  ) s
+5 346 M
+(                  nor2_4                4         457.2288  ) s
+5 335 M
+(                  nor3_1                1          65.3184  ) s
+5 324 M
+(                  nor4_1                1          81.6480  ) s
+5 313 M
+(                   or2_1                1          81.6480  ) s
+5 302 M
+(# Pads: 0  ) s
+5 291 M
+(# Net: 168  ) s
+5 280 M
+(# Special Net: 2  ) s
+5 269 M
+(# IO Pins: ) s
+5 258 M
+(    ------------------------------) s
+5 247 M
+(    Issued IO Information) s
+5 236 M
+(    ------------------------------) s
+5 225 M
+(    # Unplaced IO Pin  0  ) s
+5 214 M
+(    # Floating IO  ) s
+5 203 M
+(        ------------------------------) s
+5 192 M
+(        Floating IO) s
+5 181 M
+(        ------------------------------) s
+5 170 M
+(            Floating IO Name  ) s
+5 159 M
+(                        q_en  ) s
+5 148 M
+(                        zero  ) s
+5 137 M
+(                        c[0]  ) s
+5 126 M
+(                        c[1]  4  ) s
+5 115 M
+(    # IO Connected to Non-IO Inst  ) s
+5 104 M
+(        ------------------------------) s
+5 93 M
+(        IO Connected to Non-IO Inst) s
+5 82 M
+(        ------------------------------) s
+5 71 M
+(                     IO Name      Non-IO Inst Name  ) s
+5 60 M
+(                          cp                  U128  ) s
+5 49 M
+(                   ireg_b_wr                  U128  ) s
+5 38 M
+(                    reg_b_wr                  U128  ) s
+5 27 M
+(                   ireg_a_wr                  U128  ) s
+5 16 M
+(                    reg_a_wr                  U128  ) s
+5 5 M
+(                     ireg_wr                  U141  ) s
+_R
+S
+%%Page: (2) 2
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 2 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (2) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(                 iq_slave_en                  U151  ) s
+5 676 M
+(                iq_master_en                  U149  ) s
+5 665 M
+(                  q_slave_en                  U152  ) s
+5 654 M
+(                 q_master_en                  U150  ) s
+5 643 M
+(                       inv_r                  U188  ) s
+5 632 M
+(                       inv_s                  U186  ) s
+5 621 M
+(                    q_sel[0]                  U183  ) s
+5 610 M
+(                    q_sel[1]                  U184  ) s
+5 599 M
+(                    f_sel[0]                  U147  ) s
+5 588 M
+(                    f_sel[1]                  U144  ) s
+5 577 M
+(                       y_sel                  U195  ) s
+5 566 M
+(                 func_sel[0]                  U188  ) s
+5 555 M
+(                 func_sel[1]                  U185  ) s
+5 544 M
+(                 func_sel[2]                  U186  ) s
+5 533 M
+(                    s_sel[0]                  U191  ) s
+5 522 M
+(                    s_sel[1]                  U193  ) s
+5 511 M
+(                    r_sel[0]                  U179  ) s
+5 500 M
+(                    r_sel[1]                  U182  ) s
+5 489 M
+(                      reg_wr                  U142  ) s
+5 478 M
+(                     q3_data                  U132  ) s
+5 467 M
+(                     q0_data                  U135  ) s
+5 456 M
+(                          q3               drvqshl  ) s
+5 445 M
+(                          q0               drvqshr  ) s
+5 434 M
+(                        ram3               drvraml  ) s
+5 423 M
+(                        ram0               drvramr  ) s
+5 412 M
+(                          oe                  U137  ) s
+5 401 M
+(                   y_data[0]                  U133  ) s
+5 390 M
+(                   y_data[1]                  U131  ) s
+5 379 M
+(                   y_data[2]                  U129  ) s
+5 368 M
+(                   y_data[3]                  U136  ) s
+5 357 M
+(                    y_tri[0]                 drvy0  ) s
+5 346 M
+(                    y_tri[1]                 drvy1  ) s
+5 335 M
+(                    y_tri[2]                 drvy2  ) s
+5 324 M
+(                    y_tri[3]                 drvy3  ) s
+5 313 M
+(                           z                  U139  ) s
+5 302 M
+(                         ovr                  U177  ) s
+5 291 M
+(                        p_lo                  U138  ) s
+5 280 M
+(                        g_lo                  U145  ) s
+5 269 M
+(                        p[0]                  U138  ) s
+5 258 M
+(                        p[1]                  U138  ) s
+5 247 M
+(                        p[2]                  U138  ) s
+5 236 M
+(                        p[3]                  U138  ) s
+5 225 M
+(                        c[2]                  U177  ) s
+5 214 M
+(                        c[3]                  U145  ) s
+5 203 M
+(                        f[0]                  U134  ) s
+5 192 M
+(                        f[1]                  U139  ) s
+5 181 M
+(                        f[2]                  U139  ) s
+5 170 M
+(                        f[3]                  U130  ) s
+5 159 M
+(              select_b_hi[0]                  U114  ) s
+5 148 M
+(              select_b_hi[1]                  U164  ) s
+5 137 M
+(              select_b_hi[2]                  U168  ) s
+5 126 M
+(              select_b_hi[3]                  U156  ) s
+5 115 M
+(              select_b_hi[4]                  U116  ) s
+5 104 M
+(              select_b_hi[5]                  U163  ) s
+5 93 M
+(              select_b_hi[6]                  U167  ) s
+5 82 M
+(              select_b_hi[7]                   U98  ) s
+5 71 M
+(              select_b_hi[8]                  U115  ) s
+5 60 M
+(              select_b_hi[9]                  U162  ) s
+5 49 M
+(             select_b_hi[10]                  U166  ) s
+5 38 M
+(             select_b_hi[11]                   U99  ) s
+5 27 M
+(             select_b_hi[12]                  U122  ) s
+5 16 M
+(             select_b_hi[13]                  U161  ) s
+5 5 M
+(             select_b_hi[14]                  U100  ) s
+_R
+S
+%%Page: (3) 3
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 3 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (3) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(             select_b_hi[15]                  U153  ) s
+5 676 M
+(              select_a_hi[0]                  U117  ) s
+5 665 M
+(              select_a_hi[1]                  U172  ) s
+5 654 M
+(              select_a_hi[2]                  U176  ) s
+5 643 M
+(              select_a_hi[3]                  U160  ) s
+5 632 M
+(              select_a_hi[4]                  U119  ) s
+5 621 M
+(              select_a_hi[5]                  U171  ) s
+5 610 M
+(              select_a_hi[6]                  U175  ) s
+5 599 M
+(              select_a_hi[7]                  U101  ) s
+5 588 M
+(              select_a_hi[8]                  U118  ) s
+5 577 M
+(              select_a_hi[9]                  U170  ) s
+5 566 M
+(             select_a_hi[10]                  U174  ) s
+5 555 M
+(             select_a_hi[11]                  U102  ) s
+5 544 M
+(             select_a_hi[12]                  U123  ) s
+5 533 M
+(             select_a_hi[13]                  U169  ) s
+5 522 M
+(             select_a_hi[14]                  U103  ) s
+5 511 M
+(             select_a_hi[15]                  U157  ) s
+5 500 M
+(                        b[0]                   U92  ) s
+5 489 M
+(                        b[1]                   U94  ) s
+5 478 M
+(                        b[2]                  U104  ) s
+5 467 M
+(                        b[3]                  U105  ) s
+5 456 M
+(                        a[0]                   U93  ) s
+5 445 M
+(                        a[1]                   U95  ) s
+5 434 M
+(                        a[2]                  U106  ) s
+5 423 M
+(                        a[3]                  U107  ) s
+5 412 M
+(                        i[0]                  U180  ) s
+5 401 M
+(                        i[1]                  U179  ) s
+5 390 M
+(                        i[2]                  U179  ) s
+5 379 M
+(                        i[3]                  U188  ) s
+5 368 M
+(                        i[4]                  U185  ) s
+5 357 M
+(                        i[5]                  U186  ) s
+5 346 M
+(                        i[6]                  U148  ) s
+5 335 M
+(                        i[7]                  U140  ) s
+5 324 M
+(                        i[8]                  U140  103  107  ) s
+5 313 M
+(# Pins: ) s
+5 302 M
+(    ------------------------------) s
+5 291 M
+(    Correctness of Pin Connectivity for All Instances) s
+5 280 M
+(    ------------------------------) s
+5 269 M
+(    # Floating Terms  0  ) s
+5 258 M
+(    # Output Term Marked Tie Hi/Lo  0  ) s
+5 247 M
+(    # Output Term Shorted to PG Net  0  313  ) s
+5 236 M
+(# PG Pins: ) s
+5 225 M
+(    ------------------------------) s
+5 214 M
+(    Correctness of PG Pin Connectivity for All Instances) s
+5 203 M
+(    ------------------------------) s
+5 192 M
+(    # Instances that No Net Defined for Any PG Pin  ) s
+5 181 M
+(        ------------------------------) s
+5 170 M
+(        The Instances that No Net Defined for any PG Pin) s
+5 159 M
+(        ------------------------------) s
+5 148 M
+(               Instance Name  ) s
+5 137 M
+(                        U196  ) s
+5 126 M
+(                        U195  ) s
+5 115 M
+(                        U194  ) s
+5 104 M
+(                        U193  ) s
+5 93 M
+(                        U192  ) s
+5 82 M
+(                        U191  ) s
+5 71 M
+(                        U190  ) s
+5 60 M
+(                        U189  ) s
+5 49 M
+(                        U188  ) s
+5 38 M
+(                        U187  ) s
+5 27 M
+(                        U186  ) s
+5 16 M
+(                        U185  ) s
+5 5 M
+(                        U184  ) s
+_R
+S
+%%Page: (4) 4
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 4 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (4) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(                        U183  ) s
+5 676 M
+(                        U182  ) s
+5 665 M
+(                        U181  ) s
+5 654 M
+(                        U180  ) s
+5 643 M
+(                        U179  ) s
+5 632 M
+(                        U177  ) s
+5 621 M
+(                        U176  ) s
+5 610 M
+(                        U175  ) s
+5 599 M
+(                        U174  ) s
+5 588 M
+(                        U173  ) s
+5 577 M
+(                        U172  ) s
+5 566 M
+(                        U171  ) s
+5 555 M
+(                        U170  ) s
+5 544 M
+(                        U169  ) s
+5 533 M
+(                        U168  ) s
+5 522 M
+(                        U167  ) s
+5 511 M
+(                        U166  ) s
+5 500 M
+(                        U165  ) s
+5 489 M
+(                        U164  ) s
+5 478 M
+(                        U163  ) s
+5 467 M
+(                        U162  ) s
+5 456 M
+(                        U161  ) s
+5 445 M
+(                        U160  ) s
+5 434 M
+(                        U159  ) s
+5 423 M
+(                        U158  ) s
+5 412 M
+(                        U157  ) s
+5 401 M
+(                        U156  ) s
+5 390 M
+(                        U155  ) s
+5 379 M
+(                        U154  ) s
+5 368 M
+(                        U153  ) s
+5 357 M
+(                        U152  ) s
+5 346 M
+(                        U151  ) s
+5 335 M
+(                        U150  ) s
+5 324 M
+(                        U149  ) s
+5 313 M
+(                        U148  ) s
+5 302 M
+(                        U147  ) s
+5 291 M
+(                        U146  ) s
+5 280 M
+(                        U145  ) s
+5 269 M
+(                        U144  ) s
+5 258 M
+(                        U143  ) s
+5 247 M
+(                        U142  ) s
+5 236 M
+(                        U141  ) s
+5 225 M
+(                        U140  ) s
+5 214 M
+(                        U139  ) s
+5 203 M
+(                        U138  ) s
+5 192 M
+(                        U137  ) s
+5 181 M
+(                        U136  ) s
+5 170 M
+(                        U135  ) s
+5 159 M
+(                        U134  ) s
+5 148 M
+(                        U133  ) s
+5 137 M
+(                        U132  ) s
+5 126 M
+(                        U131  ) s
+5 115 M
+(                        U130  ) s
+5 104 M
+(                        U129  ) s
+5 93 M
+(                        U128  ) s
+5 82 M
+(                        U127  ) s
+5 71 M
+(                        U126  ) s
+5 60 M
+(                        U125  ) s
+5 49 M
+(                        U124  ) s
+5 38 M
+(                        U123  ) s
+5 27 M
+(                        U122  ) s
+5 16 M
+(                        U121  ) s
+5 5 M
+(                        U120  ) s
+_R
+S
+%%Page: (5) 5
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 5 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (5) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(                        U119  ) s
+5 676 M
+(                        U118  ) s
+5 665 M
+(                        U117  ) s
+5 654 M
+(                        U116  ) s
+5 643 M
+(                        U115  ) s
+5 632 M
+(                        U114  ) s
+5 621 M
+(                        U113  ) s
+5 610 M
+(                        U112  ) s
+5 599 M
+(                        U111  ) s
+5 588 M
+(                        U110  ) s
+5 577 M
+(                        U109  ) s
+5 566 M
+(                        U108  ) s
+5 555 M
+(                        U107  ) s
+5 544 M
+(                        U106  ) s
+5 533 M
+(                        U105  ) s
+5 522 M
+(                        U104  ) s
+5 511 M
+(                        U103  ) s
+5 500 M
+(                        U102  ) s
+5 489 M
+(                        U101  ) s
+5 478 M
+(                        U100  ) s
+5 467 M
+(                         U99  ) s
+5 456 M
+(                         U98  ) s
+5 445 M
+(                         U97  ) s
+5 434 M
+(                         U96  ) s
+5 423 M
+(                         U95  ) s
+5 412 M
+(                         U94  ) s
+5 401 M
+(                         U93  ) s
+5 390 M
+(                         U92  ) s
+5 379 M
+(                     drvraml  ) s
+5 368 M
+(                     drvqshl  ) s
+5 357 M
+(                     drvramr  ) s
+5 346 M
+(                     drvqshr  ) s
+5 335 M
+(                       drvy3  ) s
+5 324 M
+(                       drvy2  ) s
+5 313 M
+(                       drvy1  ) s
+5 302 M
+(                       drvy0  112  ) s
+5 291 M
+(    # Floating PG Terms  0  ) s
+5 280 M
+(    # PG Pins Connect to Non-PG Net  0  ) s
+5 269 M
+(    # Power Pins Connect Ground Net  0  ) s
+5 258 M
+(    # Ground Pins Connect Power Net  0  224  ) s
+5 247 M
+(Average Pins Per Net\(Signal\): 1.863  ) s
+5 225 M
+(==============================) s
+5 214 M
+(General Library Information) s
+5 203 M
+(==============================) s
+5 192 M
+(# Routing Layers: 5  ) s
+5 181 M
+(# Masterslice Layers: 12  ) s
+5 170 M
+(# Pin Layers: ) s
+5 159 M
+(    General Caution:) s
+5 148 M
+(        1\) Library have metal1, metal2, metal3, metal4 and metal5 pins, you should setP) s
+5 137 M
+(reRouteAsObs {1 2 3}                                 to ensure these pins are accessibl) s
+5 126 M
+(e after placement) s
+5 104 M
+(    ------------------------------) s
+5 93 M
+(    Pin Layers) s
+5 82 M
+(    ------------------------------) s
+5 71 M
+(    metal5  ) s
+5 60 M
+(    metal4  ) s
+5 49 M
+(    metal3  ) s
+5 38 M
+(    metal2  ) s
+5 27 M
+(    metal1  5  ) s
+5 16 M
+(# Layers: ) s
+5 5 M
+(    ------------------------------) s
+_R
+S
+%%Page: (6) 6
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 6 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (6) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(    Layer metal5 Information) s
+5 676 M
+(    ------------------------------) s
+5 665 M
+(    Type  Routing  ) s
+5 654 M
+(    Wire Pitch X  2.160 um  ) s
+5 643 M
+(    Wire Pitch Y  2.160 um  ) s
+5 632 M
+(    Wire Width  0.480 um  ) s
+5 621 M
+(    Spacing  0.480 um  ) s
+5 610 M
+(    ------------------------------) s
+5 599 M
+(    Layer via4 Information) s
+5 588 M
+(    ------------------------------) s
+5 577 M
+(    Type  Cut  ) s
+5 566 M
+(    Vias  ) s
+5 555 M
+(        ------------------------------) s
+5 544 M
+(        Via list in layer via4) s
+5 533 M
+(        ------------------------------) s
+5 522 M
+(                Vias in via4  Default  ) s
+5 511 M
+(                       M5_M4      Yes  For complete list click here  ) s
+5 500 M
+(    Multiple Orientation Vias  CAUTION: There is only one default via in this layer  ) s
+5 489 M
+(    ------------------------------) s
+5 478 M
+(    Layer metal4 Information) s
+5 467 M
+(    ------------------------------) s
+5 456 M
+(    Type  Routing  ) s
+5 445 M
+(    Wire Pitch X  1.080 um  ) s
+5 434 M
+(    Wire Pitch Y  1.080 um  ) s
+5 423 M
+(    Wire Width  0.360 um  ) s
+5 412 M
+(    Spacing  0.480 um  ) s
+5 401 M
+(    ------------------------------) s
+5 390 M
+(    Layer via3 Information) s
+5 379 M
+(    ------------------------------) s
+5 368 M
+(    Type  Cut  ) s
+5 357 M
+(    Vias  ) s
+5 346 M
+(        ------------------------------) s
+5 335 M
+(        Via list in layer via3) s
+5 324 M
+(        ------------------------------) s
+5 313 M
+(                Vias in via3  Default  ) s
+5 302 M
+(                       M4_M3      Yes  For complete list click here  ) s
+5 291 M
+(    Multiple Orientation Vias  CAUTION: There is only one default via in this layer  ) s
+5 280 M
+(    ------------------------------) s
+5 269 M
+(    Layer metal3 Information) s
+5 258 M
+(    ------------------------------) s
+5 247 M
+(    Type  Routing  ) s
+5 236 M
+(    Wire Pitch X  1.080 um  ) s
+5 225 M
+(    Wire Pitch Y  1.080 um  ) s
+5 214 M
+(    Wire Width  0.360 um  ) s
+5 203 M
+(    Spacing  0.480 um  ) s
+5 192 M
+(    ------------------------------) s
+5 181 M
+(    Layer via2 Information) s
+5 170 M
+(    ------------------------------) s
+5 159 M
+(    Type  Cut  ) s
+5 148 M
+(    Vias  ) s
+5 137 M
+(        ------------------------------) s
+5 126 M
+(        Via list in layer via2) s
+5 115 M
+(        ------------------------------) s
+5 104 M
+(                Vias in via2  Default  ) s
+5 93 M
+(                       M3_M2      Yes  For complete list click here  ) s
+5 82 M
+(    Multiple Orientation Vias  CAUTION: There is only one default via in this layer  ) s
+5 71 M
+(    ------------------------------) s
+5 60 M
+(    Layer metal2 Information) s
+5 49 M
+(    ------------------------------) s
+5 38 M
+(    Type  Routing  ) s
+5 27 M
+(    Wire Pitch X  1.080 um  ) s
+5 16 M
+(    Wire Pitch Y  1.080 um  ) s
+5 5 M
+(    Wire Width  0.360 um  ) s
+_R
+S
+%%Page: (7) 7
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 7 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (7) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(    Spacing  0.480 um  ) s
+5 676 M
+(    ------------------------------) s
+5 665 M
+(    Layer via Information) s
+5 654 M
+(    ------------------------------) s
+5 643 M
+(    Type  Cut  ) s
+5 632 M
+(    Vias  ) s
+5 621 M
+(        ------------------------------) s
+5 610 M
+(        Via list in layer via) s
+5 599 M
+(        ------------------------------) s
+5 588 M
+(                 Vias in via  Default  ) s
+5 577 M
+(                       M2_M1      Yes  For complete list click here  ) s
+5 566 M
+(    Multiple Orientation Vias  CAUTION: There is only one default via in this layer  ) s
+5 555 M
+(    ------------------------------) s
+5 544 M
+(    Layer metal1 Information) s
+5 533 M
+(    ------------------------------) s
+5 522 M
+(    Type  Routing  ) s
+5 511 M
+(    Wire Pitch X  1.080 um  ) s
+5 500 M
+(    Wire Pitch Y  1.080 um  ) s
+5 489 M
+(    Wire Width  0.360 um  ) s
+5 478 M
+(    Spacing  0.360 um  ) s
+5 467 M
+(    ------------------------------) s
+5 456 M
+(    Layer cc Information) s
+5 445 M
+(    ------------------------------) s
+5 434 M
+(    Type  Cut  ) s
+5 423 M
+(    Vias  ) s
+5 412 M
+(        ------------------------------) s
+5 401 M
+(        Via list in layer cc) s
+5 390 M
+(        ------------------------------) s
+5 379 M
+(                  Vias in cc  Default  ) s
+5 368 M
+(                     M1_POLY       No  ) s
+5 357 M
+(                        NTAP       No  ) s
+5 346 M
+(                        M1_N       No  ) s
+5 335 M
+(                        M1_P       No  For complete list click here  ) s
+5 324 M
+(    ------------------------------) s
+5 313 M
+(    Layer nodrc Information) s
+5 302 M
+(    ------------------------------) s
+5 291 M
+(    Type  Masterslice  ) s
+5 280 M
+(    ------------------------------) s
+5 269 M
+(    Layer metalcap Information) s
+5 258 M
+(    ------------------------------) s
+5 247 M
+(    Type  Masterslice  ) s
+5 236 M
+(    ------------------------------) s
+5 225 M
+(    Layer cap_id Information) s
+5 214 M
+(    ------------------------------) s
+5 203 M
+(    Type  Masterslice  ) s
+5 192 M
+(    ------------------------------) s
+5 181 M
+(    Layer res_id Information) s
+5 170 M
+(    ------------------------------) s
+5 159 M
+(    Type  Masterslice  ) s
+5 148 M
+(    ------------------------------) s
+5 137 M
+(    Layer text Information) s
+5 126 M
+(    ------------------------------) s
+5 115 M
+(    Type  Masterslice  ) s
+5 104 M
+(    ------------------------------) s
+5 93 M
+(    Layer sblock Information) s
+5 82 M
+(    ------------------------------) s
+5 71 M
+(    Type  Masterslice  ) s
+5 60 M
+(    ------------------------------) s
+5 49 M
+(    Layer pad Information) s
+5 38 M
+(    ------------------------------) s
+5 27 M
+(    Type  Masterslice  ) s
+5 16 M
+(    ------------------------------) s
+5 5 M
+(    Layer glass Information) s
+_R
+S
+%%Page: (8) 8
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 8 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (8) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(    ------------------------------) s
+5 676 M
+(    Type  Masterslice  ) s
+5 665 M
+(    ------------------------------) s
+5 654 M
+(    Layer poly Information) s
+5 643 M
+(    ------------------------------) s
+5 632 M
+(    Type  Masterslice  ) s
+5 621 M
+(    ------------------------------) s
+5 610 M
+(    Layer pactive Information) s
+5 599 M
+(    ------------------------------) s
+5 588 M
+(    Type  Masterslice  ) s
+5 577 M
+(    ------------------------------) s
+5 566 M
+(    Layer nactive Information) s
+5 555 M
+(    ------------------------------) s
+5 544 M
+(    Type  Masterslice  ) s
+5 533 M
+(    ------------------------------) s
+5 522 M
+(    Layer nwell Information) s
+5 511 M
+(    ------------------------------) s
+5 500 M
+(    Type  Masterslice  22  ) s
+5 489 M
+(# Pins without Physical Port: 0  ) s
+5 478 M
+(# Pins in Library without Timing Lib: ) s
+5 467 M
+(    ------------------------------) s
+5 456 M
+(    Pins in Library without timing lib) s
+5 445 M
+(    ------------------------------) s
+5 434 M
+(               Cell Name      List of Pin Name  ) s
+5 423 M
+(                  ABnorC                   ip1  ) s
+5 412 M
+(                  ABnorC                   ip2  ) s
+5 401 M
+(                  ABnorC                   ip3  ) s
+5 390 M
+(                  ABnorC                    op  ) s
+5 379 M
+(                   ABorC                   ip1  ) s
+5 368 M
+(                   ABorC                   ip2  ) s
+5 357 M
+(                   ABorC                   ip3  ) s
+5 346 M
+(                   ABorC                    op  ) s
+5 335 M
+(            ab_or_c_or_d                   ip1  ) s
+5 324 M
+(            ab_or_c_or_d                   ip2  ) s
+5 313 M
+(            ab_or_c_or_d                   ip3  ) s
+5 302 M
+(            ab_or_c_or_d                   ip4  ) s
+5 291 M
+(            ab_or_c_or_d                    op  ) s
+5 280 M
+(                  and2_1                   ip1  ) s
+5 269 M
+(                  and2_1                   ip2  ) s
+5 258 M
+(                  and2_1                    op  ) s
+5 247 M
+(                  and2_2                   ip1  ) s
+5 236 M
+(                  and2_2                   ip2  ) s
+5 225 M
+(                  and2_2                    op  ) s
+5 214 M
+(                  and2_4                   ip1  ) s
+5 203 M
+(                  and2_4                   ip2  ) s
+5 192 M
+(                  and2_4                    op  ) s
+5 181 M
+(                  and3_1                   ip1  ) s
+5 170 M
+(                  and3_1                   ip2  ) s
+5 159 M
+(                  and3_1                   ip3  ) s
+5 148 M
+(                  and3_1                    op  ) s
+5 137 M
+(                  and3_2                   ip1  ) s
+5 126 M
+(                  and3_2                   ip2  ) s
+5 115 M
+(                  and3_2                   ip3  ) s
+5 104 M
+(                  and3_2                    op  ) s
+5 93 M
+(                  and3_4                   ip1  ) s
+5 82 M
+(                  and3_4                   ip2  ) s
+5 71 M
+(                  and3_4                   ip3  ) s
+5 60 M
+(                  and3_4                    op  ) s
+5 49 M
+(                  and4_1                   ip1  ) s
+5 38 M
+(                  and4_1                   ip2  ) s
+5 27 M
+(                  and4_1                   ip3  ) s
+5 16 M
+(                  and4_1                   ip4  ) s
+5 5 M
+(                  and4_1                    op  ) s
+_R
+S
+%%Page: (9) 9
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 9 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (9) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(                  and4_2                   ip1  ) s
+5 676 M
+(                  and4_2                   ip2  ) s
+5 665 M
+(                  and4_2                   ip3  ) s
+5 654 M
+(                  and4_2                   ip4  ) s
+5 643 M
+(                  and4_2                    op  ) s
+5 632 M
+(                  and4_4                   ip1  ) s
+5 621 M
+(                  and4_4                   ip2  ) s
+5 610 M
+(                  and4_4                   ip3  ) s
+5 599 M
+(                  and4_4                   ip4  ) s
+5 588 M
+(                  and4_4                    op  ) s
+5 577 M
+(                   buf_1                    ip  ) s
+5 566 M
+(                   buf_1                    op  ) s
+5 555 M
+(                   buf_2                    ip  ) s
+5 544 M
+(                   buf_2                    op  ) s
+5 533 M
+(                   buf_4                    ip  ) s
+5 522 M
+(                   buf_4                    op  ) s
+5 511 M
+(                 bufzp_2                     c  ) s
+5 500 M
+(                 bufzp_2                    ip  ) s
+5 489 M
+(                 bufzp_2                    op  ) s
+5 478 M
+(                   cd_12                    ip  ) s
+5 467 M
+(                   cd_12                    op  ) s
+5 456 M
+(                   cd_16                    ip  ) s
+5 445 M
+(                   cd_16                    op  ) s
+5 434 M
+(                    cd_8                    ip  ) s
+5 423 M
+(                    cd_8                    op  ) s
+5 412 M
+(                  dksp_1                    ck  ) s
+5 401 M
+(                  dksp_1                    ip  ) s
+5 390 M
+(                  dksp_1                     q  ) s
+5 379 M
+(                  dksp_1                    qb  ) s
+5 368 M
+(                  dksp_1                    sb  ) s
+5 357 M
+(                    dp_1                    ck  ) s
+5 346 M
+(                    dp_1                    ip  ) s
+5 335 M
+(                    dp_1                     q  ) s
+5 324 M
+(                    dp_2                    ck  ) s
+5 313 M
+(                    dp_2                    ip  ) s
+5 302 M
+(                    dp_2                     q  ) s
+5 291 M
+(                    dp_4                    ck  ) s
+5 280 M
+(                    dp_4                    ip  ) s
+5 269 M
+(                    dp_4                     q  ) s
+5 258 M
+(                   drp_1                    ck  ) s
+5 247 M
+(                   drp_1                    ip  ) s
+5 236 M
+(                   drp_1                     q  ) s
+5 225 M
+(                   drp_1                    rb  ) s
+5 214 M
+(                   drp_2                    ck  ) s
+5 203 M
+(                   drp_2                    ip  ) s
+5 192 M
+(                   drp_2                     q  ) s
+5 181 M
+(                   drp_2                    rb  ) s
+5 170 M
+(                   drp_4                    ck  ) s
+5 159 M
+(                   drp_4                    ip  ) s
+5 148 M
+(                   drp_4                     q  ) s
+5 137 M
+(                   drp_4                    rb  ) s
+5 126 M
+(                  drsp_1                    ck  ) s
+5 115 M
+(                  drsp_1                    ip  ) s
+5 104 M
+(                  drsp_1                     q  ) s
+5 93 M
+(                  drsp_1                    rb  ) s
+5 82 M
+(                  drsp_1                     s  ) s
+5 71 M
+(                  drsp_2                    ck  ) s
+5 60 M
+(                  drsp_2                    ip  ) s
+5 49 M
+(                  drsp_2                     q  ) s
+5 38 M
+(                  drsp_2                    rb  ) s
+5 27 M
+(                  drsp_2                     s  ) s
+5 16 M
+(                  drsp_4                    ck  ) s
+5 5 M
+(                  drsp_4                    ip  ) s
+_R
+S
+%%Page: (10) 10
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 10 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (10) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(                  drsp_4                     q  ) s
+5 676 M
+(                  drsp_4                    rb  ) s
+5 665 M
+(                  drsp_4                     s  ) s
+5 654 M
+(                 dtrsp_2                    ck  ) s
+5 643 M
+(                 dtrsp_2                    ip  ) s
+5 632 M
+(                 dtrsp_2                     q  ) s
+5 621 M
+(                 dtrsp_2                    rb  ) s
+5 610 M
+(                 dtrsp_2                     s  ) s
+5 599 M
+(                 dtrsp_2                   sip  ) s
+5 588 M
+(                 dtrsp_2                    sm  ) s
+5 577 M
+(               fulladder                     a  ) s
+5 566 M
+(               fulladder                     b  ) s
+5 555 M
+(               fulladder                    ci  ) s
+5 544 M
+(               fulladder                    co  ) s
+5 533 M
+(               fulladder                     s  ) s
+5 522 M
+(                   inv_1                    ip  ) s
+5 511 M
+(                   inv_1                    op  ) s
+5 500 M
+(                   inv_2                    ip  ) s
+5 489 M
+(                   inv_2                    op  ) s
+5 478 M
+(                   inv_4                    ip  ) s
+5 467 M
+(                   inv_4                    op  ) s
+5 456 M
+(                 invzp_1                     c  ) s
+5 445 M
+(                 invzp_1                    ip  ) s
+5 434 M
+(                 invzp_1                    op  ) s
+5 423 M
+(                 invzp_2                     c  ) s
+5 412 M
+(                 invzp_2                    ip  ) s
+5 401 M
+(                 invzp_2                    op  ) s
+5 390 M
+(                 invzp_4                     c  ) s
+5 379 M
+(                 invzp_4                    ip  ) s
+5 368 M
+(                 invzp_4                    op  ) s
+5 357 M
+(                  jkrp_2                    ck  ) s
+5 346 M
+(                  jkrp_2                     j  ) s
+5 335 M
+(                  jkrp_2                     k  ) s
+5 324 M
+(                  jkrp_2                     q  ) s
+5 313 M
+(                  jkrp_2                    qb  ) s
+5 302 M
+(                  jkrp_2                    rb  ) s
+5 291 M
+(                    lp_1                    ck  ) s
+5 280 M
+(                    lp_1                    ip  ) s
+5 269 M
+(                    lp_1                     q  ) s
+5 258 M
+(                    lp_2                    ck  ) s
+5 247 M
+(                    lp_2                    ip  ) s
+5 236 M
+(                    lp_2                     q  ) s
+5 225 M
+(                   lrp_1                    ck  ) s
+5 214 M
+(                   lrp_1                    ip  ) s
+5 203 M
+(                   lrp_1                     q  ) s
+5 192 M
+(                   lrp_1                    rb  ) s
+5 181 M
+(                   lrp_2                    ck  ) s
+5 170 M
+(                   lrp_2                    ip  ) s
+5 159 M
+(                   lrp_2                     q  ) s
+5 148 M
+(                   lrp_2                    rb  ) s
+5 137 M
+(                   lrp_4                    ck  ) s
+5 126 M
+(                   lrp_4                    ip  ) s
+5 115 M
+(                   lrp_4                     q  ) s
+5 104 M
+(                   lrp_4                    rb  ) s
+5 93 M
+(                  lrsp_1                    ck  ) s
+5 82 M
+(                  lrsp_1                    ip  ) s
+5 71 M
+(                  lrsp_1                     q  ) s
+5 60 M
+(                  lrsp_1                    rb  ) s
+5 49 M
+(                  lrsp_1                     s  ) s
+5 38 M
+(                  lrsp_2                    ck  ) s
+5 27 M
+(                  lrsp_2                    ip  ) s
+5 16 M
+(                  lrsp_2                     q  ) s
+5 5 M
+(                  lrsp_2                    rb  ) s
+_R
+S
+%%Page: (11) 11
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 11 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (11) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(                  lrsp_2                     s  ) s
+5 676 M
+(                  lrsp_4                    ck  ) s
+5 665 M
+(                  lrsp_4                    ip  ) s
+5 654 M
+(                  lrsp_4                     q  ) s
+5 643 M
+(                  lrsp_4                    rb  ) s
+5 632 M
+(                  lrsp_4                     s  ) s
+5 621 M
+(                  mux2_1                   ip1  ) s
+5 610 M
+(                  mux2_1                   ip2  ) s
+5 599 M
+(                  mux2_1                    op  ) s
+5 588 M
+(                  mux2_1                     s  ) s
+5 577 M
+(                  mux2_2                   ip1  ) s
+5 566 M
+(                  mux2_2                   ip2  ) s
+5 555 M
+(                  mux2_2                    op  ) s
+5 544 M
+(                  mux2_2                     s  ) s
+5 533 M
+(                  mux2_4                   ip1  ) s
+5 522 M
+(                  mux2_4                   ip2  ) s
+5 511 M
+(                  mux2_4                    op  ) s
+5 500 M
+(                  mux2_4                     s  ) s
+5 489 M
+(                  mux3_2                   ip1  ) s
+5 478 M
+(                  mux3_2                   ip2  ) s
+5 467 M
+(                  mux3_2                   ip3  ) s
+5 456 M
+(                  mux3_2                    op  ) s
+5 445 M
+(                  mux3_2                    s0  ) s
+5 434 M
+(                  mux3_2                    s1  ) s
+5 423 M
+(                  mux4_2                   ip1  ) s
+5 412 M
+(                  mux4_2                   ip2  ) s
+5 401 M
+(                  mux4_2                   ip3  ) s
+5 390 M
+(                  mux4_2                   ip4  ) s
+5 379 M
+(                  mux4_2                    op  ) s
+5 368 M
+(                  mux4_2                    s0  ) s
+5 357 M
+(                  mux4_2                    s1  ) s
+5 346 M
+(                 nand2_1                   ip1  ) s
+5 335 M
+(                 nand2_1                   ip2  ) s
+5 324 M
+(                 nand2_1                    op  ) s
+5 313 M
+(                 nand2_2                   ip1  ) s
+5 302 M
+(                 nand2_2                   ip2  ) s
+5 291 M
+(                 nand2_2                    op  ) s
+5 280 M
+(                 nand2_4                   ip1  ) s
+5 269 M
+(                 nand2_4                   ip2  ) s
+5 258 M
+(                 nand2_4                    op  ) s
+5 247 M
+(                 nand3_1                   ip1  ) s
+5 236 M
+(                 nand3_1                   ip2  ) s
+5 225 M
+(                 nand3_1                   ip3  ) s
+5 214 M
+(                 nand3_1                    op  ) s
+5 203 M
+(                 nand3_2                   ip1  ) s
+5 192 M
+(                 nand3_2                   ip2  ) s
+5 181 M
+(                 nand3_2                   ip3  ) s
+5 170 M
+(                 nand3_2                    op  ) s
+5 159 M
+(                 nand3_4                   ip1  ) s
+5 148 M
+(                 nand3_4                   ip2  ) s
+5 137 M
+(                 nand3_4                   ip3  ) s
+5 126 M
+(                 nand3_4                    op  ) s
+5 115 M
+(                 nand4_1                   ip1  ) s
+5 104 M
+(                 nand4_1                   ip2  ) s
+5 93 M
+(                 nand4_1                   ip3  ) s
+5 82 M
+(                 nand4_1                   ip4  ) s
+5 71 M
+(                 nand4_1                    op  ) s
+5 60 M
+(                 nand4_2                   ip1  ) s
+5 49 M
+(                 nand4_2                   ip2  ) s
+5 38 M
+(                 nand4_2                   ip3  ) s
+5 27 M
+(                 nand4_2                   ip4  ) s
+5 16 M
+(                 nand4_2                    op  ) s
+5 5 M
+(                 nand4_4                   ip1  ) s
+_R
+S
+%%Page: (12) 12
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 12 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (12) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(                 nand4_4                   ip2  ) s
+5 676 M
+(                 nand4_4                   ip3  ) s
+5 665 M
+(                 nand4_4                   ip4  ) s
+5 654 M
+(                 nand4_4                    op  ) s
+5 643 M
+(                  nor2_1                   ip1  ) s
+5 632 M
+(                  nor2_1                   ip2  ) s
+5 621 M
+(                  nor2_1                    op  ) s
+5 610 M
+(                  nor2_2                   ip1  ) s
+5 599 M
+(                  nor2_2                   ip2  ) s
+5 588 M
+(                  nor2_2                    op  ) s
+5 577 M
+(                  nor2_4                   ip1  ) s
+5 566 M
+(                  nor2_4                   ip2  ) s
+5 555 M
+(                  nor2_4                    op  ) s
+5 544 M
+(                  nor3_1                   ip1  ) s
+5 533 M
+(                  nor3_1                   ip2  ) s
+5 522 M
+(                  nor3_1                   ip3  ) s
+5 511 M
+(                  nor3_1                    op  ) s
+5 500 M
+(                  nor3_2                   ip1  ) s
+5 489 M
+(                  nor3_2                   ip2  ) s
+5 478 M
+(                  nor3_2                   ip3  ) s
+5 467 M
+(                  nor3_2                    op  ) s
+5 456 M
+(                  nor3_4                   ip1  ) s
+5 445 M
+(                  nor3_4                   ip2  ) s
+5 434 M
+(                  nor3_4                   ip3  ) s
+5 423 M
+(                  nor3_4                    op  ) s
+5 412 M
+(                  nor4_1                   ip1  ) s
+5 401 M
+(                  nor4_1                   ip2  ) s
+5 390 M
+(                  nor4_1                   ip3  ) s
+5 379 M
+(                  nor4_1                   ip4  ) s
+5 368 M
+(                  nor4_1                    op  ) s
+5 357 M
+(                  nor4_2                   ip1  ) s
+5 346 M
+(                  nor4_2                   ip2  ) s
+5 335 M
+(                  nor4_2                   ip3  ) s
+5 324 M
+(                  nor4_2                   ip4  ) s
+5 313 M
+(                  nor4_2                    op  ) s
+5 302 M
+(                  nor4_4                   ip1  ) s
+5 291 M
+(                  nor4_4                   ip2  ) s
+5 280 M
+(                  nor4_4                   ip3  ) s
+5 269 M
+(                  nor4_4                   ip4  ) s
+5 258 M
+(                  nor4_4                    op  ) s
+5 247 M
+(        not_ab_or_c_or_d                   ip1  ) s
+5 236 M
+(        not_ab_or_c_or_d                   ip2  ) s
+5 225 M
+(        not_ab_or_c_or_d                   ip3  ) s
+5 214 M
+(        not_ab_or_c_or_d                   ip4  ) s
+5 203 M
+(        not_ab_or_c_or_d                    op  ) s
+5 192 M
+(                   or2_1                   ip1  ) s
+5 181 M
+(                   or2_1                   ip2  ) s
+5 170 M
+(                   or2_1                    op  ) s
+5 159 M
+(                   or2_2                   ip1  ) s
+5 148 M
+(                   or2_2                   ip2  ) s
+5 137 M
+(                   or2_2                    op  ) s
+5 126 M
+(                   or2_4                   ip1  ) s
+5 115 M
+(                   or2_4                   ip2  ) s
+5 104 M
+(                   or2_4                    op  ) s
+5 93 M
+(                   or3_1                   ip1  ) s
+5 82 M
+(                   or3_1                   ip2  ) s
+5 71 M
+(                   or3_1                   ip3  ) s
+5 60 M
+(                   or3_1                    op  ) s
+5 49 M
+(                   or3_2                   ip1  ) s
+5 38 M
+(                   or3_2                   ip2  ) s
+5 27 M
+(                   or3_2                   ip3  ) s
+5 16 M
+(                   or3_2                    op  ) s
+5 5 M
+(                   or3_4                   ip1  ) s
+_R
+S
+%%Page: (13) 13
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 13 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (13) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(                   or3_4                   ip2  ) s
+5 676 M
+(                   or3_4                   ip3  ) s
+5 665 M
+(                   or3_4                    op  ) s
+5 654 M
+(                   or4_1                   ip1  ) s
+5 643 M
+(                   or4_1                   ip2  ) s
+5 632 M
+(                   or4_1                   ip3  ) s
+5 621 M
+(                   or4_1                   ip4  ) s
+5 610 M
+(                   or4_1                    op  ) s
+5 599 M
+(                   or4_2                   ip1  ) s
+5 588 M
+(                   or4_2                   ip2  ) s
+5 577 M
+(                   or4_2                   ip3  ) s
+5 566 M
+(                   or4_2                   ip4  ) s
+5 555 M
+(                   or4_2                    op  ) s
+5 544 M
+(                   or4_4                   ip1  ) s
+5 533 M
+(                   or4_4                   ip2  ) s
+5 522 M
+(                   or4_4                   ip3  ) s
+5 511 M
+(                   or4_4                   ip4  ) s
+5 500 M
+(                   or4_4                    op  ) s
+5 489 M
+(                 xnor2_1                   ip1  ) s
+5 478 M
+(                 xnor2_1                   ip2  ) s
+5 467 M
+(                 xnor2_1                    op  ) s
+5 456 M
+(                 xnor2_2                   ip1  ) s
+5 445 M
+(                 xnor2_2                   ip2  ) s
+5 434 M
+(                 xnor2_2                    op  ) s
+5 423 M
+(                  xor2_1                   ip1  ) s
+5 412 M
+(                  xor2_1                   ip2  ) s
+5 401 M
+(                  xor2_1                    op  ) s
+5 390 M
+(                  xor2_2                   ip1  ) s
+5 379 M
+(                  xor2_2                   ip2  ) s
+5 368 M
+(                  xor2_2                    op  ) s
+5 357 M
+(                  padgnd                   pad  ) s
+5 346 M
+(          padbidirhe_025                    di  ) s
+5 335 M
+(          padbidirhe_025                   dib  ) s
+5 324 M
+(          padbidirhe_025                    do  ) s
+5 313 M
+(          padbidirhe_025                   oeb  ) s
+5 302 M
+(          padbidirhe_025                   pad  ) s
+5 291 M
+(                  padinc                    di  ) s
+5 280 M
+(                  padinc                   dib  ) s
+5 269 M
+(                  padinc                   pad  ) s
+5 258 M
+(                   padio                  data  ) s
+5 247 M
+(                   padio                   pad  ) s
+5 236 M
+(                  padout                    di  ) s
+5 225 M
+(                  padout                   dib  ) s
+5 214 M
+(                  padout                    do  ) s
+5 203 M
+(                  padout                   pad  ) s
+5 192 M
+(                  padvdd                   pad  ) s
+5 181 M
+(            padnoconnect                   pad  338  ) s
+5 170 M
+(# Pins Missing Direction: 0  ) s
+5 159 M
+(Antenna Summary Report: ) s
+5 148 M
+(    General Caution:) s
+5 137 M
+(        1\) All Antenna Constructs are absent for the layer section of LEF.) s
+5 126 M
+(        2\) All Antenna Constructs are absent for the macro section of LEF.For more info) s
+5 115 M
+(rmation click here  ) s
+5 104 M
+(# Cells Missing LEF Info: 0  ) s
+5 93 M
+(# Cells with Dimension Errors: 0  ) s
+5 71 M
+(==============================) s
+5 60 M
+(Netlist Information) s
+5 49 M
+(==============================) s
+5 38 M
+(# HFO \(>200\) Nets: 0  ) s
+5 27 M
+(# No-driven Nets: 16  ) s
+5 16 M
+(    General Caution:) s
+5 5 M
+(        1\) TODO) s
+_R
+S
+%%Page: (14) 14
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 14 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (14) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(    No-driven Nets  ) s
+5 676 M
+(    N35  ) s
+5 665 M
+(    N34  ) s
+5 654 M
+(    N33  ) s
+5 643 M
+(    N25  ) s
+5 632 M
+(    N24  ) s
+5 621 M
+(    N23  ) s
+5 610 M
+(    i_0  ) s
+5 599 M
+(    i_1  ) s
+5 588 M
+(    i_2  ) s
+5 577 M
+(    ireg_b_wr  ) s
+5 566 M
+(    reg_b_wr  ) s
+5 555 M
+(    reg_a_wr  ) s
+5 544 M
+(    q_en  ) s
+5 533 M
+(    i[3]  ) s
+5 522 M
+(    i[4]  ) s
+5 511 M
+(    i[5]  ) s
+5 500 M
+(# Multi-driven Nets: 0  ) s
+5 489 M
+(# Assign Statements: 16  ) s
+5 478 M
+(    General Caution:) s
+5 467 M
+(        1\) The assignment statements can impact CTS and IPO.) s
+5 456 M
+(        2\) You can use "setDoAssign" properly to slove the problem.) s
+5 445 M
+(    ) s
+5 434 M
+(    Verilog File Name: controller_synth.v  ) s
+5 423 M
+(    Module Name: controller  ) s
+5 412 M
+(    ireg_b_wr = ireg_a_wr  ) s
+5 401 M
+(    q_sel[1] = N35  ) s
+5 390 M
+(    q_sel[0] = N34  ) s
+5 379 M
+(    f_sel[0] = N33  ) s
+5 368 M
+(    r_sel[1] = N25  ) s
+5 357 M
+(    r_sel[0] = N24  ) s
+5 346 M
+(    f_sel[1] = N23  ) s
+5 335 M
+(    reg_a_wr = cp  ) s
+5 324 M
+(    reg_b_wr = reg_a_wr  ) s
+5 313 M
+(    func_sel[0] = i[3]  ) s
+5 302 M
+(    func_sel[1] = i[4]  ) s
+5 291 M
+(    func_sel[2] = i[5]  ) s
+5 280 M
+(    i_0 = i[0]  ) s
+5 269 M
+(    i_1 = i[1]  ) s
+5 258 M
+(    i_2 = i[2]  ) s
+5 247 M
+(    zero = 1'b0  ) s
+5 236 M
+(Is Design Uniquified: YES  ) s
+5 225 M
+(# Pins in Netlist without timing lib: ) s
+5 214 M
+(    ------------------------------) s
+5 203 M
+(    Pins in Netlist without timing lib) s
+5 192 M
+(    ------------------------------) s
+5 181 M
+(    Cell Name  List of Pin Name  ) s
+5 170 M
+(    inv_1  ip  ) s
+5 159 M
+(    inv_1  op  ) s
+5 148 M
+(    inv_2  ip  ) s
+5 137 M
+(    inv_2  op  ) s
+5 126 M
+(    inv_4  ip  ) s
+5 115 M
+(    inv_4  op  ) s
+5 104 M
+(    invzp_1  c  ) s
+5 93 M
+(    invzp_1  ip  ) s
+5 82 M
+(    invzp_1  op  ) s
+5 71 M
+(    mux2_1  ip1  ) s
+5 60 M
+(    mux2_1  ip2  ) s
+5 49 M
+(    mux2_1  op  ) s
+5 38 M
+(    mux2_1  s  ) s
+5 27 M
+(    nand2_1  ip1  ) s
+5 16 M
+(    nand2_1  ip2  ) s
+5 5 M
+(    nand2_1  op  ) s
+_R
+S
+%%Page: (15) 15
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 15 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (15) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(    nand2_2  ip1  ) s
+5 676 M
+(    nand2_2  ip2  ) s
+5 665 M
+(    nand2_2  op  ) s
+5 654 M
+(    nand4_1  ip1  ) s
+5 643 M
+(    nand4_1  ip2  ) s
+5 632 M
+(    nand4_1  ip3  ) s
+5 621 M
+(    nand4_1  ip4  ) s
+5 610 M
+(    nand4_1  op  ) s
+5 599 M
+(    nor2_1  ip1  ) s
+5 588 M
+(    nor2_1  ip2  ) s
+5 577 M
+(    nor2_1  op  ) s
+5 566 M
+(    nor2_2  ip1  ) s
+5 555 M
+(    nor2_2  ip2  ) s
+5 544 M
+(    nor2_2  op  ) s
+5 533 M
+(    nor2_4  ip1  ) s
+5 522 M
+(    nor2_4  ip2  ) s
+5 511 M
+(    nor2_4  op  ) s
+5 500 M
+(    nor3_1  ip1  ) s
+5 489 M
+(    nor3_1  ip2  ) s
+5 478 M
+(    nor3_1  ip3  ) s
+5 467 M
+(    nor3_1  op  ) s
+5 456 M
+(    nor4_1  ip1  ) s
+5 445 M
+(    nor4_1  ip2  ) s
+5 434 M
+(    nor4_1  ip3  ) s
+5 423 M
+(    nor4_1  ip4  ) s
+5 412 M
+(    nor4_1  op  ) s
+5 401 M
+(    or2_1  ip1  ) s
+5 390 M
+(    or2_1  ip2  ) s
+5 379 M
+(    or2_1  op  45  ) s
+5 357 M
+(==============================) s
+5 335 M
+(==============================) s
+5 324 M
+(: Internal  External  ) s
+5 313 M
+(No of Nets:        147           0  ) s
+5 302 M
+(No of Connections:        269           0  ) s
+5 291 M
+(Total Net Length \(X\): 3.2539e+03  0.0000e+00  ) s
+5 280 M
+(Total Net Length \(Y\): 1.9172e+03  0.0000e+00  ) s
+5 269 M
+(Total Net Length: 5.1711e+03  0.0000e+00  ) s
+5 247 M
+(==============================) s
+5 236 M
+(Timing Information) s
+5 225 M
+(==============================) s
+5 214 M
+(# Clocks in design: 0  ) s
+5 203 M
+(# Generated clocks: 0  ) s
+5 192 M
+(# "dont_use" cells from .libs: 0  ) s
+5 181 M
+(# "dont_touch" cells from .libs: 0  ) s
+5 170 M
+(# Cells in .lib with max_tran: 0  ) s
+5 159 M
+(# Cells in .lib with max_cap: 0  ) s
+5 148 M
+(# Cells in .lib with max_fanout: 0  ) s
+5 137 M
+(SDC max_cap: N/A  ) s
+5 126 M
+(SDC max_tran: N/A  ) s
+5 115 M
+(SDC max_fanout: N/A  ) s
+5 104 M
+(Default Ext. Scale Factor: 1.000  ) s
+5 93 M
+(Detail Ext. Scale Factor: 1.000  ) s
+5 71 M
+(==============================) s
+5 60 M
+(Floorplan/Placement Information) s
+5 49 M
+(==============================) s
+5 38 M
+(Total area of Standard cells: 6695.136 um^2  ) s
+5 27 M
+(Total area of Standard cells\(Subtracting Physical Cells\): 6695.136 um^2  ) s
+5 16 M
+(Total area of Macros: 0.000 um^2  ) s
+5 5 M
+(Total area of Blockages: 0.000 um^2  ) s
+_R
+S
+%%Page: (16) 16
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 16 def
+/fname (summaryReport.rpt) def
+/fdir (.) def
+/ftail (summaryReport.rpt) def
+% User defined strings:
+/fmodstr (Thu May 02 17:37:57 2019) def
+/pagenumstr (16) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 687 M
+(Total area of Pad cells: 0.000 um^2  ) s
+5 676 M
+(Total area of Core: 10233.216 um^2  ) s
+5 665 M
+(Total area of Chip: 10233.216 um^2  ) s
+5 654 M
+(Effective Utilization: 6.8562e-01  ) s
+5 643 M
+(Number of Cell Rows: 2  ) s
+5 632 M
+(% Pure Gate Density #1 \(Subtracting BLOCKAGES\): 65.426%  ) s
+5 621 M
+(% Pure Gate Density #2 \(Subtracting BLOCKAGES and Physical Cells\): 65.426%  ) s
+5 610 M
+(% Pure Gate Density #3 \(Subtracting MACROS\): 65.426%  ) s
+5 599 M
+(% Pure Gate Density #4 \(Subtracting MACROS and Physical Cells\): 65.426%  ) s
+5 588 M
+(% Pure Gate Density #5 \(Subtracting MACROS and BLOCKAGES\): 65.426%  ) s
+5 577 M
+(% Pure Gate Density #6 \(Subtracting MACROS and BLOCKAGES and Physical Cells\): 65.426%  ) s
+5 566 M
+(% Core Density \(Counting Std Cells and MACROs\): 65.426%  ) s
+5 555 M
+(% Core Density #2\(Subtracting Physical Cells\): 65.426%  ) s
+5 544 M
+(% Chip Density \(Counting Std Cells and MACROs and IOs\): 65.426%  ) s
+5 533 M
+(% Chip Density #2\(Subtracting Physical Cells\): 65.426%  ) s
+5 522 M
+(# Macros within 5 sites of IO pad: No  ) s
+5 511 M
+(Macro halo defined?: No  ) s
+5 489 M
+(==============================) s
+5 478 M
+(Wire Length Distribution) s
+5 467 M
+(==============================) s
+5 456 M
+(Total metal1 wire length: 355.6800 um  ) s
+5 445 M
+(Total metal2 wire length: 1630.3200 um  ) s
+5 434 M
+(Total metal3 wire length: 2634.9000 um  ) s
+5 423 M
+(Total metal4 wire length: 186.6600 um  ) s
+5 412 M
+(Total metal5 wire length: 476.2800 um  ) s
+5 401 M
+(Total wire length: 5283.8400 um  ) s
+5 390 M
+(Average wire length/net: 31.4514 um  ) s
+5 379 M
+(Area of Power Net Distribution: ) s
+5 368 M
+(    ------------------------------) s
+5 357 M
+(    Area of Power Net Distribution) s
+5 346 M
+(    ------------------------------) s
+5 335 M
+(    Layer Name  Area of Power Net  Routable Area  Percentage  ) s
+5 324 M
+(    metal1  892.4256  10233.2160  8.7209%  ) s
+5 313 M
+(    metal2  130.6368  10233.2160  1.2766%  ) s
+5 302 M
+(    metal3  0.0000  10233.2160  0.0000%  ) s
+5 291 M
+(    metal4  0.0000  10233.2160  0.0000%  ) s
+5 280 M
+(    metal5  0.0000  10233.2160  0.0000%  For more information click here  ) s
+_R
+S
+%%Trailer
+%%Pages: 16
+%%DocumentNeededResources: font Courier-Bold Courier 
+%%EOF

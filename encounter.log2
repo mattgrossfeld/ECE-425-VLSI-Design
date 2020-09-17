@@ -1,0 +1,3347 @@
+Checking out Encounter license ...
+	edsxl		DENIED:		"Encounter_Digital_Impl_Sys_XL"
+	edsl		DENIED:		"Encounter_Digital_Impl_Sys_L"
+	encblk		DENIED:		"Encounter_Block"
+	fegxl		DENIED:		"First_Encounter_GXL"
+	fexl		DENIED:		"FE_GPS"
+	nru		DENIED:		"NanoRoute_Ultra"
+	vdixl		DENIED:		"Virtuoso_Digital_Implem_XL"
+	vdi		CHECKED OUT:	"Virtuoso_Digital_Implem"
+Virtuoso_Digital_Implem 14.2 license checkout succeeded.
+	Maximum number of instance allowed (1 x 50000).
+**ERROR: (ENCOAX-142):	Could not open shared library libfeoax22.so : liboaDesign.so: cannot open shared object file: No such file or directory
+
+**ERROR: (ENCOAX-142):	OA features will be disabled in this session.
+
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2014.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Encounter v14.28-s033_1 (64bit) 03/21/2016 13:34 (Linux 2.6.18-194.el5)
+@(#)CDS: NanoRoute v14.28-s005 NR160313-1959/14_28-UB (database version 2.30, 267.6.1) {superthreading v1.25}
+@(#)CDS: CeltIC v14.28-s006_1 (64bit) 03/08/2016 00:08:23 (Linux 2.6.18-194.el5)
+@(#)CDS: AAE 14.28-s002 (64bit) 03/21/2016 (Linux 2.6.18-194.el5)
+@(#)CDS: CTE 14.28-s007_1 (64bit) Mar  7 2016 23:11:05 (Linux 2.6.18-194.el5)
+@(#)CDS: CPE v14.28-s006
+@(#)CDS: IQRC/TQRC 14.2.2-s217 (64bit) Wed Apr 15 23:10:24 PDT 2015 (Linux 2.6.18-194.el5)
+@(#)CDS: OA 22.50-p011 Tue Nov 11 03:24:55 2014
+@(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+@(#)CDS: RCDB 11.5
+--- Starting "Encounter v14.28-s033_1" on Thu May  2 17:19:45 2019 (mem=95.3M) ---
+--- Running on linux-06.ews.illinois.edu (x86_64 w/Linux 3.10.0-957.12.1.el7.x86_64) ---
+This version was compiled on Mon Mar 21 13:34:48 PDT 2016.
+Set DBUPerIGU to 1000.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+**ERROR: (ENCSYT-6689):	Invalid return code while sourcing "/software/cadence-Aug2016/IC617/share/lpa/etc/lpawrapper/tcl/InShape/Encounter.tcl". Check and correct your Tcl script regarding below message:
+ couldn't read file "/software/cadence-Aug2016/IC617/tools.lnx86/bin/../tools.lnx86/lpa/bin/64bit/etc/lpawrapper/tcl/InShape/FixingHint.tcl": no such file or directory
+<CMD> win
+<CMD> setImportMode -treatUndefinedCellAsBbox 0 -keepEmptyModule 1 -useLefDef56 1
+<CMD> init_design
+**ERROR: (ENCOAX-820):	The OA features are disabled in the current session of Encounter because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Encounter either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+
+**ERROR: (ENCOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+
+Loading LEF file vtvt/vtvt_tsmc250_lef/vtvt_tsmc250.lef ...
+**WARN: (ENCLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M2 pitch 108.
+
+viaInitial starts at Thu May  2 17:20:02 2019
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN1 GENERATE.
+Type 'man ENCPP-557' for more detail.
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN2 GENERATE.
+Type 'man ENCPP-557' for more detail.
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN3 GENERATE.
+Type 'man ENCPP-557' for more detail.
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN4 GENERATE.
+Type 'man ENCPP-557' for more detail.
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN5 GENERATE.
+Type 'man ENCPP-557' for more detail.
+viaInitial ends at Thu May  2 17:20:02 2019
+*** Begin netlist parsing (mem=343.3M) ***
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'controller_synth.v'
+
+*** Memory Usage v#1 (Current mem = 344.301M, initial mem = 95.340M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=344.3M) ***
+Set top cell to controller.
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.09min, fe_real=0.37min, fe_mem=344.3M) ***
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell controller ...
+*** Netlist is unique.
+** info: there are 94 modules.
+** info: there are 112 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 350.051M, initial mem = 95.340M) ***
+*info: set bottom ioPad orient R0
+**WARN: (ENCFP-3961):	The techSite 'CornerSite' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+Type 'man ENCFP-3961' for more detail.
+**WARN: (ENCFP-3961):	The techSite 'IOSite' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+Type 'man ENCFP-3961' for more detail.
+Generated pitch 1.62 in metal5 is different from 2.16 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Input Pin Transition Delay as 0.1 ps.
+
+**WARN: (ENCSYT-7328):	The design has been initialized in physical-only mode because the init_mmmc_file global variable was not defined. Timing analysis will not be possible within this session. You can only use commands that do not depend on timing data. If you need to use timing, you need to restart with an init_mmmc_file to define the timing setup, or you can save this design and use restore_design -mmmc_file <viewDef.tcl> to add the timing setup information.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   ENCLF-108            1  There is no overlap layer defined in any...
+WARNING   ENCFP-3961           2  The techSite '%s' has no related cells i...
+WARNING   ENCSYT-7328          1  The design has been initialized in physi...
+WARNING   ENCPP-557            5  A single-layer VIARULE GENERATE for turn...
+ERROR     ENCOAX-820           1  The OA features are disabled in the curr...
+ERROR     ENCOAX-850           1  %s command cannot be run as OA features ...
+*** Message Summary: 9 warning(s), 2 error(s)
+
+<CMD> defIn am2901.def
+Reading DEF file 'am2901.def', current time is Thu May  2 17:20:09 2019 ...
+--- DIVIDERCHAR '/'
+**WARN: (ENCDF-64):	UnitsPerDBU is not unity (you may have rounding problems).
+--- UnitsPerDBU = 10.0000
+Generated pitch 1.62 in metal5 is different from 2.16 defined in technology file in preferred direction.
+--- DIEAREA (0 2040) (33840 5064)
+**WARN: (ENCDF-200):	Instance I30 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I29 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I28 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I27 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I26 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I25 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I24 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I23 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I22 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I21 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I20 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I10 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I1 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I11 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I17 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I2 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I16 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I18 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I3 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I19 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (EMS-63):	Message <ENCDF-200> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (ENCDF-248):	The direction of pin 'zero' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-244):	Pin 'd[3]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'inv_s' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'inv_r' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'f[3]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (ENCDF-244):	Pin 'q3_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'p[1]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'f_sel[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'f_sel[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-244):	Pin 'f0_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'p[2]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'q_sel[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'q_sel[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'q_master_en' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'iq_master_en' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'q_slave_en' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'iq_slave_en' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-244):	Pin 'q0_out' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'reg_a_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'ireg_a_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'reg_b_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'ireg_b_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'ireg_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-244):	Pin 'f3_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'select_a_hi[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (EMS-63):	Message <ENCDF-248> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (ENCDF-244):	Pin 'cin' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'y[3]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'vdd!' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'gnd!' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'q0_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'q3_out' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'y[2]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'y[1]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'y[0]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'd[2]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'd[1]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'd[0]' is not created because it's not in the netlist and also not a P/G pin.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+**WARN: (ENCDF-147):	Net 'd[3]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'q3_in' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'f0_in' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'q0_out' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'f3_in' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'cin' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'y[3]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'vdd!' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'gnd!' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'q0_in' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'q3_out' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'y[2]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'y[1]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'y[0]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'd[2]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'd[1]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'd[0]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+DEF file 'am2901.def' is parsed, current time is Thu May  2 17:20:09 2019.
+<CMD> fit
+<CMD> setDrawView fplan
+<CMD> uiSetTool ptnPinBlk
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> panPage 0 -1
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> zoomIn
+<CMD> panPage 0 -1
+<CMD> panPage 1 0
+<CMD> zoomIn
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> createPinBlkg -area 0.010 20.120 338.400 20.460
+<CMD> uiSetTool moveWire
+<CMD> uiSetTool move
+<CMD> setObjFPlanBox PtnPinBlk (0,2010,33840,2046) 0.000 20.320 338.400 20.460
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> setObjFPlanBox PtnPinBlk (0,2034,33840,2048) 0.000 20.320 338.400 20.480
+<CMD> undo
+<CMD> zoomIn
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 0 1
+<CMD> panPage 1 0
+<CMD> zoomIn
+<CMD> setObjFPlanBox PtnPinBlk (0,2034,33840,2048) 0.000 20.340 338.400 20.480
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomIn
+<CMD> uiSetTool layerBlk
+<CMD> createRouteBlk -box 1.530 21.160 2.130 22.060
+<CMD> uiSetTool move
+<CMD> setObjFPlanBox LayerShape (150,2118,210,2208) 0.000 21.180 2.100 22.080
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> panPage 0 -1
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> setObjFPlanBox LayerShape (0,2118,210,2208) 0.000 21.180 338.310 22.080
+<CMD> zoomIn
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> zoomIn
+<CMD> setObjFPlanBox LayerShape (0,2118,33828,2208) 0.000 14.520 338.280 22.080
+<CMD> selectRouteBlk -box 0.0000 20.4000 338.2800 27.9600 defLayerBlkName -layer 3
+<CMD> setObjFPlanBox LayerShape (0,2040,33828,2796) 0.26 14.22 338.54 21.78
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,2796) 0.55 12.33 338.83 19.89
+<CMD> setObjFPlanBox LayerShape (55,1233,33883,1989) 0.43 12.78 338.71 20.34
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> zoomOut
+<CMD> setObjFPlanBox LayerShape (43,1278,33871,2034) 0.430 16.350 338.710 20.340
+<CMD> setObjFPlanBox LayerShape (43,1635,33871,2034) 0.430 15.510 338.710 20.340
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> setObjFPlanBox LayerShape (43,1551,33871,2034) 0.430 15.510 338.710 20.500
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> zoomOut
+<CMD> undo
+<CMD> setObjFPlanBox LayerShape (43,1551,33871,2034) 0.430 15.510 338.710 20.480
+<CMD> undo
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> setObjFPlanBox LayerShape (43,1551,33871,2034) 0.22 15.79 338.5 20.62
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> zoomOut
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,2520) 0.120 18.820 338.400 25.200
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,2676) 0.52 16.55 338.8 22.91
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,2676) 0.73 14.62 339.01 20.98
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,2676) 0.12 13.31 338.4 19.67
+<CMD> setObjFPlanBox LayerShape (12,1331,33840,1967) 0.12 13.75 338.4 20.11
+<CMD> setObjFPlanBox LayerShape (12,1375,33840,2011) 0.120 13.750 338.400 20.650
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,2730) 0.5 14.23 338.78 21.13
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,2730) 0.120 20.400 338.400 30.330
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,3030) 0.12 11.03 338.4 20.93
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,3030) 1.18 11.06 339.46 20.96
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,3030) 2.54 9.06 340.82 18.96
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> setObjFPlanBox LayerShape (254,906,34082,1896) 2.540 9.060 340.820 21.170
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,3252) 1.04 11.88 339.32 24.0
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,3252) 4.35 11.31 342.63 23.43
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,3252) 0.120 20.400 338.400 40.140
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,4014) 3.5 0.13 341.78 19.87
+<CMD> setObjFPlanBox LayerShape (350,13,34178,1987) 3.5 1.61 341.78 21.35
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,4014) 0.120 20.400 338.400 41.400
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,4140) 8.35 -1.15 346.63 19.85
+<CMD> setObjFPlanBox LayerShape (835,-115,34663,1985) 8.35 0.54 346.63 21.54
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,4140) 0.120 2.320 338.400 41.400
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,5064) 0.55 -8.97 338.83 21.27
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,5064) -0.3 -11.28 337.98 18.96
+<CMD> zoomIn
+<CMD> uiSetTool getLocation Rda_Attr::Command:Set_coord
+<CMD> uiSetTool move
+<CMD> setObjFPlanBox LayerShape (-30,-1128,33798,1896) -0.86 -5.22 337.42 25.02
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> setObjFPlanBox LayerShape (0,2040,33828,5064) 0.99 -15.27 339.27 14.97
+<CMD> setObjFPlanBox LayerShape (99,-1527,33927,1497) 0.990 -15.270 339.270 4.290
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> setObjFPlanBox LayerShape (99,-1527,33927,429) 0.990 -15.270 339.270 4.220
+<CMD> setObjFPlanBox LayerShape (99,-1527,33927,422) 0.84 -1.82 339.12 17.67
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomIn
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> zoomIn
+<CMD> setObjFPlanBox LayerShape (84,-182,33912,1767) 0.07 -1.53 338.35 17.96
+<CMD> setObjFPlanBox LayerShape (7,-153,33835,1796) 0.0 -1.53 338.28 17.96
+<CMD> setSelectedRouteBlk 0.12 20.4 338.4 39.9 defLayerBlkName {{3 }} {Undefined ALLNET} {} {}
+<CMD> setSelectedRouteBlk 0.12 20.4 338.4 39.9 defLayerBlkName {{3 }} {Undefined ALLNET} {} {}
+<CMD> setSelectedRouteBlk 193.2 0.0 531.48 19.5 defLayerBlkName {{3 }} {Undefined ALLNET} {} {}
+<CMD> setSelectedRouteBlk 0.12 20.4 338.4 39.9 defLayerBlkName {{3 }} {Undefined ALLNET} {} {}
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,3990) 0.12 11.39 338.4 30.89
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,3990) 0.120 20.400 338.400 20.980
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> setObjFPlanBox LayerShape (12,2040,33840,2100) 0.0 20.4 338.28 21.0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> zoomIn
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> setObjFPlanBox LayerShape (0,2040,33828,2100) 0.000 20.400 338.400 21.000
+<CMD> setObjFPlanBox LayerShape (0,2040,33840,2100) 0.000 20.400 338.400 20.550
+<CMD> panPage -1 0
+<CMD> setObjFPlanBox LayerShape (0,2040,33840,2052) 0.000 20.400 338.400 20.580
+<CMD> setObjFPlanBox LayerShape (0,2040,33840,2058) 0.000 20.400 338.400 20.570
+<CMD> setObjFPlanBox LayerShape (0,2040,33840,2058) 0.000 20.400 338.400 20.560
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> uiSetTool layerBlk
+<CMD> panPage 0 -1
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> panPage 0 -1
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> createRouteBlk -box 0.000 -19.040 338.400 20.480
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> createRouteBlk -box 292.980 28.280 311.150 35.880
+<CMD> uiSetTool move
+<CMD> setObjFPlanBox LayerShape (29298,2826,31116,3588) 292.980 28.260 338.400 35.880
+<CMD> setObjFPlanBox LayerShape (0,2040,33840,2058) 1.69 20.4 340.09 20.58
+<CMD> undo
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> setObjFPlanBox LayerShape (29298,2826,33840,3588) 0.180 28.260 338.400 35.880
+<CMD> zoomIn
+<CMD> panPage 0 1
+<CMD> zoomIn
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 0 1
+<CMD> setObjFPlanBox LayerShape (18,2826,33840,3588) 0.010 28.260 338.400 35.880
+<CMD> deselectAll
+<CMD> selectRouteBlk -box 0.0000 28.2600 338.4000 35.8800 defLayerBlkName -layer 3
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> setObjFPlanBox LayerShape (0,2826,33840,3588) -0.03 12.51 338.37 20.13
+<CMD> setObjFPlanBox LayerShape (-3,1251,33837,2013) 0.06 12.72 338.46 20.34
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> setObjFPlanBox LayerShape (6,1272,33846,2034) 0.0 12.78 338.4 20.4
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> setObjFPlanBox LayerShape (0,1278,33840,2040) 0.000 -7.250 338.400 20.400
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> zoomOut
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> uiSetTool select
+<CMD> deselectAll
+**ERROR: (ENCSYT-6000):	No Object Selected.
+<CMD> selectObjByProp Pin And(<Status>=<Placed>,!<Name>Match<U>)
+<CMD> setPtnPinStatus -cell controller -pin ireg_b_wr -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin reg_b_wr -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin ireg_a_wr -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin reg_a_wr -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin ireg_wr -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin iq_slave_en -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin iq_master_en -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin q_slave_en -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin q_master_en -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin inv_r -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin inv_s -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin zero -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {q_sel[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {q_sel[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {f_sel[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {f_sel[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin y_sel -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {func_sel[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {func_sel[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {func_sel[2]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {s_sel[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {s_sel[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {r_sel[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {r_sel[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin reg_wr -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {p[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {p[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {p[2]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {p[3]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {c[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {c[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {c[2]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {c[3]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {f[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {f[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {f[2]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {f[3]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[2]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[3]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[4]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[5]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[6]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[7]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[8]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[9]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[10]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[11]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[12]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[13]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[14]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_b_hi[15]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[0]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[1]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[2]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[3]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[4]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[5]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[6]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[7]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[8]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[9]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[10]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[11]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[12]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[13]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[14]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD> setPtnPinStatus -cell controller -pin {select_a_hi[15]} -status fixed
+Processed 1 pins over 1 partitions.
+<CMD_INTERNAL> ptnSprRefreshPinsAndBlockages
+<CMD> deselectAll
+<CMD> set sprCreateIeStripeNets {}
+<CMD> set sprCreateIeStripeLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeSpacing 2.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit metal3 -max_same_layer_jog_length 0.96 -padcore_ring_bottom_layer_limit metal1 -set_to_set_distance 100 -skip_via_on_pin Standardcell -stacked_via_top_layer metal5 -padcore_ring_top_layer_limit metal3 -spacing 0.48 -merge_stripes_value 1.08 -layer metal2 -block_ring_bottom_layer_limit metal1 -width 1 -nets {vdd vss} -stacked_via_bottom_layer metal1
+
+**WARN: (ENCPP-151):	-width (1.000000) is not multiple of manufacturing grid (0.060000), setting to 1.020000.
+**WARN: (ENCPP-152):	-width (1.000000) is not an even multiple of manufacturing grid (0.060000), setting to 1.080000.
+**WARN: (ENCPP-151):	-set_to_set_distance (100.000000) is not multiple of manufacturing grid (0.060000), setting to 100.020000.
+Starting stripe generation ...
+Non-Default setAddStripeOption Settings :
+  NONE
+The core ring for vdd is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for vss is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+Stripe generation is complete; vias are now being generated.
+The power planner created 8 wires.
+*** Ending Stripe Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 454.3M) ***
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1 metal5 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1 metal5 } -nets { vdd vss } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1 metal5 }
+*** Begin SPECIAL ROUTE on Thu May  2 17:36:03 2019 ***
+SPECIAL ROUTE ran on directory: /home/grossfe2/ece425.work
+SPECIAL ROUTE ran on machine: linux-06.ews.illinois.edu (Linux 3.10.0-957.12.1.el7.x86_64 Xeon 2.40Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "vdd vss"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 5
+srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
+srouteFollowCorePinEnd set to 3
+srouteJogControl set to "preferWithChanges differentLayer"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 5
+srouteTopTargetLayerLimit set to 5
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1024.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 10 layers, 5 routing layers, 0 overlap layer
+Read in 85 macros, 14 used
+Read in 14 components
+  14 core components: 14 unplaced, 0 placed, 0 fixed
+Read in 85 physical pins
+  85 physical pins: 0 unplaced, 0 placed, 85 fixed
+Read in 38 logical pins
+Read in 1 blockages
+Read in 101 nets
+Read in 2 special nets, 2 routed
+Read in 85 terminals
+2 nets selected.
+
+Begin power routing ...
+Bad via found: M1_N
+Bad via found: M1_P
+Bad via found: M1_POLY
+Bad via found: NTAP
+**WARN: (ENCSR-1234):	Find 4 vias whose layer defination is incorrect before power routing.
+**WARN: (ENCSR-1253):	Cannot find any standard cell pin connected to net vdd.
+Run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND'.
+**WARN: (ENCSR-1254):	Cannot find any block pin of net vdd. Check netlist, or change option to include the pin.
+**WARN: (ENCSR-1256):	Cannot find any CORE class pad pin of net vdd. Change routing area or layer to include the expected pin, or check netlist, or change port class in LEF file.
+Type 'man ENCSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net vdd. Check net list, or change port class in LEF file, or change option to include pin in given range.
+**WARN: (ENCSR-1253):	Cannot find any standard cell pin connected to net vss.
+Run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND'.
+**WARN: (ENCSR-1254):	Cannot find any block pin of net vss. Check netlist, or change option to include the pin.
+**WARN: (ENCSR-1256):	Cannot find any CORE class pad pin of net vss. Change routing area or layer to include the expected pin, or check netlist, or change port class in LEF file.
+Type 'man ENCSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net vss. Check net list, or change port class in LEF file, or change option to include pin in given range.
+**WARN: (ENCSR-468):	Cannot find any standard cell pin connected to net vdd.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (ENCSR-468):	Cannot find any standard cell pin connected to net vdd.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+CPU time for FollowPin 0 seconds
+**WARN: (ENCSR-468):	Cannot find any standard cell pin connected to net vss.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (ENCSR-468):	Cannot find any standard cell pin connected to net vss.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+CPU time for FollowPin 0 seconds
+Bad via found: M1_N
+Bad via found: M1_P
+Bad via found: M1_POLY
+Bad via found: NTAP
+**WARN: (ENCSR-1234):	Find 4 vias whose layer defination is incorrect after power routing.
+  Number of IO ports routed: 0
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 0
+  Number of Core ports routed: 0  open: 3
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Followpin connections: 3
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1029.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 10 via definition ...
+ Updating DB with 85 io pins ...
+
+sroute post-processing starts at Thu May  2 17:36:03 2019
+The viaGen is rebuilding shadow vias for net vss.
+sroute post-processing ends at Thu May  2 17:36:03 2019
+
+sroute post-processing starts at Thu May  2 17:36:03 2019
+The viaGen is rebuilding shadow vias for net vdd.
+sroute post-processing ends at Thu May  2 17:36:03 2019
+sroute: Total CPU time used = 0:0:0
+sroute: Total Real time used = 0:0:0
+sroute: Total Memory used = 6.30 megs
+sroute: Total Peak Memory used = 460.56 megs
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> zoomOut
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> setPlaceMode -fp false
+<CMD> placeDesign
+**WARN: (ENCSP-9513):	Timing constraint file does not exist
+**WARN: (ENCSP-9514):	Non-TimingDriven placement will be performed.
+*** Starting placeDesign default flow ***
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 0 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.0) ***
+*** Starting "NanoPlace(TM) placement v#1 (mem=460.6M)" ...
+Options: clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+**WARN: (ENCSP-9042):	Scan chains were not defined, -ignoreScan option will be ignored.
+Define the scan chains before using this option.
+Type 'man ENCSP-9042' for more detail.
+#std cell=112 (0 fixed + 112 movable) #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=147 #term=416 #term/net=2.83, #fixedIo=0, #floatIo=0, #fixedPin=66, #floatPin=37
+stdCell: 112 single + 0 double + 0 multi
+Total standard cell length = 0.4428 (mm), area = 0.0067 (mm^2)
+Average module density = 0.686.
+Density for the design = 0.686.
+       = stdcell_area 410 sites (6695 um^2) / alloc_area 598 sites (9765 um^2).
+Pin Density = 1.015.
+            = total # of pins 416 / total Instance area 410.
+=== lastAutoLevel = 5 
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 3.261e+03 (2.81e+03 4.46e+02)
+              Est.  stn bbox = 3.340e+03 (2.89e+03 4.54e+02)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 462.6M
+Iteration  2: Total net bbox = 3.261e+03 (2.81e+03 4.46e+02)
+              Est.  stn bbox = 3.340e+03 (2.89e+03 4.54e+02)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 462.6M
+Iteration  3: Total net bbox = 3.321e+03 (2.71e+03 6.13e+02)
+              Est.  stn bbox = 3.432e+03 (2.82e+03 6.15e+02)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 462.6M
+Iteration  4: Total net bbox = 3.623e+03 (3.01e+03 6.12e+02)
+              Est.  stn bbox = 3.756e+03 (3.14e+03 6.14e+02)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 462.6M
+Iteration  5: Total net bbox = 3.561e+03 (2.95e+03 6.12e+02)
+              Est.  stn bbox = 3.715e+03 (3.10e+03 6.14e+02)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 462.6M
+Iteration  6: Total net bbox = 3.976e+03 (2.99e+03 9.88e+02)
+              Est.  stn bbox = 4.156e+03 (3.15e+03 1.00e+03)
+              cpu = 0:00:00.0 real = 0:00:01.0 mem = 462.6M
+*** cost = 3.976e+03 (2.99e+03 9.88e+02) (cpu for global=0:00:00.0) real=0:00:01.0***
+Info: 0 clock gating cells identified, 0 (on average) moved
+Core Placement runtime cpu: 0:00:00.0 real: 0:00:01.0
+**WARN: (ENCSP-9025):	No scan chain specified/traced.
+Type 'man ENCSP-9025' for more detail.
+*** Starting refinePlace (0:01:18 mem=462.6M) ***
+Total net length = 4.120e+03 (3.050e+03 1.070e+03) (ext = 2.491e+03)
+Move report: Detail placement moves 112 insts, mean move: 10.77 um, max move: 36.64 um
+	Max move on inst (U159): (74.60, 20.40) --> (111.24, 20.40)
+	Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 462.6MB
+Summary Report:
+Instances move: 112 (out of 112 movable)
+Mean displacement: 10.77 um
+Max displacement: 36.64 um (Instance: U159) (74.6, 20.4) -> (111.24, 20.4)
+	Length: 3 sites, height: 1 rows, site name: CoreSite, cell type: inv_2
+Total net length = 5.187e+03 (3.224e+03 1.963e+03) (ext = 3.151e+03)
+Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 462.6MB
+*** Finished refinePlace (0:01:18 mem=462.6M) ***
+Total net length = 5.218e+03 (3.221e+03 1.997e+03) (ext = 3.205e+03)
+*** End of Placement (cpu=0:00:00.1, real=0:00:01.0, mem=462.6M) ***
+default core: bins with density >  0.75 =    0 % ( 0 / 3 )
+Density distribution unevenness ratio = 0.000%
+Starting IO pin assignment...
+**WARN: (ENCPTN-1805):	100.00% of possible pin-positions on layer [2] on the bottom side of partition [controller] from (1.08, 20.40) to (338.04, 20.40) are blocked (by one or more of pin blockage(s), routing blockage(s), power stripes, cornerMask, etc.). This may impact the quality of pin assignment. Check if the pin-resources need to be freed up for pin-assignment.
+**WARN: (ENCPTN-1805):	100.00% of possible pin-positions on layer [4] on the bottom side of partition [controller] from (1.08, 20.40) to (338.04, 20.40) are blocked (by one or more of pin blockage(s), routing blockage(s), power stripes, cornerMask, etc.). This may impact the quality of pin assignment. Check if the pin-resources need to be freed up for pin-assignment.
+Completed IO pin assignment.
+Starting congestion repair ...
+*** Starting trialRoute (mem=462.6M) ***
+
+There are 0 guide points passed to trialRoute for fixed pins.
+There are 0 guide points passed to trialRoute for pinGroup/netGroup/pinGuide pins.
+Options:  -noPinGuide
+
+
+Phase 1a-1d Overflow: 0.00% H + 0.00% V (0:00:00.0 465.6M)
+
+Overflow: 0.00% H + 0.00% V (0:00:00.0 465.6M)
+
+Phase 1l Overflow: 0.00% H + 0.00% V (0:00:00.0 473.6M)
+
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  2:	0	 0.00%	3	 2.42%
+  3:	0	 0.00%	4	 3.23%
+  4:	0	 0.00%	7	 5.65%
+  5:	124	100.00%	110	88.71%
+
+
+Total length: 5.628e+03um, number of vias: 609
+M1(H) length: 0.000e+00um, number of vias: 301
+M2(V) length: 1.913e+03um, number of vias: 277
+M3(H) length: 3.443e+03um, number of vias: 31
+M4(V) length: 2.713e+02um, number of vias: 0
+M5(H) length: 0.000e+00um
+
+Peak Memory Usage was 473.6M 
+*** Finished trialRoute (cpu=0:00:00.0 mem=473.6M) ***
+
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+describeCongestion: hCong = 0.00 vCong = -nan
+Trial Route Overflow 0.000000(H) 0.000000(V).
+Start repairing congestion with level 1.
+Skipped repairing congestion.
+End of congRepair (cpu=0:00:00.0, real=0:00:00.0)
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0: 0, real = 0: 0: 2, mem = 462.6M **
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   ENCPTN-1805          2  %.2f%% of possible pin-positions on laye...
+WARNING   ENCSP-9513           1  Timing constraint file does not exist    
+WARNING   ENCSP-9514           1  Non-TimingDriven placement will be perfo...
+WARNING   ENCSP-9025           1  No scan chain specified/traced.          
+WARNING   ENCSP-9042           1  Scan chains were not defined, -ignoreSca...
+*** Message Summary: 6 warning(s), 0 error(s)
+
+<CMD> setNanoRouteMode -quiet -timingEngine {}
+<CMD> setNanoRouteMode -quiet -routeWithSiPostRouteFix 0
+<CMD> setNanoRouteMode -quiet -drouteStartIteration default
+<CMD> setNanoRouteMode -quiet -routeTopRoutingLayer default
+<CMD> setNanoRouteMode -quiet -routeBottomRoutingLayer default
+<CMD> setNanoRouteMode -quiet -drouteEndIteration default
+<CMD> setNanoRouteMode -quiet -routeWithTimingDriven false
+<CMD> setNanoRouteMode -quiet -routeWithSiDriven false
+Running Native NanoRoute ...
+<CMD> routeDesign -globalDetail
+#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 486.80 (MB), peak = 496.36 (MB)
+#WARNING (NRIG-96) Selected single pass global detail route "-globalDetail". Clock eco and post optimizations will not be run. See "man NRIG-96" for more details.
+Begin checking placement ... (start mem=462.6M, init mem=462.6M)
+*info: Placed = 112           
+*info: Unplaced = 0           
+Placement Density:68.56%(6695/9765)
+Finished checkPlace (cpu: total=0:00:00.0, vio checks=0:00:00.0; mem=462.6M)
+#**INFO: honoring user setting for routeWithTimingDriven set to false
+#**INFO: honoring user setting for routeWithSiDriven set to false
+
+changeUseClockNetStatus Option :  -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=462.6M) ***
+
+globalDetailRoute
+
+#setNanoRouteMode -routeWithSiDriven false
+#setNanoRouteMode -routeWithTimingDriven false
+#Start globalDetailRoute on Thu May  2 17:37:17 2019
+#
+#WARNING (NRDB-2005) SPECIAL_NET vdd has special wires but no definitions for instance pins or top level pins. This will cause routability problems later.
+#WARNING (NRDB-2005) SPECIAL_NET vss has special wires but no definitions for instance pins or top level pins. This will cause routability problems later.
+#WARNING (NRDB-976) The TRACK STEP 1.6200 for preferred direction tracks is smaller than the PITCH 2.1600 for LAYER metal5. This will cause routability problems for NanoRoute.
+#NanoRoute Version v14.28-s005 NR160313-1959/14_28-UB
+#Bottom routing layer is M1, bottom routing layer for shielding is M1, bottom shield layer is M1
+#Start routing data preparation.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal1 is not specified for width 0.360.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal2 is not specified for width 0.360.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal1 is not specified for width 0.360.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal2 is not specified for width 0.360.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal2 is not specified for width 0.360.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal3 is not specified for width 0.360.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal2 is not specified for width 0.360.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal3 is not specified for width 0.360.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal3 is not specified for width 0.360.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal4 is not specified for width 0.360.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal3 is not specified for width 0.360.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal4 is not specified for width 0.360.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal4 is not specified for width 0.360.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal5 is not specified for width 0.480.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal4 is not specified for width 0.360.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal5 is not specified for width 0.480.
+# metal1       H   Track-Pitch = 1.080    Line-2-Via Pitch = 0.840
+# metal2       V   Track-Pitch = 1.080    Line-2-Via Pitch = 0.960
+# metal3       H   Track-Pitch = 1.080    Line-2-Via Pitch = 0.960
+# metal4       V   Track-Pitch = 1.080    Line-2-Via Pitch = 0.960
+# metal5       H   Track-Pitch = 1.620    Line-2-Via Pitch = 1.140
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer metal2's pitch = 1.080.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 528.82 (MB), peak = 528.82 (MB)
+#Merging special wires...
+#Number of eco nets is 0
+#
+#Start data preparation...
+#
+#Data preparation is done on Thu May  2 17:37:18 2019
+#
+#Analyzing routing resource...
+#Routing resource analysis is done on Thu May  2 17:37:18 2019
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  Metal 1        H          27           0          63    92.06%
+#  Metal 2        V         313           0          63     0.00%
+#  Metal 3        H          27           0          63    33.33%
+#  Metal 4        V         313           0          63     0.00%
+#  Metal 5        H          18           0          63    33.33%
+#  --------------------------------------------------------------
+#  Total                    698       0.00%  315    31.75%
+#
+#
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 529.04 (MB), peak = 529.10 (MB)
+#
+#start global routing iteration 1...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 529.63 (MB), peak = 529.87 (MB)
+#
+#start global routing iteration 2...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 529.87 (MB), peak = 529.93 (MB)
+#
+#
+#Total number of trivial nets (e.g. < 2 pins) = 21 (skipped).
+#Total number of routable nets = 147.
+#Total number of nets in the design = 168.
+#
+#147 routable nets have only global wires.
+#
+#Routed nets constraints summary:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default             147  
+#-----------------------------
+#        Total             147  
+#-----------------------------
+#
+#Routing constraints summary of the whole design:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default             147  
+#-----------------------------
+#        Total             147  
+#-----------------------------
+#
+#
+#  Congestion Analysis: (blocked Gcells are excluded)
+#
+#                 OverCon          
+#                  #Gcell    %Gcell
+#     Layer           (1)   OverCon
+#  --------------------------------
+#   Metal 1      0(0.00%)   (0.00%)
+#   Metal 2      0(0.00%)   (0.00%)
+#   Metal 3      0(0.00%)   (0.00%)
+#   Metal 4      0(0.00%)   (0.00%)
+#   Metal 5      0(0.00%)   (0.00%)
+#  --------------------------------
+#     Total      0(0.00%)   (0.00%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 1
+#
+#Complete Global Routing.
+#Total wire length = 5821 um.
+#Total half perimeter of net bounding box = 5962 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 2278 um.
+#Total wire length on LAYER metal3 = 2603 um.
+#Total wire length on LAYER metal4 = 437 um.
+#Total wire length on LAYER metal5 = 503 um.
+#Total number of vias = 572
+#Up-Via Summary (total 572):
+#           
+#-----------------------
+#  Metal 1          292
+#  Metal 2          229
+#  Metal 3           45
+#  Metal 4            6
+#-----------------------
+#                   572 
+#
+#Max overcon = 0 track.
+#Total overcon = 0.00%.
+#Worst layer Gcell overcon rate = 0.00%.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 529.99 (MB), peak = 530.00 (MB)
+#
+#
+#Start data preparation for track assignment...
+#
+#Data preparation is done on Thu May  2 17:37:18 2019
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 530.02 (MB), peak = 530.02 (MB)
+#Start Track Assignment.
+#Done with 121 horizontal wires in 1 hboxes and 146 vertical wires in 1 hboxes.
+#Done with 36 horizontal wires in 1 hboxes and 20 vertical wires in 1 hboxes.
+#Complete Track Assignment.
+#Total wire length = 5572 um.
+#Total half perimeter of net bounding box = 5962 um.
+#Total wire length on LAYER metal1 = 19 um.
+#Total wire length on LAYER metal2 = 2181 um.
+#Total wire length on LAYER metal3 = 2474 um.
+#Total wire length on LAYER metal4 = 390 um.
+#Total wire length on LAYER metal5 = 508 um.
+#Total number of vias = 572
+#Up-Via Summary (total 572):
+#           
+#-----------------------
+#  Metal 1          292
+#  Metal 2          229
+#  Metal 3           45
+#  Metal 4            6
+#-----------------------
+#                   572 
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 497.65 (MB), peak = 532.04 (MB)
+#
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 4.11 (MB)
+#Total memory = 497.65 (MB)
+#Peak memory = 532.04 (MB)
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.71 (MB), peak = 532.04 (MB)
+#start 1st optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 2nd optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 3rd optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 4th optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 5th optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 6th optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 7th optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 8th optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 9th optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 10th optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 511.77 (MB), peak = 532.04 (MB)
+#start 11th optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 515.05 (MB), peak = 532.04 (MB)
+#start 12th optimization iteration ...
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 515.05 (MB), peak = 532.04 (MB)
+#Complete Detail Routing.
+#Total wire length = 5218 um.
+#Total half perimeter of net bounding box = 5962 um.
+#Total wire length on LAYER metal1 = 356 um.
+#Total wire length on LAYER metal2 = 1604 um.
+#Total wire length on LAYER metal3 = 2597 um.
+#Total wire length on LAYER metal4 = 184 um.
+#Total wire length on LAYER metal5 = 476 um.
+#Total number of vias = 606
+#Up-Via Summary (total 606):
+#           
+#-----------------------
+#  Metal 1          292
+#  Metal 2          277
+#  Metal 3           31
+#  Metal 4            6
+#-----------------------
+#                   606 
+#
+#Total number of DRC violations = 66
+#Total number of violations on LAYER metal1 = 0
+#Total number of violations on LAYER metal2 = 0
+#Total number of violations on LAYER metal3 = 66
+#Total number of violations on LAYER metal4 = 0
+#Total number of violations on LAYER metal5 = 0
+#Cpu time = 00:00:02
+#Elapsed time = 00:00:02
+#Increased memory = 17.42 (MB)
+#Total memory = 515.07 (MB)
+#Peak memory = 532.04 (MB)
+#
+#Start Post Routing Optimization.
+#start 1st post routing optimization iteration ...
+#    number of DRC violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:01, memory = 515.14 (MB), peak = 532.04 (MB)
+#Complete Post Routing Optimization.
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:01
+#Increased memory = 0.07 (MB)
+#Total memory = 515.14 (MB)
+#Peak memory = 532.04 (MB)
+#Total wire length = 5218 um.
+#Total half perimeter of net bounding box = 5962 um.
+#Total wire length on LAYER metal1 = 356 um.
+#Total wire length on LAYER metal2 = 1604 um.
+#Total wire length on LAYER metal3 = 2597 um.
+#Total wire length on LAYER metal4 = 184 um.
+#Total wire length on LAYER metal5 = 476 um.
+#Total number of vias = 606
+#Up-Via Summary (total 606):
+#           
+#-----------------------
+#  Metal 1          292
+#  Metal 2          277
+#  Metal 3           31
+#  Metal 4            6
+#-----------------------
+#                   606 
+#
+#Total number of DRC violations = 66
+#Total number of violations on LAYER metal1 = 0
+#Total number of violations on LAYER metal2 = 0
+#Total number of violations on LAYER metal3 = 66
+#Total number of violations on LAYER metal4 = 0
+#Total number of violations on LAYER metal5 = 0
+#WARNING (NRDB-2005) SPECIAL_NET vdd has special wires but no definitions for instance pins or top level pins. This will cause routability problems later.
+#WARNING (NRDB-2005) SPECIAL_NET vss has special wires but no definitions for instance pins or top level pins. This will cause routability problems later.
+#
+#Start Post Route wire spreading..
+#
+#Start data preparation for wire spreading...
+#
+#Data preparation is done on Thu May  2 17:37:20 2019
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 515.15 (MB), peak = 532.04 (MB)
+#
+#Spread distance (# of tracks): min = 0.500000; max = 2.000000
+#
+#Start Post Route Wire Spread.
+#Done with 36 horizontal wires in 1 hboxes and 16 vertical wires in 1 hboxes.
+#Complete Post Route Wire Spread.
+#
+#Total wire length = 5284 um.
+#Total half perimeter of net bounding box = 5962 um.
+#Total wire length on LAYER metal1 = 356 um.
+#Total wire length on LAYER metal2 = 1630 um.
+#Total wire length on LAYER metal3 = 2635 um.
+#Total wire length on LAYER metal4 = 187 um.
+#Total wire length on LAYER metal5 = 476 um.
+#Total number of vias = 606
+#Up-Via Summary (total 606):
+#           
+#-----------------------
+#  Metal 1          292
+#  Metal 2          277
+#  Metal 3           31
+#  Metal 4            6
+#-----------------------
+#                   606 
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 502.44 (MB), peak = 532.04 (MB)
+#
+#Post Route wire spread is done.
+#Total wire length = 5284 um.
+#Total half perimeter of net bounding box = 5962 um.
+#Total wire length on LAYER metal1 = 356 um.
+#Total wire length on LAYER metal2 = 1630 um.
+#Total wire length on LAYER metal3 = 2635 um.
+#Total wire length on LAYER metal4 = 187 um.
+#Total wire length on LAYER metal5 = 476 um.
+#Total number of vias = 606
+#Up-Via Summary (total 606):
+#           
+#-----------------------
+#  Metal 1          292
+#  Metal 2          277
+#  Metal 3           31
+#  Metal 4            6
+#-----------------------
+#                   606 
+#
+#WARNING (NRDB-2005) SPECIAL_NET vdd has special wires but no definitions for instance pins or top level pins. This will cause routability problems later.
+#WARNING (NRDB-2005) SPECIAL_NET vss has special wires but no definitions for instance pins or top level pins. This will cause routability problems later.
+#
+#Start DRC checking..
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 509.71 (MB), peak = 532.04 (MB)
+#    number of violations = 66
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        0        0
+#	metal2        0        0
+#	metal3       66       66
+#	Totals       66       66
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 509.71 (MB), peak = 532.04 (MB)
+#CELL_VIEW controller,init has 66 DRC violations
+#Total number of DRC violations = 66
+#Total number of violations on LAYER metal1 = 0
+#Total number of violations on LAYER metal2 = 0
+#Total number of violations on LAYER metal3 = 66
+#Total number of violations on LAYER metal4 = 0
+#Total number of violations on LAYER metal5 = 0
+#detailRoute Statistics:
+#Cpu time = 00:00:02
+#Elapsed time = 00:00:03
+#Increased memory = 12.06 (MB)
+#Total memory = 509.71 (MB)
+#Peak memory = 532.04 (MB)
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:00:02
+#Elapsed time = 00:00:03
+#Increased memory = 22.92 (MB)
+#Total memory = 509.84 (MB)
+#Peak memory = 532.04 (MB)
+#Number of warnings = 23
+#Total number of warnings = 24
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Thu May  2 17:37:21 2019
+#
+#routeDesign: cpu time = 00:00:02, elapsed time = 00:00:03, memory = 509.84 (MB), peak = 532.04 (MB)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> setDrawView place
+<CMD> summaryReport -noHtml -outfile summaryReport.rpt
+Creating directory summaryReport.
+Start to collect the design information.
+Build netlist information for Cell controller.
+Finished collecting the design information.
+Generating standard cells used in the design report.
+Analyze library ... 
+Analyze netlist ... 
+Generate no-driven nets information report.
+Generating Assign Statements report.
+Analyze timing ... 
+Analyze floorplan/placement ... 
+Analysis Routing ...
+Report saved in file summaryReport.rpt.
+<CMD> getFillerMode -quiet
+<CMD> addFiller -cell filler -prefix FILLER
+**WARN: (ENCSP-5215):	addFiller command is running on a postRoute database. It is recommended to be followed by ecoRoute command to make the DRC clean.
+Type 'man ENCSP-5215' for more detail.
+*INFO: Adding fillers to top-module.
+*INFO:   Added 216 filler insts (cell filler / prefix FILLER).
+*INFO: Total 216 filler insts added - prefix FILLER (CPU: 0:00:00.0).
+For 216 new insts, *** Applied 0 GNC rules (cpu = 0:00:00.0)
+<CMD> streamOut controller.gds -mapFile vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map -libName DesignLib -units 100 -mode ALL
+Parse map file...
+**WARN: (ENCOGDS-399):	 Only 2 layer(s) (cc metal1) of a VIA object is(are) specified in map file 'vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map'. A VIA object needs 3 layers (nodrc cc metal1) being specified at the same time in the map file. Add VIA contruct(s) to the map file for the following layer(s): nodrc or remove VIA construct(s) from the map file for the following layer(s): cc metal1.
+Type 'man ENCOGDS-399' for more detail.
+**WARN: (ENCOGDS-399):	 Only 1 layer(s) (metal1) of a VIAFILL object is(are) specified in map file 'vtvt/vtvt_tsmc250_lef/vtvt_SocE2df2.map'. A VIAFILL object needs 3 layers (nodrc cc metal1) being specified at the same time in the map file. Add VIAFILL contruct(s) to the map file for the following layer(s): nodrc cc or remove VIAFILL construct(s) from the map file for the following layer(s): metal1.
+Type 'man ENCOGDS-399' for more detail.
+Writing GDSII file ...
+	****** db unit per micron = 100 ******
+	****** output gds2 file unit per micron = 100 ******
+	****** unit scaling factor = 1 ******
+Output for instance
+Output for bump
+Output for physical terminals
+Output for logical terminals
+Output for regular nets
+Output for special nets and metal fills
+Output for via structure generation
+Statistics for GDS generated (version 3)
+----------------------------------------
+Stream Out Layer Mapping Information:
+GDS Layer Number          GDS Layer Name
+----------------------------------------
+    46                              poly
+    25                                cc
+    47                                cc
+    48                                cc
+    49                            metal1
+    50                               via
+    51                            metal2
+    61                              via2
+    62                            metal3
+    30                              via3
+    31                            metal4
+    32                              via4
+    33                            metal5
+    149                           metal1
+    151                           metal2
+    162                           metal3
+    131                           metal4
+    133                           metal5
+
+
+Stream Out Information Processed for GDS version 3:
+Units: 100 DBU
+
+Object                             Count
+----------------------------------------
+Instances                            328
+
+Ports/Pins                           123
+    metal layer metal2                41
+    metal layer metal3                74
+    metal layer metal4                 8
+
+Nets                                 917
+    metal layer metal1               164
+    metal layer metal2               337
+    metal layer metal3               383
+    metal layer metal4                30
+    metal layer metal5                 3
+
+    Via Instances                    606
+
+Special Nets                          11
+    metal layer metal1                 3
+    metal layer metal2                 8
+
+    Via Instances                     12
+
+Metal Fills                            0
+
+    Via Instances                      0
+
+Metal FillOPCs                         0
+
+    Via Instances                      0
+
+Text                                 272
+    metal layer metal1                54
+    metal layer metal2               105
+    metal layer metal3               103
+    metal layer metal4                10
+
+
+Blockages                              0
+
+
+Custom Text                            0
+
+
+Custom Box                             0
+
+######Streamout is finished!
+
+*** Memory Usage v#1 (Current mem = 499.824M, initial mem = 95.340M) ***
+*** Message Summary: 960 warning(s), 6 error(s)
+
+--- Ending "Encounter" (totcpu=0:02:45, real=0:46:58, mem=499.8M) ---

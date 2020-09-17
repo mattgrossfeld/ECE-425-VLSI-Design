@@ -1,0 +1,814 @@
+technology NCSU_TechLib_tsmc03d
+grid 0.06
+
+parameters
+end
+
+layers
+   VIA_DRAWING alias via/drawing
+   VIA_GRID alias via/grid
+   VIA_BLOCKAGE alias via/blockage
+   VIA_LABEL alias via/label
+   VIA_NET alias via/net
+   VIA_PIN alias via/pin
+   VIA_BOUNDARY alias via/boundary
+   POLY_DRAWING alias poly/drawing
+   POLY_LABEL alias poly/label
+   POLY_NET alias poly/net
+   POLY_PIN alias poly/pin
+   POLY_BOUNDARY alias poly/boundary
+   METAL1_DRAWING alias metal1/drawing
+   METAL1_GRID alias metal1/grid
+   METAL1_BLOCKAGE alias metal1/blockage
+   METAL1_LABEL alias metal1/label
+   METAL1_NET alias metal1/net
+   METAL1_PIN alias metal1/pin
+   METAL1_BOUNDARY alias metal1/boundary
+   METAL2_DRAWING alias metal2/drawing
+   METAL2_GRID alias metal2/grid
+   METAL2_BLOCKAGE alias metal2/blockage
+   METAL2_LABEL alias metal2/label
+   METAL2_NET alias metal2/net
+   METAL2_PIN alias metal2/pin
+   METAL2_BOUNDARY alias metal2/boundary
+   CA_DRAWING alias ca/drawing
+   CA_GRID alias ca/grid
+   CA_BLOCKAGE alias ca/blockage
+   CA_LABEL alias ca/label
+   CA_NET alias ca/net
+   CA_PIN alias ca/pin
+   CA_BOUNDARY alias ca/boundary
+   CP_DRAWING alias cp/drawing
+   CP_GRID alias cp/grid
+   CP_BLOCKAGE alias cp/blockage
+   CP_LABEL alias cp/label
+   CP_NET alias cp/net
+   CP_PIN alias cp/pin
+   CP_BOUNDARY alias cp/boundary
+   CC_DRAWING alias cc/drawing
+   CC_GRID alias cc/grid
+   CC_BLOCKAGE alias cc/blockage
+   CC_LABEL alias cc/label
+   CC_NET alias cc/net
+   CC_PIN alias cc/pin
+   CC_BOUNDARY alias cc/boundary
+   VIA2_DRAWING alias via2/drawing
+   VIA2_GRID alias via2/grid
+   VIA2_BLOCKAGE alias via2/blockage
+   VIA2_LABEL alias via2/label
+   VIA2_NET alias via2/net
+   VIA2_PIN alias via2/pin
+   VIA2_BOUNDARY alias via2/boundary
+   METAL3_DRAWING alias metal3/drawing
+   METAL3_GRID alias metal3/grid
+   METAL3_BLOCKAGE alias metal3/blockage
+   METAL3_LABEL alias metal3/label
+   METAL3_NET alias metal3/net
+   METAL3_PIN alias metal3/pin
+   METAL3_BOUNDARY alias metal3/boundary
+   VIA3_DRAWING alias via3/drawing
+   VIA3_GRID alias via3/grid
+   VIA3_BLOCKAGE alias via3/blockage
+   VIA3_LABEL alias via3/label
+   VIA3_NET alias via3/net
+   VIA3_PIN alias via3/pin
+   VIA3_BOUNDARY alias via3/boundary
+   METAL4_DRAWING alias metal4/drawing
+   METAL4_GRID alias metal4/grid
+   METAL4_BLOCKAGE alias metal4/blockage
+   METAL4_LABEL alias metal4/label
+   METAL4_NET alias metal4/net
+   METAL4_PIN alias metal4/pin
+   METAL4_BOUNDARY alias metal4/boundary
+   VIA4_DRAWING alias via4/drawing
+   VIA4_GRID alias via4/grid
+   VIA4_BLOCKAGE alias via4/blockage
+   VIA4_LABEL alias via4/label
+   VIA4_NET alias via4/net
+   VIA4_PIN alias via4/pin
+   VIA4_BOUNDARY alias via4/boundary
+   METAL5_DRAWING alias metal5/drawing
+   METAL5_GRID alias metal5/grid
+   METAL5_BLOCKAGE alias metal5/blockage
+   METAL5_LABEL alias metal5/label
+   METAL5_NET alias metal5/net
+   METAL5_PIN alias metal5/pin
+   METAL5_BOUNDARY alias metal5/boundary
+   prBoundary alias oaPrBoundary
+   snapBoundary alias oaSnapBoundary
+   NWELL_DRAWING alias nwell/drawing
+   NWELL_NET alias nwell/net
+   NWELL_PIN alias nwell/pin
+   NACTIVE_DRAWING alias nactive/drawing
+   NACTIVE_NET alias nactive/net
+   NACTIVE_PIN alias nactive/pin
+   PACTIVE_DRAWING alias pactive/drawing
+   PACTIVE_NET alias pactive/net
+   PACTIVE_PIN alias pactive/pin
+   ACTIVE_DRAWING alias active/drawing
+   ACTIVE_NET alias active/net
+   ACTIVE_PIN alias active/pin
+   SNAP_BOUNDARY alias snap/boundary
+   ROW_BOUNDARY alias Row/boundary
+   UNROUTED_TRACK alias Unrouted/track
+   MARKER_ANNOTATE alias marker/annotate
+   MARKER_INFO alias marker/info
+   MARKER_ACKWARN alias marker/ackWarn
+   MARKER_SOERROR alias marker/soError
+   MARKER_SOCRITICAL alias marker/soCritical
+   MARKER_CRITICAL alias marker/critical
+   MARKER_FATAL alias marker/fatal
+   GROUP_BOUNDARY alias Group/boundary
+   Y0_FLIGHT alias y0/flight
+   Y1_FLIGHT alias y1/flight
+   Y2_FLIGHT alias y2/flight
+   Y3_FLIGHT alias y3/flight
+   Y4_FLIGHT alias y4/flight
+   Y5_FLIGHT alias y5/flight
+   Y6_FLIGHT alias y6/flight
+   Y7_FLIGHT alias y7/flight
+   Y8_FLIGHT alias y8/flight
+   Y9_FLIGHT alias y9/flight
+   BORDER_BOUNDARY alias border/boundary
+   SNAP_GRID alias snap/grid
+   PWELL_DRAWING alias pwell/drawing
+   TACTIVE_DRAWING alias tactive/drawing
+   NSELECT_DRAWING alias nselect/drawing
+   PSELECT_DRAWING alias pselect/drawing
+   METALCAP_DRAWING alias metalcap/drawing
+   GLASS_DRAWING alias glass/drawing
+   BACKGROUND_DRAWING alias background/drawing
+   ANNOTATE_DRAWING alias annotate/drawing
+   ANNOTATE_DRAWING1 alias annotate/drawing1
+   ANNOTATE_DRAWING2 alias annotate/drawing2
+   ANNOTATE_DRAWING3 alias annotate/drawing3
+   ANNOTATE_DRAWING4 alias annotate/drawing4
+   ANNOTATE_DRAWING5 alias annotate/drawing5
+   ANNOTATE_DRAWING6 alias annotate/drawing6
+   ANNOTATE_DRAWING7 alias annotate/drawing7
+   ANNOTATE_DRAWING8 alias annotate/drawing8
+   ANNOTATE_DRAWING9 alias annotate/drawing9
+   DEFAULT_DRAWING alias default/drawing
+   INSTANCE_DRAWING alias instance/drawing
+   INSTANCE_LABEL alias instance/label
+   GSELECT_DRAWING alias gselect/drawing
+   GWELL_DRAWING alias gwell/drawing
+   ALIGN_DRAWING alias align/drawing
+   HARDFENCE_DRAWING alias hardFence/drawing
+   SOFTFENCE_DRAWING alias softFence/drawing
+   NODRC_DRAWING alias nodrc/drawing
+   NOLPE_DRAWING alias nolpe/drawing
+   PAD_DRAWING alias pad/drawing
+   TEXT_DRAWING alias text/drawing
+   TEXT_DRAWING1 alias text/drawing1
+   TEXT_DRAWING2 alias text/drawing2
+   RES_ID_DRAWING alias res_id/drawing
+   CAP_ID_DRAWING alias cap_id/drawing
+   DIO_ID_DRAWING alias dio_id/drawing
+   SBLOCK_DRAWING alias sblock/drawing
+   BORDER_DRAWING alias border/drawing
+   DEVICE_DRAWING alias device/drawing
+   DEVICE_LABEL alias device/label
+   DEVICE_DRAWING1 alias device/drawing1
+   DEVICE_DRAWING2 alias device/drawing2
+   DEVICE_ANNOTATE alias device/annotate
+   WIRE_DRAWING alias wire/drawing
+   WIRE_LABEL alias wire/label
+   WIRE_FLIGHT alias wire/flight
+   PIN_LABEL alias pin/label
+   PIN_DRAWING alias pin/drawing
+   PIN_ANNOTATE alias pin/annotate
+   AXIS_DRAWING alias axis/drawing
+   EDGELAYER_DRAWING alias edgeLayer/drawing
+   EDGELAYER_PIN alias edgeLayer/pin
+   SNAP_DRAWING alias snap/drawing
+   STRETCH_DRAWING alias stretch/drawing
+   Y0_DRAWING alias y0/drawing
+   Y1_DRAWING alias y1/drawing
+   Y2_DRAWING alias y2/drawing
+   Y3_DRAWING alias y3/drawing
+   Y4_DRAWING alias y4/drawing
+   Y5_DRAWING alias y5/drawing
+   Y6_DRAWING alias y6/drawing
+   Y7_DRAWING alias y7/drawing
+   Y8_DRAWING alias y8/drawing
+   Y9_DRAWING alias y9/drawing
+   HILITE_DRAWING alias hilite/drawing
+   HILITE_DRAWING1 alias hilite/drawing1
+   HILITE_DRAWING2 alias hilite/drawing2
+   HILITE_DRAWING3 alias hilite/drawing3
+   HILITE_DRAWING4 alias hilite/drawing4
+   HILITE_DRAWING5 alias hilite/drawing5
+   HILITE_DRAWING6 alias hilite/drawing6
+   HILITE_DRAWING7 alias hilite/drawing7
+   HILITE_DRAWING8 alias hilite/drawing8
+   HILITE_DRAWING9 alias hilite/drawing9
+   DRIVE_DRAWING alias drive/drawing
+   HIZ_DRAWING alias hiz/drawing
+   RESIST_DRAWING alias resist/drawing
+   SPIKE_DRAWING alias spike/drawing
+   SUPPLY_DRAWING alias supply/drawing
+   UNKNOWN_DRAWING alias unknown/drawing
+   UNSET_DRAWING alias unset/drawing
+   DESIGNFLOW_DRAWING alias designFlow/drawing
+   DESIGNFLOW_DRAWING1 alias designFlow/drawing1
+   DESIGNFLOW_DRAWING2 alias designFlow/drawing2
+   DESIGNFLOW_DRAWING3 alias designFlow/drawing3
+   DESIGNFLOW_DRAWING4 alias designFlow/drawing4
+   DESIGNFLOW_DRAWING5 alias designFlow/drawing5
+   DESIGNFLOW_DRAWING6 alias designFlow/drawing6
+   DESIGNFLOW_DRAWING7 alias designFlow/drawing7
+   DESIGNFLOW_DRAWING8 alias designFlow/drawing8
+   DESIGNFLOW_DRAWING9 alias designFlow/drawing9
+   CHANGEDLAYER_TOOL0 alias changedLayer/tool0
+   CHANGEDLAYER_TOOL1 alias changedLayer/tool1
+   MARKER_WARNING alias marker/warning
+   MARKER_ERROR alias marker/error
+   ROW_DRAWING alias Row/drawing
+   ROW_LABEL alias Row/label
+   GROUP_DRAWING alias Group/drawing
+   GROUP_LABEL alias Group/label
+   METALCAP_LABEL alias metalcap/label
+   PWELL_NET alias pwell/net
+   GWELL_NET alias gwell/net
+   TACTIVE_NET alias tactive/net
+   METALCAP_NET alias metalcap/net
+   TACTIVE_PIN alias tactive/pin
+   GWELL_PIN alias gwell/pin
+   METALCAP_PIN alias metalcap/pin
+   PWELL_PIN alias pwell/pin
+   CANNOTOCCUPY_DRAWING alias Cannotoccupy/drawing
+   CANNOTOCCUPY_BOUNDARY alias Cannotoccupy/boundary
+   CANPLACE_DRAWING alias Canplace/drawing
+   METALCAP_BOUNDARY alias metalcap/boundary
+   HDRC_BOUNDARY alias hdrc/boundary
+   UNROUTED_DRAWING alias Unrouted/drawing
+   UNROUTED_DRAWING1 alias Unrouted/drawing1
+   UNROUTED_DRAWING2 alias Unrouted/drawing2
+   UNROUTED_DRAWING3 alias Unrouted/drawing3
+   UNROUTED_DRAWING4 alias Unrouted/drawing4
+   UNROUTED_DRAWING5 alias Unrouted/drawing5
+   UNROUTED_DRAWING6 alias Unrouted/drawing6
+   UNROUTED_DRAWING7 alias Unrouted/drawing7
+   UNROUTED_DRAWING8 alias Unrouted/drawing8
+   UNROUTED_DRAWING9 alias Unrouted/drawing9
+end
+
+planes
+   base ( POLY_DRAWING POLY_LABEL POLY_NET POLY_PIN POLY_BOUNDARY CP_DRAWING CP_GRID CP_BLOCKAGE CP_LABEL CP_NET CP_PIN CP_BOUNDARY CC_DRAWING CC_GRID CC_BLOCKAGE CC_LABEL CC_NET CC_PIN CC_BOUNDARY prBoundary snapBoundary NACTIVE_DRAWING NACTIVE_NET NACTIVE_PIN PACTIVE_DRAWING PACTIVE_NET PACTIVE_PIN ACTIVE_DRAWING ACTIVE_NET ACTIVE_PIN PWELL_DRAWING TACTIVE_DRAWING NSELECT_DRAWING PSELECT_DRAWING PWELL_NET TACTIVE_NET TACTIVE_PIN PWELL_PIN )
+   METAL2_DRAWING ( VIA_DRAWING VIA_GRID VIA_BLOCKAGE VIA_LABEL VIA_NET VIA_PIN VIA_BOUNDARY POLY_DRAWING POLY_LABEL POLY_NET POLY_PIN POLY_BOUNDARY METAL2_DRAWING METAL2_GRID METAL2_BLOCKAGE METAL2_LABEL METAL2_NET METAL2_PIN METAL2_BOUNDARY CA_DRAWING CA_GRID CA_BLOCKAGE CA_LABEL CA_NET CA_PIN CA_BOUNDARY CP_DRAWING CP_GRID CP_BLOCKAGE CP_LABEL CP_NET CP_PIN CP_BOUNDARY VIA2_DRAWING VIA2_GRID VIA2_BLOCKAGE VIA2_LABEL VIA2_NET VIA2_PIN VIA2_BOUNDARY prBoundary snapBoundary ACTIVE_DRAWING ACTIVE_NET ACTIVE_PIN TACTIVE_DRAWING NSELECT_DRAWING PSELECT_DRAWING TACTIVE_NET TACTIVE_PIN )
+   METAL3_DRAWING ( VIA2_DRAWING VIA2_GRID VIA2_BLOCKAGE VIA2_LABEL VIA2_NET VIA2_PIN VIA2_BOUNDARY METAL3_DRAWING METAL3_GRID METAL3_BLOCKAGE METAL3_LABEL METAL3_NET METAL3_PIN METAL3_BOUNDARY VIA3_DRAWING VIA3_GRID VIA3_BLOCKAGE VIA3_LABEL VIA3_NET VIA3_PIN VIA3_BOUNDARY prBoundary snapBoundary )
+   METAL4_DRAWING ( VIA3_DRAWING VIA3_GRID VIA3_BLOCKAGE VIA3_LABEL VIA3_NET VIA3_PIN VIA3_BOUNDARY METAL4_DRAWING METAL4_GRID METAL4_BLOCKAGE METAL4_LABEL METAL4_NET METAL4_PIN METAL4_BOUNDARY VIA4_DRAWING VIA4_GRID VIA4_BLOCKAGE VIA4_LABEL VIA4_NET VIA4_PIN VIA4_BOUNDARY prBoundary snapBoundary )
+   METAL5_DRAWING ( VIA4_DRAWING VIA4_GRID VIA4_BLOCKAGE VIA4_LABEL VIA4_NET VIA4_PIN VIA4_BOUNDARY METAL5_DRAWING METAL5_GRID METAL5_BLOCKAGE METAL5_LABEL METAL5_NET METAL5_PIN METAL5_BOUNDARY prBoundary snapBoundary )
+   METAL1_DRAWING ( VIA_DRAWING VIA_GRID VIA_BLOCKAGE VIA_LABEL VIA_NET VIA_PIN VIA_BOUNDARY POLY_DRAWING POLY_LABEL POLY_NET POLY_PIN POLY_BOUNDARY METAL1_DRAWING METAL1_GRID METAL1_BLOCKAGE METAL1_LABEL METAL1_NET METAL1_PIN METAL1_BOUNDARY CA_DRAWING CA_GRID CA_BLOCKAGE CA_LABEL CA_NET CA_PIN CA_BOUNDARY CP_DRAWING CP_GRID CP_BLOCKAGE CP_LABEL CP_NET CP_PIN CP_BOUNDARY CC_DRAWING CC_GRID CC_BLOCKAGE CC_LABEL CC_NET CC_PIN CC_BOUNDARY prBoundary snapBoundary ACTIVE_DRAWING ACTIVE_NET ACTIVE_PIN TACTIVE_DRAWING NSELECT_DRAWING PSELECT_DRAWING TACTIVE_NET TACTIVE_PIN )
+   NWELL_DRAWING ( CC_DRAWING CC_GRID CC_BLOCKAGE CC_LABEL CC_NET CC_PIN CC_BOUNDARY prBoundary snapBoundary NWELL_DRAWING NWELL_NET NWELL_PIN )
+   NACTIVE_DRAWING ( CC_DRAWING CC_GRID CC_BLOCKAGE CC_LABEL CC_NET CC_PIN CC_BOUNDARY prBoundary snapBoundary NACTIVE_DRAWING NACTIVE_NET NACTIVE_PIN )
+   PACTIVE_DRAWING ( CC_DRAWING CC_GRID CC_BLOCKAGE CC_LABEL CC_NET CC_PIN CC_BOUNDARY prBoundary snapBoundary PACTIVE_DRAWING PACTIVE_NET PACTIVE_PIN PWELL_DRAWING PWELL_NET PWELL_PIN )
+   DEFAULT_DRAWING ( prBoundary snapBoundary SNAP_BOUNDARY ROW_BOUNDARY UNROUTED_TRACK MARKER_ANNOTATE MARKER_INFO MARKER_ACKWARN MARKER_SOERROR MARKER_SOCRITICAL MARKER_CRITICAL MARKER_FATAL GROUP_BOUNDARY Y0_FLIGHT Y1_FLIGHT Y2_FLIGHT Y3_FLIGHT Y4_FLIGHT Y5_FLIGHT Y6_FLIGHT Y7_FLIGHT Y8_FLIGHT Y9_FLIGHT BORDER_BOUNDARY SNAP_GRID PWELL_DRAWING TACTIVE_DRAWING NSELECT_DRAWING PSELECT_DRAWING METALCAP_DRAWING GLASS_DRAWING BACKGROUND_DRAWING ANNOTATE_DRAWING ANNOTATE_DRAWING1 ANNOTATE_DRAWING2 ANNOTATE_DRAWING3 ANNOTATE_DRAWING4 ANNOTATE_DRAWING5 ANNOTATE_DRAWING6 ANNOTATE_DRAWING7 ANNOTATE_DRAWING8 ANNOTATE_DRAWING9 DEFAULT_DRAWING INSTANCE_DRAWING INSTANCE_LABEL GSELECT_DRAWING GWELL_DRAWING ALIGN_DRAWING HARDFENCE_DRAWING SOFTFENCE_DRAWING NODRC_DRAWING NOLPE_DRAWING PAD_DRAWING TEXT_DRAWING TEXT_DRAWING1 TEXT_DRAWING2 RES_ID_DRAWING CAP_ID_DRAWING DIO_ID_DRAWING SBLOCK_DRAWING BORDER_DRAWING DEVICE_DRAWING DEVICE_LABEL DEVICE_DRAWING1 DEVICE_DRAWING2 DEVICE_ANNOTATE WIRE_DRAWING WIRE_LABEL WIRE_FLIGHT PIN_LABEL PIN_DRAWING PIN_ANNOTATE AXIS_DRAWING EDGELAYER_DRAWING EDGELAYER_PIN SNAP_DRAWING STRETCH_DRAWING Y0_DRAWING Y1_DRAWING Y2_DRAWING Y3_DRAWING Y4_DRAWING Y5_DRAWING Y6_DRAWING Y7_DRAWING Y8_DRAWING Y9_DRAWING HILITE_DRAWING HILITE_DRAWING1 HILITE_DRAWING2 HILITE_DRAWING3 HILITE_DRAWING4 HILITE_DRAWING5 HILITE_DRAWING6 HILITE_DRAWING7 HILITE_DRAWING8 HILITE_DRAWING9 DRIVE_DRAWING HIZ_DRAWING RESIST_DRAWING SPIKE_DRAWING SUPPLY_DRAWING UNKNOWN_DRAWING UNSET_DRAWING DESIGNFLOW_DRAWING DESIGNFLOW_DRAWING1 DESIGNFLOW_DRAWING2 DESIGNFLOW_DRAWING3 DESIGNFLOW_DRAWING4 DESIGNFLOW_DRAWING5 DESIGNFLOW_DRAWING6 DESIGNFLOW_DRAWING7 DESIGNFLOW_DRAWING8 DESIGNFLOW_DRAWING9 CHANGEDLAYER_TOOL0 CHANGEDLAYER_TOOL1 MARKER_WARNING MARKER_ERROR ROW_DRAWING ROW_LABEL GROUP_DRAWING GROUP_LABEL METALCAP_LABEL PWELL_NET GWELL_NET TACTIVE_NET METALCAP_NET TACTIVE_PIN GWELL_PIN METALCAP_PIN PWELL_PIN CANNOTOCCUPY_DRAWING CANNOTOCCUPY_BOUNDARY CANPLACE_DRAWING METALCAP_BOUNDARY HDRC_BOUNDARY UNROUTED_DRAWING UNROUTED_DRAWING1 UNROUTED_DRAWING2 UNROUTED_DRAWING3 UNROUTED_DRAWING4 UNROUTED_DRAWING5 UNROUTED_DRAWING6 UNROUTED_DRAWING7 UNROUTED_DRAWING8 UNROUTED_DRAWING9 )
+end
+
+labels
+end
+
+functions
+   NACTIVE = NACTIVE_DRAWING | NACTIVE_NET | NACTIVE_PIN 
+   PACTIVE = PACTIVE_DRAWING | PACTIVE_NET | PACTIVE_PIN 
+   ACTIVE = ACTIVE_DRAWING | ACTIVE_NET | ACTIVE_PIN 
+   TACTIVE = TACTIVE_DRAWING | TACTIVE_NET | TACTIVE_PIN 
+   PWELL = PWELL_DRAWING | PWELL_NET | PWELL_PIN 
+   VIA2 = VIA2_DRAWING | VIA2_GRID | VIA2_BLOCKAGE | VIA2_LABEL | VIA2_NET | VIA2_PIN | VIA2_BOUNDARY 
+   VIA = VIA_DRAWING | VIA_GRID | VIA_BLOCKAGE | VIA_LABEL | VIA_NET | VIA_PIN | VIA_BOUNDARY 
+   VIA3 = VIA3_DRAWING | VIA3_GRID | VIA3_BLOCKAGE | VIA3_LABEL | VIA3_NET | VIA3_PIN | VIA3_BOUNDARY 
+   VIA4 = VIA4_DRAWING | VIA4_GRID | VIA4_BLOCKAGE | VIA4_LABEL | VIA4_NET | VIA4_PIN | VIA4_BOUNDARY 
+   NWELL = NWELL_DRAWING | NWELL_NET | NWELL_PIN 
+   POLY = POLY_DRAWING | POLY_LABEL | POLY_NET | POLY_PIN | POLY_BOUNDARY 
+   NSELECT = NSELECT_DRAWING  
+   PSELECT = PSELECT_DRAWING  
+   METAL1 = METAL1_DRAWING | METAL1_GRID | METAL1_BLOCKAGE | METAL1_LABEL | METAL1_NET | METAL1_PIN | METAL1_BOUNDARY 
+   METAL3 = METAL3_DRAWING | METAL3_GRID | METAL3_BLOCKAGE | METAL3_LABEL | METAL3_NET | METAL3_PIN | METAL3_BOUNDARY 
+   METAL4 = METAL4_DRAWING | METAL4_GRID | METAL4_BLOCKAGE | METAL4_LABEL | METAL4_NET | METAL4_PIN | METAL4_BOUNDARY 
+   METAL5 = METAL5_DRAWING | METAL5_GRID | METAL5_BLOCKAGE | METAL5_LABEL | METAL5_NET | METAL5_PIN | METAL5_BOUNDARY 
+   METAL2 = METAL2_DRAWING | METAL2_GRID | METAL2_BLOCKAGE | METAL2_LABEL | METAL2_NET | METAL2_PIN | METAL2_BOUNDARY 
+   CA = CA_DRAWING | CA_GRID | CA_BLOCKAGE | CA_LABEL | CA_NET | CA_PIN | CA_BOUNDARY 
+   CP = CP_DRAWING | CP_GRID | CP_BLOCKAGE | CP_LABEL | CP_NET | CP_PIN | CP_BOUNDARY 
+   CC = CC_DRAWING | CC_GRID | CC_BLOCKAGE | CC_LABEL | CC_NET | CC_PIN | CC_BOUNDARY 
+   noOverlapLayer1 = POLY & ACTIVE
+   noOverlapLayer2 = POLY & NACTIVE
+   noOverlapLayer3 = POLY & PACTIVE
+   noOverlapLayer4 = VIA & CA
+   noOverlapLayer5 = VIA & CP
+   noOverlapLayer6 = VIA & CC
+end
+
+objectives
+end
+
+connections
+   VIA_DRAWING overlap
+   VIA_GRID overlap
+   VIA_BLOCKAGE overlap
+   VIA_LABEL overlap
+   VIA_NET overlap
+   VIA_PIN overlap
+   VIA_BOUNDARY overlap
+   POLY_DRAWING electrical
+   POLY_LABEL electrical
+   POLY_NET electrical
+   POLY_PIN electrical
+   POLY_BOUNDARY electrical
+   METAL1_DRAWING electrical
+   METAL1_GRID electrical
+   METAL1_BLOCKAGE electrical
+   METAL1_LABEL electrical
+   METAL1_NET electrical
+   METAL1_PIN electrical
+   METAL1_BOUNDARY electrical
+   METAL2_DRAWING electrical
+   METAL2_GRID electrical
+   METAL2_BLOCKAGE electrical
+   METAL2_LABEL electrical
+   METAL2_NET electrical
+   METAL2_PIN electrical
+   METAL2_BOUNDARY electrical
+   CA_DRAWING overlap
+   CA_GRID overlap
+   CA_BLOCKAGE overlap
+   CA_LABEL overlap
+   CA_NET overlap
+   CA_PIN overlap
+   CA_BOUNDARY overlap
+   CP_DRAWING overlap
+   CP_GRID overlap
+   CP_BLOCKAGE overlap
+   CP_LABEL overlap
+   CP_NET overlap
+   CP_PIN overlap
+   CP_BOUNDARY overlap
+   CC_DRAWING overlap
+   CC_GRID overlap
+   CC_BLOCKAGE overlap
+   CC_LABEL overlap
+   CC_NET overlap
+   CC_PIN overlap
+   CC_BOUNDARY overlap
+   VIA2_DRAWING overlap
+   VIA2_GRID overlap
+   VIA2_BLOCKAGE overlap
+   VIA2_LABEL overlap
+   VIA2_NET overlap
+   VIA2_PIN overlap
+   VIA2_BOUNDARY overlap
+   METAL3_DRAWING electrical
+   METAL3_GRID electrical
+   METAL3_BLOCKAGE electrical
+   METAL3_LABEL electrical
+   METAL3_NET electrical
+   METAL3_PIN electrical
+   METAL3_BOUNDARY electrical
+   VIA3_DRAWING overlap
+   VIA3_GRID overlap
+   VIA3_BLOCKAGE overlap
+   VIA3_LABEL overlap
+   VIA3_NET overlap
+   VIA3_PIN overlap
+   VIA3_BOUNDARY overlap
+   METAL4_DRAWING electrical
+   METAL4_GRID electrical
+   METAL4_BLOCKAGE electrical
+   METAL4_LABEL electrical
+   METAL4_NET electrical
+   METAL4_PIN electrical
+   METAL4_BOUNDARY electrical
+   VIA4_DRAWING overlap
+   VIA4_GRID overlap
+   VIA4_BLOCKAGE overlap
+   VIA4_LABEL overlap
+   VIA4_NET overlap
+   VIA4_PIN overlap
+   VIA4_BOUNDARY overlap
+   METAL5_DRAWING electrical
+   METAL5_GRID electrical
+   METAL5_BLOCKAGE electrical
+   METAL5_LABEL electrical
+   METAL5_NET electrical
+   METAL5_PIN electrical
+   METAL5_BOUNDARY electrical
+   prBoundary overlap
+   snapBoundary overlap
+   NWELL_DRAWING overlap
+   NWELL_NET overlap
+   NWELL_PIN overlap
+   NACTIVE_DRAWING overlap
+   NACTIVE_NET overlap
+   NACTIVE_PIN overlap
+   PACTIVE_DRAWING overlap
+   PACTIVE_NET overlap
+   PACTIVE_PIN overlap
+   ACTIVE_DRAWING overlap
+   ACTIVE_NET overlap
+   ACTIVE_PIN overlap
+   SNAP_BOUNDARY overlap
+   ROW_BOUNDARY overlap
+   UNROUTED_TRACK overlap
+   MARKER_ANNOTATE overlap
+   MARKER_INFO overlap
+   MARKER_ACKWARN overlap
+   MARKER_SOERROR overlap
+   MARKER_SOCRITICAL overlap
+   MARKER_CRITICAL overlap
+   MARKER_FATAL overlap
+   GROUP_BOUNDARY overlap
+   Y0_FLIGHT overlap
+   Y1_FLIGHT overlap
+   Y2_FLIGHT overlap
+   Y3_FLIGHT overlap
+   Y4_FLIGHT overlap
+   Y5_FLIGHT overlap
+   Y6_FLIGHT overlap
+   Y7_FLIGHT overlap
+   Y8_FLIGHT overlap
+   Y9_FLIGHT overlap
+   BORDER_BOUNDARY overlap
+   SNAP_GRID overlap
+   PWELL_DRAWING overlap
+   TACTIVE_DRAWING overlap
+   NSELECT_DRAWING overlap
+   PSELECT_DRAWING overlap
+   METALCAP_DRAWING overlap
+   GLASS_DRAWING overlap
+   BACKGROUND_DRAWING overlap
+   ANNOTATE_DRAWING overlap
+   ANNOTATE_DRAWING1 overlap
+   ANNOTATE_DRAWING2 overlap
+   ANNOTATE_DRAWING3 overlap
+   ANNOTATE_DRAWING4 overlap
+   ANNOTATE_DRAWING5 overlap
+   ANNOTATE_DRAWING6 overlap
+   ANNOTATE_DRAWING7 overlap
+   ANNOTATE_DRAWING8 overlap
+   ANNOTATE_DRAWING9 overlap
+   DEFAULT_DRAWING overlap
+   INSTANCE_DRAWING overlap
+   INSTANCE_LABEL overlap
+   GSELECT_DRAWING overlap
+   GWELL_DRAWING overlap
+   ALIGN_DRAWING overlap
+   HARDFENCE_DRAWING overlap
+   SOFTFENCE_DRAWING overlap
+   NODRC_DRAWING overlap
+   NOLPE_DRAWING overlap
+   PAD_DRAWING overlap
+   TEXT_DRAWING overlap
+   TEXT_DRAWING1 overlap
+   TEXT_DRAWING2 overlap
+   RES_ID_DRAWING overlap
+   CAP_ID_DRAWING overlap
+   DIO_ID_DRAWING overlap
+   SBLOCK_DRAWING overlap
+   BORDER_DRAWING overlap
+   DEVICE_DRAWING overlap
+   DEVICE_LABEL overlap
+   DEVICE_DRAWING1 overlap
+   DEVICE_DRAWING2 overlap
+   DEVICE_ANNOTATE overlap
+   WIRE_DRAWING overlap
+   WIRE_LABEL overlap
+   WIRE_FLIGHT overlap
+   PIN_LABEL overlap
+   PIN_DRAWING overlap
+   PIN_ANNOTATE overlap
+   AXIS_DRAWING overlap
+   EDGELAYER_DRAWING overlap
+   EDGELAYER_PIN overlap
+   SNAP_DRAWING overlap
+   STRETCH_DRAWING overlap
+   Y0_DRAWING overlap
+   Y1_DRAWING overlap
+   Y2_DRAWING overlap
+   Y3_DRAWING overlap
+   Y4_DRAWING overlap
+   Y5_DRAWING overlap
+   Y6_DRAWING overlap
+   Y7_DRAWING overlap
+   Y8_DRAWING overlap
+   Y9_DRAWING overlap
+   HILITE_DRAWING overlap
+   HILITE_DRAWING1 overlap
+   HILITE_DRAWING2 overlap
+   HILITE_DRAWING3 overlap
+   HILITE_DRAWING4 overlap
+   HILITE_DRAWING5 overlap
+   HILITE_DRAWING6 overlap
+   HILITE_DRAWING7 overlap
+   HILITE_DRAWING8 overlap
+   HILITE_DRAWING9 overlap
+   DRIVE_DRAWING overlap
+   HIZ_DRAWING overlap
+   RESIST_DRAWING overlap
+   SPIKE_DRAWING overlap
+   SUPPLY_DRAWING overlap
+   UNKNOWN_DRAWING overlap
+   UNSET_DRAWING overlap
+   DESIGNFLOW_DRAWING overlap
+   DESIGNFLOW_DRAWING1 overlap
+   DESIGNFLOW_DRAWING2 overlap
+   DESIGNFLOW_DRAWING3 overlap
+   DESIGNFLOW_DRAWING4 overlap
+   DESIGNFLOW_DRAWING5 overlap
+   DESIGNFLOW_DRAWING6 overlap
+   DESIGNFLOW_DRAWING7 overlap
+   DESIGNFLOW_DRAWING8 overlap
+   DESIGNFLOW_DRAWING9 overlap
+   CHANGEDLAYER_TOOL0 overlap
+   CHANGEDLAYER_TOOL1 overlap
+   MARKER_WARNING overlap
+   MARKER_ERROR overlap
+   ROW_DRAWING overlap
+   ROW_LABEL overlap
+   GROUP_DRAWING overlap
+   GROUP_LABEL overlap
+   METALCAP_LABEL overlap
+   PWELL_NET overlap
+   GWELL_NET overlap
+   TACTIVE_NET overlap
+   METALCAP_NET overlap
+   TACTIVE_PIN overlap
+   GWELL_PIN overlap
+   METALCAP_PIN overlap
+   PWELL_PIN overlap
+   CANNOTOCCUPY_DRAWING overlap
+   CANNOTOCCUPY_BOUNDARY overlap
+   CANPLACE_DRAWING overlap
+   METALCAP_BOUNDARY overlap
+   HDRC_BOUNDARY overlap
+   UNROUTED_DRAWING overlap
+   UNROUTED_DRAWING1 overlap
+   UNROUTED_DRAWING2 overlap
+   UNROUTED_DRAWING3 overlap
+   UNROUTED_DRAWING4 overlap
+   UNROUTED_DRAWING5 overlap
+   UNROUTED_DRAWING6 overlap
+   UNROUTED_DRAWING7 overlap
+   UNROUTED_DRAWING8 overlap
+   UNROUTED_DRAWING9 overlap
+end
+
+alignment_locks
+   snapBoundary prBoundary
+end
+
+power_supplies
+   vcc
+   vcc!
+   vcc:
+   vdd
+   vdd!
+   vdd:
+   gnd
+   gnd!
+   gnd:
+   vss
+   vss!
+   vss:
+end
+
+wires
+   POLY_DRAWING width 0.24 scale 1
+   POLY_LABEL width 0.24 scale 1
+   POLY_NET width 0.24 scale 1
+   POLY_PIN width 0.24 scale 1
+   POLY_BOUNDARY width 0.24 scale 1
+   METAL1_DRAWING width 0.36 scale 1
+   METAL1_GRID width 0.36 scale 1
+   METAL1_BLOCKAGE width 0.36 scale 1
+   METAL1_LABEL width 0.36 scale 1
+   METAL1_NET width 0.36 scale 1
+   METAL1_PIN width 0.36 scale 1
+   METAL1_BOUNDARY width 0.36 scale 1
+   METAL2_DRAWING width 0.36 scale 1
+   METAL2_GRID width 0.36 scale 1
+   METAL2_BLOCKAGE width 0.36 scale 1
+   METAL2_LABEL width 0.36 scale 1
+   METAL2_NET width 0.36 scale 1
+   METAL2_PIN width 0.36 scale 1
+   METAL2_BOUNDARY width 0.36 scale 1
+   METAL3_DRAWING width 0.36 scale 1
+   METAL3_GRID width 0.36 scale 1
+   METAL3_BLOCKAGE width 0.36 scale 1
+   METAL3_LABEL width 0.36 scale 1
+   METAL3_NET width 0.36 scale 1
+   METAL3_PIN width 0.36 scale 1
+   METAL3_BOUNDARY width 0.36 scale 1
+   METAL4_DRAWING width 0.36 scale 1
+   METAL4_GRID width 0.36 scale 1
+   METAL4_BLOCKAGE width 0.36 scale 1
+   METAL4_LABEL width 0.36 scale 1
+   METAL4_NET width 0.36 scale 1
+   METAL4_PIN width 0.36 scale 1
+   METAL4_BOUNDARY width 0.36 scale 1
+   METAL5_DRAWING width 0.48 scale 1
+   METAL5_GRID width 0.48 scale 1
+   METAL5_BLOCKAGE width 0.48 scale 1
+   METAL5_LABEL width 0.48 scale 1
+   METAL5_NET width 0.48 scale 1
+   METAL5_PIN width 0.48 scale 1
+   METAL5_BOUNDARY width 0.48 scale 1
+end
+
+vias
+end
+
+devices
+end
+
+abutment_boundaries
+end
+
+design_rules
+recommended 0
+
+   rule foundry_ACTIVE_minSpacing "ACTIVE minSpacing is 0.36 minSameNetSpacing 0.36"
+   space ACTIVE by 0.36
+
+   rule foundry_ACTIVE_minWidth "ACTIVE minWidth is 0.36"
+   widen ACTIVE by 0.36
+
+   rule foundry_NSELECT_minSpacing "NSELECT minSpacing is 0.48 minSameNetSpacing 0.48"
+   space NSELECT by 0.48
+
+   rule foundry_PSELECT_minSpacing "PSELECT minSpacing is 0.48 minSameNetSpacing 0.48"
+   space PSELECT by 0.48
+
+   rule foundry_NSELECT_minWidth "NSELECT minWidth is 0.48"
+   widen NSELECT by 0.48
+
+   rule foundry_PSELECT_minWidth "PSELECT minWidth is 0.48"
+   widen PSELECT by 0.48
+
+   rule foundry_POLY_minWidth "POLY minWidth is 0.24"
+   widen POLY by 0.24
+
+   rule foundry_METAL1_minSpacing "METAL1 minSpacing is 0.36 minSameNetSpacing 0.36"
+   space METAL1 by 0.36
+
+   rule foundry_METAL1_minWidth "METAL1 minWidth is 0.36"
+   widen METAL1 by 0.36
+
+   rule foundry_METAL2_minWidth "METAL2 minWidth is 0.36"
+   widen METAL2 by 0.36
+
+   rule foundry_VIA_minSpacing "VIA minSpacing is 0.36"
+   space VIA by 0.36
+
+   rule foundry_METAL2_minSpacing "METAL2 minSpacing is 0.48 minSameNetSpacing 0.48"
+   space METAL2 by 0.48
+
+   rule foundry_CA_minSpacing "CA minSpacing is 0.48"
+   space CA by 0.48
+
+   rule foundry_CP_minSpacing "CP minSpacing is 0.48"
+   space CP by 0.48
+
+   rule foundry_CC_minSpacing "CC minSpacing is 0.48"
+   space CC by 0.48
+
+   rule foundry_POLY_minSpacing "POLY minSpacing is 0.48"
+   space POLY by 0.48
+
+   rule foundry_NWELL_minWidth "NWELL minWidth is 1.44"
+   widen NWELL by 1.44
+
+   rule foundry_PWELL_minWidth "PWELL minWidth is 1.44"
+   widen PWELL by 1.44
+
+   rule foundry_NWELL_minSpacing "NWELL minSpacing is 2.16 minSameNetSpacing 0.72"
+   space NWELL by 2.16 same_net 0.72
+
+   rule foundry_PWELL_minSpacing "PWELL minSpacing is 2.16 minSameNetSpacing 0.72"
+   space PWELL by 2.16 same_net 0.72
+
+   rule foundry_METAL5_minSpacing "METAL5 minSpacing is 0.48 minSameNetSpacing 0.48"
+   space METAL5 by 0.48
+
+   rule foundry_METAL5_minWidth "METAL5 minWidth is 0.48"
+   widen METAL5 by 0.48
+
+   rule foundry_VIA4_minSpacing "VIA4 minSpacing is 0.36"
+   space VIA4 by 0.36
+
+   rule foundry_METAL4_minWidth "METAL4 minWidth is 0.36"
+   widen METAL4 by 0.36
+
+   rule foundry_VIA3_minSpacing "VIA3 minSpacing is 0.48"
+   space VIA3 by 0.48
+
+   rule foundry_METAL3_minWidth "METAL3 minWidth is 0.36"
+   widen METAL3 by 0.36
+
+   rule foundry_VIA2_minSpacing "VIA2 minSpacing is 0.36"
+   space VIA2 by 0.36
+
+   rule foundry_METAL4_minSpacing "METAL4 minSpacing is 0.48 minSameNetSpacing 0.48"
+   space METAL4 by 0.48
+
+   rule foundry_METAL3_minSpacing "METAL3 minSpacing is 0.48 minSameNetSpacing 0.48"
+   space METAL3 by 0.48
+
+   rule foundry_NSELECT_ACTIVE_minExtensionDistance "NSELECT  ACTIVE minExtensionDistance is 0.24"
+   enclose ACTIVE with NSELECT by 0.24
+
+   rule foundry_PSELECT_ACTIVE_minExtensionDistance "PSELECT  ACTIVE minExtensionDistance is 0.24"
+   enclose ACTIVE with PSELECT by 0.24
+
+   rule foundry_NSELECT_CA_minExtensionDistance "NSELECT  CA minExtensionDistance is 0.18"
+   enclose CA with NSELECT by 0.18
+
+   rule foundry_PSELECT_CA_minExtensionDistance "PSELECT  CA minExtensionDistance is 0.18"
+   enclose CA with PSELECT by 0.18
+
+   rule foundry_NSELECT_CC_minExtensionDistance "NSELECT  CC minExtensionDistance is 0.18"
+   enclose CC with NSELECT by 0.18
+
+   rule foundry_PSELECT_CC_minExtensionDistance "PSELECT  CC minExtensionDistance is 0.18"
+   enclose CC with PSELECT by 0.18
+
+   rule foundry_ACTIVE_CA_minExtensionDistance "ACTIVE  CA minExtensionDistance is 0.12"
+   enclose CA with ACTIVE by 0.12
+
+   rule foundry_ACTIVE_CC_minExtensionDistance "ACTIVE  CC minExtensionDistance is 0.12"
+   enclose CC with ACTIVE by 0.12
+
+   rule foundry_POLY_CP_minExtensionDistance "POLY  CP minExtensionDistance is 0.12"
+   enclose CP with POLY by 0.12
+
+   rule foundry_POLY_CC_minExtensionDistance "POLY  CC minExtensionDistance is 0.12"
+   enclose CC with POLY by 0.12
+
+   rule foundry_ACTIVE_VIA_minExtensionDistance "ACTIVE  VIA minExtensionDistance is 0.24"
+   enclose VIA with ACTIVE by 0.24
+
+   rule foundry_POLY_VIA_minExtensionDistance "POLY  VIA minExtensionDistance is 0.24"
+   enclose VIA with POLY by 0.24
+
+   rule foundry_METAL1_CA_minExtensionDistance "METAL1  CA minExtensionDistance is 0.12"
+   enclose CA with METAL1 by 0.12
+
+   rule foundry_METAL1_CP_minExtensionDistance "METAL1  CP minExtensionDistance is 0.12"
+   enclose CP with METAL1 by 0.12
+
+   rule foundry_METAL1_CC_minExtensionDistance "METAL1  CC minExtensionDistance is 0.12"
+   enclose CC with METAL1 by 0.12
+
+   rule foundry_METAL1_VIA_minExtensionDistance "METAL1  VIA minExtensionDistance is 0.12"
+   enclose VIA with METAL1 by 0.12
+
+   rule foundry_METAL2_VIA_minExtensionDistance "METAL2  VIA minExtensionDistance is 0.12"
+   enclose VIA with METAL2 by 0.12
+
+   rule foundry_PWELL_PACTIVE_minExtensionDistance "PWELL  PACTIVE minExtensionDistance is 0.36"
+   enclose PACTIVE with PWELL by 0.36
+
+   rule foundry_PWELL_ACTIVE_minExtensionDistance "PWELL  ACTIVE minExtensionDistance is 0.72"
+   enclose ACTIVE with PWELL by 0.72
+
+   rule foundry_TACTIVE_ACTIVE_minExtensionDistance "TACTIVE  ACTIVE minExtensionDistance is 0.48"
+   enclose ACTIVE with TACTIVE by 0.48
+
+   rule foundry_METAL2_VIA2_minExtensionDistance "METAL2  VIA2 minExtensionDistance is 0.12"
+   enclose VIA2 with METAL2 by 0.12
+
+   rule foundry_METAL3_VIA2_minExtensionDistance "METAL3  VIA2 minExtensionDistance is 0.12"
+   enclose VIA2 with METAL3 by 0.12
+
+   rule foundry_METAL3_VIA3_minExtensionDistance "METAL3  VIA3 minExtensionDistance is 0.12"
+   enclose VIA3 with METAL3 by 0.12
+
+   rule foundry_METAL4_VIA3_minExtensionDistance "METAL4  VIA3 minExtensionDistance is 0.12"
+   enclose VIA3 with METAL4 by 0.12
+
+   rule foundry_METAL4_VIA4_minExtensionDistance "METAL4  VIA4 minExtensionDistance is 0.12"
+   enclose VIA4 with METAL4 by 0.12
+
+   rule foundry_METAL5_VIA4_minExtensionDistance "METAL5  VIA4 minExtensionDistance is 0.24"
+   enclose VIA4 with METAL5 by 0.24
+
+   rule foundry_POLY_CA_minSpacing "POLY  CA minSpacing is 0.24"
+   space POLY from CA by 0.24
+
+   rule foundry_POLY_CC_minSpacing "POLY  CC minSpacing is 0.24"
+   space POLY from CC by 0.24
+
+   rule prBoundary.w.1 "Widen prBoundary.w.1 by 0.06"
+   widen prBoundary by 0.06
+
+   rule prBoundary.s.1 "Space prBoundary.s.1 by 0"
+   space prBoundary by 0
+
+   rule snapBoundary.w.1 "Widen snapBoundary.w.1 by 0.06"
+   widen snapBoundary by 0.06
+
+   rule snapBoundary.s.1 "Space snapBoundary.s.1 by 0"
+   space snapBoundary by 0
+
+end
+

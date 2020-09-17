@@ -1,0 +1,24 @@
+// Library - ece425mp1, Cell - nand2, View - schematic
+// LAST TIME SAVED: Feb  8 21:58:49 2019
+// NETLIST TIME: Feb 23 15:50:45 2019
+`timescale 1ns / 1ns 
+
+module nand2 ( y, a, b );
+
+output  y;
+
+input  a, b;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "nand2";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+pfet M1 ( y, cds_globals.vdd_, a);
+pfet M0 ( y, cds_globals.vdd_, b);
+nfet M3 ( net8, cds_globals.gnd_, a);
+nfet M2 ( y, net8, b);
+
+endmodule

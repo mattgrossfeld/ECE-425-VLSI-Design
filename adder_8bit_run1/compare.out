@@ -1,0 +1,8 @@
+
+================================================================================
+
+Compare set name:          c1 (hierarchical)
+Compare command:           compare . -pos 2ns -neg 2ns -maxerrors 200
+Successful compares:       5/6
+Total error limit reached: Yes
+Expression miscompares:    100

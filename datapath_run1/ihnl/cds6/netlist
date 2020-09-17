@@ -1,0 +1,30 @@
+// Library - ece425mp2, Cell - alu, View - schematic
+// LAST TIME SAVED: Mar 29 17:07:00 2019
+// NETLIST TIME: Mar 29 17:07:35 2019
+`timescale 1ns / 1ns 
+
+module alu ( cout, f, p, cin, func_sel, inv_r, inv_s, r, s );
+
+output  cout, f, p;
+
+input  cin, inv_r, inv_s, r, s;
+
+input [2:0]  func_sel;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "alu";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+add add ( cout, net017, cin, net023, net030, p);
+logic logic ( net023, net030, p, inv_r, inv_s, r, s);
+mux41 I14 ( net013, net017, net017, net017, net023, func_sel[0],
+     func_sel[1]);
+mux41 I13 ( net012, net030, net030, p, net029, func_sel[0],
+     func_sel[1]);
+mux21 I15 ( f, net013, net012, func_sel[2]);
+inv I30 ( net029, p);
+
+endmodule

@@ -1,0 +1,24 @@
+// Library - ece425mp1, Cell - nor2, View - schematic
+// LAST TIME SAVED: Feb  8 22:04:51 2019
+// NETLIST TIME: Feb 10 21:37:58 2019
+`timescale 1ns / 1ns 
+
+module nor2 ( y, a, b );
+
+output  y;
+
+input  a, b;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "nor2";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+nfet M1 ( y, cds_globals.gnd_, b);
+nfet M0 ( y, cds_globals.gnd_, a);
+pfet M3 ( net10, cds_globals.vdd_, a);
+pfet M2 ( y, net10, b);
+
+endmodule

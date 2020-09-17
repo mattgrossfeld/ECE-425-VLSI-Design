@@ -1,0 +1,390 @@
+Checking out Encounter license ...
+	edsxl		DENIED:		"Encounter_Digital_Impl_Sys_XL"
+	edsl		DENIED:		"Encounter_Digital_Impl_Sys_L"
+	encblk		DENIED:		"Encounter_Block"
+	fegxl		DENIED:		"First_Encounter_GXL"
+	fexl		DENIED:		"FE_GPS"
+	nru		DENIED:		"NanoRoute_Ultra"
+	vdixl		DENIED:		"Virtuoso_Digital_Implem_XL"
+	vdi		CHECKED OUT:	"Virtuoso_Digital_Implem"
+Virtuoso_Digital_Implem 14.2 license checkout succeeded.
+	Maximum number of instance allowed (1 x 50000).
+**ERROR: (ENCOAX-142):	Could not open shared library libfeoax22.so : liboaDesign.so: cannot open shared object file: No such file or directory
+
+**ERROR: (ENCOAX-142):	OA features will be disabled in this session.
+
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2014.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Encounter v14.28-s033_1 (64bit) 03/21/2016 13:34 (Linux 2.6.18-194.el5)
+@(#)CDS: NanoRoute v14.28-s005 NR160313-1959/14_28-UB (database version 2.30, 267.6.1) {superthreading v1.25}
+@(#)CDS: CeltIC v14.28-s006_1 (64bit) 03/08/2016 00:08:23 (Linux 2.6.18-194.el5)
+@(#)CDS: AAE 14.28-s002 (64bit) 03/21/2016 (Linux 2.6.18-194.el5)
+@(#)CDS: CTE 14.28-s007_1 (64bit) Mar  7 2016 23:11:05 (Linux 2.6.18-194.el5)
+@(#)CDS: CPE v14.28-s006
+@(#)CDS: IQRC/TQRC 14.2.2-s217 (64bit) Wed Apr 15 23:10:24 PDT 2015 (Linux 2.6.18-194.el5)
+@(#)CDS: OA 22.50-p011 Tue Nov 11 03:24:55 2014
+@(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+@(#)CDS: RCDB 11.5
+--- Starting "Encounter v14.28-s033_1" on Thu May  2 17:12:19 2019 (mem=98.3M) ---
+--- Running on linux-06.ews.illinois.edu (x86_64 w/Linux 3.10.0-957.12.1.el7.x86_64) ---
+This version was compiled on Mon Mar 21 13:34:48 PDT 2016.
+Set DBUPerIGU to 1000.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+**ERROR: (ENCSYT-6689):	Invalid return code while sourcing "/software/cadence-Aug2016/IC617/share/lpa/etc/lpawrapper/tcl/InShape/Encounter.tcl". Check and correct your Tcl script regarding below message:
+ couldn't read file "/software/cadence-Aug2016/IC617/tools.lnx86/bin/../tools.lnx86/lpa/bin/64bit/etc/lpawrapper/tcl/InShape/FixingHint.tcl": no such file or directory
+<CMD> win
+<CMD> setImportMode -treatUndefinedCellAsBbox 0 -keepEmptyModule 1 -useLefDef56 1
+<CMD> init_design
+**ERROR: (ENCOAX-820):	The OA features are disabled in the current session of Encounter because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Encounter either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+
+**ERROR: (ENCOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+
+Loading LEF file vtvt/vtvt_tsmc250_lef/vtvt_tsmc250.lef ...
+**WARN: (ENCLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M2 pitch 108.
+
+viaInitial starts at Thu May  2 17:14:10 2019
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN1 GENERATE.
+Type 'man ENCPP-557' for more detail.
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN2 GENERATE.
+Type 'man ENCPP-557' for more detail.
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN3 GENERATE.
+Type 'man ENCPP-557' for more detail.
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN4 GENERATE.
+Type 'man ENCPP-557' for more detail.
+**WARN: (ENCPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from LEF file: VIARULE TURN5 GENERATE.
+Type 'man ENCPP-557' for more detail.
+viaInitial ends at Thu May  2 17:14:10 2019
+*** Begin netlist parsing (mem=344.3M) ***
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'controller_synth.v'
+
+*** Memory Usage v#1 (Current mem = 345.301M, initial mem = 98.340M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=345.3M) ***
+Set top cell to controller.
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.19min, fe_real=2.13min, fe_mem=345.3M) ***
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell controller ...
+*** Netlist is unique.
+** info: there are 94 modules.
+** info: there are 112 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 351.051M, initial mem = 98.340M) ***
+*info: set bottom ioPad orient R0
+**WARN: (ENCFP-3961):	The techSite 'CornerSite' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+Type 'man ENCFP-3961' for more detail.
+**WARN: (ENCFP-3961):	The techSite 'IOSite' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+Type 'man ENCFP-3961' for more detail.
+Generated pitch 1.62 in metal5 is different from 2.16 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Input Pin Transition Delay as 0.1 ps.
+
+**WARN: (ENCSYT-7328):	The design has been initialized in physical-only mode because the init_mmmc_file global variable was not defined. Timing analysis will not be possible within this session. You can only use commands that do not depend on timing data. If you need to use timing, you need to restart with an init_mmmc_file to define the timing setup, or you can save this design and use restore_design -mmmc_file <viewDef.tcl> to add the timing setup information.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   ENCLF-108            1  There is no overlap layer defined in any...
+WARNING   ENCFP-3961           2  The techSite '%s' has no related cells i...
+WARNING   ENCSYT-7328          1  The design has been initialized in physi...
+WARNING   ENCPP-557            5  A single-layer VIARULE GENERATE for turn...
+ERROR     ENCOAX-820           1  The OA features are disabled in the curr...
+ERROR     ENCOAX-850           1  %s command cannot be run as OA features ...
+*** Message Summary: 9 warning(s), 2 error(s)
+
+<CMD> defIn am2901.def
+Reading DEF file 'am2901.def', current time is Thu May  2 17:14:24 2019 ...
+--- DIVIDERCHAR '/'
+**WARN: (ENCDF-64):	UnitsPerDBU is not unity (you may have rounding problems).
+--- UnitsPerDBU = 10.0000
+Generated pitch 1.62 in metal5 is different from 2.16 defined in technology file in preferred direction.
+--- DIEAREA (0 2040) (33840 5064)
+**WARN: (ENCDF-200):	Instance I30 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I29 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I28 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I27 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I26 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I25 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I24 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I23 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I22 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I21 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I20 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I10 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I1 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I11 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I17 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I2 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I16 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I18 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I3 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (ENCDF-200):	Instance I19 is not found in db and ignored.
+If this is a physical-only instance, it should have '+ SOURCE DIST' attribute.
+**WARN: (EMS-63):	Message <ENCDF-200> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (ENCDF-248):	The direction of pin 'zero' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-244):	Pin 'd[3]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'inv_s' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'inv_r' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'f[3]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (ENCDF-244):	Pin 'q3_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'p[1]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'f_sel[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'f_sel[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-244):	Pin 'f0_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'p[2]' is inconsistent with
+        netlist or timing library (INPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'q_sel[1]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'q_sel[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'q_master_en' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'iq_master_en' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'q_slave_en' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'iq_slave_en' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-244):	Pin 'q0_out' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'reg_a_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'ireg_a_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'reg_b_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'ireg_b_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-248):	The direction of pin 'ireg_wr' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (ENCDF-244):	Pin 'f3_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-248):	The direction of pin 'select_a_hi[0]' is inconsistent with
+        netlist or timing library (OUTPUT in db)
+**WARN: (EMS-63):	Message <ENCDF-248> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (ENCDF-244):	Pin 'cin' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'y[3]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'vdd!' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'gnd!' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'q0_in' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'q3_out' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'y[2]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'y[1]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'y[0]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'd[2]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'd[1]' is not created because it's not in the netlist and also not a P/G pin.
+**WARN: (ENCDF-244):	Pin 'd[0]' is not created because it's not in the netlist and also not a P/G pin.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+**WARN: (ENCDF-147):	Net 'd[3]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'q3_in' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'f0_in' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'q0_out' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'f3_in' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'cin' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'y[3]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'vdd!' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'gnd!' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'q0_in' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'q3_out' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'y[2]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'y[1]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'y[0]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'd[2]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'd[1]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+**WARN: (ENCDF-147):	Net 'd[0]' is not found in the database. The routing on the net is discarded. defIn will continue, but the physical connection is lost, which will likely cause problems later on.
+Verify the net is correctly defined in your Verilog netlist, and the DEF matches the Verilog.
+DEF file 'am2901.def' is parsed, current time is Thu May  2 17:14:24 2019.
+<CMD> fit
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 0 1
+<CMD> setDrawView fplan
+<CMD> uiSetTool ptnPinBlk
+<CMD> zoomIn
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+
+*** Memory Usage v#1 (Current mem = 449.262M, initial mem = 98.340M) ***
+*** Message Summary: 936 warning(s), 5 error(s)
+
+--- Ending "Encounter" (totcpu=0:00:18.8, real=0:04:04, mem=449.3M) ---

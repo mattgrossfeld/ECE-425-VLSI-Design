@@ -1,0 +1,7 @@
+# File Created by Matthew Grossfeld at Wed May  1 13:46:25 2019
+# assisted by CdsLibEditor
+SOFTINCLUDE /home/grossfe2/cds.lib
+DEFINE ece425mp1 /home/grossfe2/ece425.work/ece425mp1
+DEFINE ece425mp2 ece425mp2
+DEFINE ece425mp2_backup ece425mp2_backup
+DEFINE ece425mp3 ece425mp3

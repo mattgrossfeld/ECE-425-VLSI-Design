@@ -1,0 +1,10 @@
+simFuncDPLList = '((nil libName "ece425mp2" cellName "bitcell"
+    viewName "functional" filePath "/home/grossfe2/ece425.work/ece425mp2/bitcell/functional/verilog.v"
+    ) 
+    (nil libName "ece425mp2" cellName "tx_gate"
+    viewName "functional" filePath "/home/grossfe2/ece425.work/ece425mp2/tx_gate/functional/verilog.v"
+    ) 
+    (nil libName "NCSU_Digital_Parts" cellName "inv"
+    viewName "functional" filePath "/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/inv/functional/verilog.v"
+    )
+)

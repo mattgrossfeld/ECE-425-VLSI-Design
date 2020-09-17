@@ -1,0 +1,18 @@
+// Library - ece425mp2, Cell - mux31, View - schematic
+// LAST TIME SAVED: Mar 29 17:06:54 2019
+// NETLIST TIME: Mar 29 17:07:35 2019
+`timescale 1ns / 1ns 
+
+module mux31 ( y, a, b, c, sel0, sel1 );
+
+output  y;
+
+input  a, b, c, sel0, sel1;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "mux31";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

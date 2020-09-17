@@ -1,0 +1,8272 @@
+%!PS-Adobe-3.0
+%%DocumentFonts: Helvetica Times-Roman Courier
+%%Creator: Cadence Design Systems
+%%EndComments
+%%BeginProlog
+%
+% Start of Cadence ps.prologue -- Version 5.3.1
+% Adobe Postscript Level 2 Color Version.
+/setpacking where
+{
+	/currpack currentpacking def
+	pop true setpacking
+} if
+%******************************************************************************
+% Graphics initialization routine.
+%
+/gis  {
+  0 setgray
+  save
+  mark
+  newpath
+
+%
+% Scale postscripts 72 dpi divided by the plotter resolution set in pap.
+%
+  72 resolution div
+  dup
+  scale
+
+%
+% Move the origin of the plot up and to the right so the plotters margin
+% is observed.
+%
+  offsetX offsetY translate
+
+  /stippleArray 10 array def
+    stippleArray
+     dup    0  <FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF> put
+     dup    1  <00000000000000000000000000000000
+                00000000000000000000000000000000> put
+     dup    2  <00000000000000000000000000000000
+                00000000000000000000000000000000> put
+     dup    3  <00000000000000000000000000000000
+                00000000000000000000000000000000> put
+     dup    4  <00000000000000000000000000000000
+                00000000000000000000000000000000> put
+     dup    5  <00000000000000000000000000000000
+                00000000000000000000000000000000> put
+     dup    6  <00000000000000000000000000000000
+                00000000000000000000000000000000> put
+     dup    7  <00000000000000000000000000000000
+                00000000000000000000000000000000> put
+     dup    8  <08080404020201018080404020201010
+		08080404020201018080404020201010> put
+            9  <08081414222241418080414122221414
+                08081414222241418080414122221414> put
+
+  /newFont 10 dict def
+  newFont begin
+
+    /FontType 3 def
+    /FontMatrix [1 0 0 1 0 0] def
+    /FontBBox [0 0 1 1] def
+
+    /Encoding 256 array def
+    0 1 255 {Encoding exch /.notdef put} for
+    Encoding
+      dup 48 /0  put
+      dup 49 /1  put
+      dup 50 /2  put
+      dup 51 /3  put
+      dup 52 /4  put
+      dup 53 /5  put
+      dup 54 /6  put
+      dup 55 /7  put
+      dup 56 /8  put
+          57 /9  put
+
+
+    /BuildChar {
+        /char exch def
+        /fontdict exch def
+        /charname fontdict /Encoding get char get def
+
+         1 0 setcharwidth
+
+          16 16 true
+          [16 0 0 -16 -.5 15.50]
+           stippleArray char 48 sub 1 getinterval cvx
+          imagemask
+    } def
+
+  end
+  /StippleFont newFont definefont 66 scalefont setfont
+  /fillChar 0 def
+
+  /ellipsedict 8 dict def
+  ellipsedict /mtrx matrix put
+
+  /xformdict 8 dict def
+  xformdict /xformmtrx matrix put
+
+  /color     0 def
+
+  /lineRed   0 def
+  /lineGreen 0 def
+  /lineBlue  0 def
+
+  /fillRed   0 def
+  /fillGreen 0 def
+  /fillBlue  0 def
+
+  /hatchSet  0 def
+
+  /rht 0 def
+  /rw 0 def
+  /ils 1.0 def
+  /textalign 1 def
+
+} bind def
+
+%******************************************************************************
+% Paper call.  Sets resolution page height and page width.
+%
+/pap {
+    /resolution exch def
+    /pageHeight exch def
+    /pageWidth exch def
+    /offsetY exch def
+    /offsetX exch def
+
+  } bind def
+
+%******************************************************************************
+% Plot is done.
+%
+/gfs  {
+    showpage
+    cleartomark
+    restore
+  } bind def
+
+%******************************************************************************
+% Next Page sequence.
+%
+/nxp  {
+
+    showpage
+    newpath
+
+%
+% Scale postscripts 72 dpi divided by the plotter resolution set in pap.
+%
+    72 resolution div
+    dup
+    scale
+%
+% Move the origin of the plot up and to the right so the plotters margin
+% is observed.
+%
+    offsetX offsetY translate
+    /ils 1.0 def
+    /textalign 1 def
+  } bind def
+
+%******************************************************************************
+% Rotate Plot Sequence.
+%
+/rotp  {
+  pageWidth 0  translate  %% This moves lower left of plot to
+                          %% lower right of page.
+
+  90 rotate    %% rotate plot 90 degs.
+} bind def
+%******************************************************************************
+% Clipping Window
+%
+/clwin  {
+    initclip
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+    newpath
+    x1 y1 moveto
+    x2 y1 lineto
+    x2 y2 lineto
+    x1 y2 lineto
+    closepath
+    clip
+} bind def
+%******************************************************************************
+% These to routines keep track of the bounding box of the shape.
+% This information is used when filling the drawn shape.
+%
+/bblineto {
+  dup dup
+  /cury exch def
+  miny lt {/miny exch def}
+    {dup maxy gt { /maxy exch def }
+           {pop } ifelse } ifelse
+  dup dup
+  minx lt {/minx exch def}
+    {dup maxx gt { /maxx exch def }
+           { pop } ifelse } ifelse
+  cury lineto
+} bind def
+
+/bbmoveto {
+  dup dup
+  /miny exch def /maxy exch def /cury exch def
+  dup dup
+  /minx exch def /maxx exch def
+  cury moveto
+} bind def
+%******************************************************************************
+% Internal ellipical arc routine.
+%    x y xradius yradius startangle endangle ellipse
+%
+/ellipse
+  {
+    /endangle exch def
+    /startangle exch def
+    /yrad exch def
+    /xrad exch def
+    /y exch def
+    /x exch def
+
+    startangle endangle gt {
+      save
+      /tmpangle startangle def
+      /startangle endangle def
+      /endangle tmpangle def
+      restore
+    } if
+
+    ellipsedict begin
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 startangle endangle arc
+      savematrix setmatrix
+    end
+  } bind def
+%******************************************************************************
+% Resident Font Scale Sequence
+%    x y rfss
+%
+/rfss  {
+    4 2 roll
+    dup
+    3 div
+    add
+    scalefont
+    setfont
+    0 color ne {setLineColor}
+               { 0 setgray } ifelse
+  } bind def
+%******************************************************************************
+% Resident Font End
+%
+%
+/rfe
+{
+/width exch def
+5 1 roll
+moveto
+
+xformdict begin
+/savematrix xformmtrx currentmatrix def
+
+exch 				% rotate mirror to mirror rotate
+matrix rotate concat		% add rotation to current transform matrix
+dup 1 eq
+	{pop 1 -1}		% X mirror
+
+	{2 eq
+		{-1 1}		% Y mirror
+		{1 1}		% No mirror
+	ifelse}
+ifelse matrix scale concat	% add mirror to current transform matrix
+
+
+dup				% duplicate (string)
+length				% replace one of the strings with its length
+dup 0 ne
+{
+	3 -1 roll		% move fixed width flag to top of stack
+	0 eq
+	{			% if flag is false (0) do old string handling
+		/numChr exch def
+		dup stringwidth	%stack  wy,wx,(string)
+		pop
+		width
+		exch sub	%stack  xdiff,ydiff,(string)
+
+		cvi
+		numChr idiv	%stack  xspace,ydiff,(string)
+
+		/xoff exch def
+
+		{		% this is the positioning  function for kshow
+			pop pop
+			xoff
+			0
+			rmoveto
+		}
+
+		exch
+		kshow
+	}
+
+	{			% if flag is true (not 0) just show string
+		pop show
+	}
+	ifelse
+}
+
+{
+	pop pop pop
+}
+ifelse
+      savematrix setmatrix
+    end
+  } bind def
+%******************************************************************************
+% Resident Font Text Alignment
+%
+/rfta {						% <align> rfta
+	/textalign exch def
+} bind def
+%******************************************************************************
+% Resident Font Interline Space
+%
+/rfis {						% <space> rfis
+	/ils exch def
+} bind def
+%******************************************************************************
+% Resident Font Scale
+%
+/rfsc {						% <ht> <rotate> <mirror> rfs
+% What I need to do here is to validate <ht>.  <ht> can not be 0.  If it is 0
+% then make it 1.  To do this I will need to use the roll operation and exch
+% and maybe dup.  The algorithm looks like this:
+% Roll stack to make it look like : <rotate> <mirror> <ht>
+% duplicate <ht> so I can test it.
+% If <ht> is equal to 0 then
+% exchange 1 for <ht>
+% In any case roll stack to make it look like: <ht> <rotate> <mirror>
+% qed.
+%
+	3 -1 roll		% <rotate> <mirror> <ht>
+	dup 0 eq
+	{
+		1 exch pop	% <rotate> <mirror> <ht=1>
+	}
+	if
+	3 1 roll		% <ht> <rotate> <mirror>
+
+	0 color ne
+	{
+		setLineColor
+	}
+	{
+		0 setgray
+	}
+	ifelse
+
+	/tasz 60 def
+	/taln 59 def
+
+	/ta tasz array def
+	/cta ta def
+	/tc 0 def
+	/sa tasz array def
+	/sc 0 def
+} bind def
+%******************************************************************************
+% Resident Font Restricted Text
+%
+/rfrt {						% <height> <width> rfrt
+	/rht exch def
+	/rw exch def
+	% Since restricting one dimension and not the other is not supported
+	% if one dimension is turned off then ensure that both dimensions
+	% are turned off (a value of 0 means no restriction)
+	rht 0 eq rw 0 eq or
+	{
+		/rht 0 def
+		/rw 0 def
+	}
+	if
+} bind def
+%******************************************************************************
+% Resident Font Text Score
+%
+/rfts {						% <score> <start> <end> rfts
+	sc tasz lt
+	{
+		3 -1 roll 3 array astore
+		sa sc 3 -1 roll put
+		/sc sc 1 add def
+	}
+	{
+		pop pop pop
+	} ifelse
+} bind def
+%******************************************************************************
+% Resident Font Text
+%
+/rft {						% (text) rft
+	tc taln gt tc tasz mod 0 eq and
+	{
+		cta /cta tasz array dup def put
+	} if
+
+	tc tasz mod exch cta 3 1 roll sc
+	sa dup length array copy
+	3 array astore put
+
+	/sc 0 def
+	/tc tc 1 add def
+} bind def
+%******************************************************************************
+% Resident Font Complete
+%
+/rfc {						% <x> <y> rfc
+	/cta ta def
+
+	%
+	% If text is restricted or if text alignment is not left, find the
+	% longest text string
+	%
+	/mw 0 def
+	rw 0 ne textalign 3 gt or
+	{
+		%
+		% Find the widest text string
+		%
+		5 index		% <fn> <ht> <rot> <mir> <x> <y> <fn>
+		setfont
+		0 1 tc 1 sub
+		{
+			dup taln gt 1 index tasz mod 0 eq and
+			{
+				/cta cta tasz get def
+			}
+			if
+
+			tasz mod cta exch get 0 get
+			stringwidth pop dup mw gt
+			{
+				/mw exch def null
+			}
+			if
+
+			pop
+		}
+		for
+
+		/cta ta def
+	}
+	if
+
+	%
+	% Operand stack:		<fn> <ht> <rot> <mir> <x> <y>
+	% Check for restricted text
+	%
+	rw 0 ne
+	{
+
+		%
+		% Compute font scale factors
+		%
+		6 -2 roll pop		% <rot> <mir> <x> <y> <fn>
+		rw mw div
+		rht tc div dup ils mul 0.5 add cvi /tht exch def
+		matrix scale makefont	% <rot> <mir> <x> <y> <fn>
+		/mw rw def
+	}
+	{
+		6 -2 roll		% <rot> <mir> <x> <y> <fn> <ht>
+		dup 0 eq		% Test if height is 0
+		{			% change to 1 if it is
+                	1 exch pop	% <rot> <mir> <x> <y> <fn> <1>
+		}
+		if
+		dup ils mul 0.5 add cvi /tht exch def
+		dup mw mul /mw exch def scalefont
+	}
+	ifelse
+
+	setfont				% <rot> <mir> <x> <y>
+
+	moveto			% <rot> <mir>
+
+	xformdict begin
+		/savematrix xformmtrx currentmatrix def
+
+		exch matrix rotate concat
+		dup 1 eq
+		{
+			pop 1.0 -1.0		% x mirror
+		}
+		{
+			2 eq
+			{
+				-1.0 1.0	% y mirror
+			}
+			{
+				1.0 1.0		% no mirror
+			}
+			ifelse
+		}
+		ifelse
+		matrix scale concat
+
+		currentpoint
+
+		%
+		% Adjust origin for text alignment. For lc (4), cc (5), and uc
+		% (6) move left by width / 2. For lr (7), cr (8), and ur (9)
+		% move left by width. For cl (2), cc (5), and cr (8) move down
+		% by height / 2. For ul (3), uc (6), and ur (9) move down by
+		% height.
+		%
+		textalign 2 eq textalign 5 eq or textalign 8 eq or
+		{
+			tht tc mul 2 div sub
+		} if
+		textalign 3 eq textalign 6 eq or textalign 9 eq or
+		{
+			tht tc mul sub
+		} if
+		/oy exch def
+
+		textalign 3 gt textalign 7 lt and
+		{
+			mw 2 div sub
+		} if
+		textalign 6 gt textalign 10 lt and
+		{
+			mw sub
+		} if
+		/ox exch def
+
+		0 1 tc 1 sub
+		{
+			dup taln gt 1 index tasz mod 0 eq and
+			{
+				/cta cta tasz get def
+			}
+			if
+
+			cta exch tasz mod get aload pop
+			dup 3 -1 roll	% (str) [score] [score] <cnt>
+			0 1 3 -1 roll 1 sub	% (str) [score] [score] 0 1 <cnt>
+			{
+				newpath ox oy moveto
+				get aload pop pop exch	% ... <len> <start>
+				dup 0 exch		% ... <len> <start> 0 <s
+				5 index 3 1 roll	% ... (str) 0 <start>
+				getinterval		% ... <len> <start> (.)
+				stringwidth pop tht rmoveto
+				3 index			% ... <len> <start> (str)
+				3 1 roll exch		% ... (str) <start> <len>
+%				dup 3 1 roll
+%				sub
+				getinterval stringwidth pop
+				0 rlineto stroke
+				dup
+			}
+			for
+			pop pop
+			ox oy moveto
+			show
+
+			%
+			% Move origin for next line
+			%
+			/oy oy tht sub def
+		}
+		for
+
+		savematrix setmatrix
+	end
+	pop					% throw away the "0"
+} bind def
+%******************************************************************************
+% Draw line sequence.
+%
+/dls  {
+  newpath
+  moveto
+  rlineto
+  gsave
+  0 color ne { setLineColor }
+             { 0 setgray } ifelse
+  stroke
+  grestore
+} bind def
+%******************************************************************************
+% Draw line to.
+%
+/dlt  {
+  newpath
+  gsave
+  0 color ne { setLineColor }
+             { 0 setgray } ifelse
+  moveto
+} bind def
+%******************************************************************************
+%
+/dslt  {
+  newpath
+  gsave
+  0 color ne { setLineColor }
+             { 0 setgray } ifelse
+  moveto
+} bind def
+%******************************************************************************
+%
+/dlv  {
+  rlineto
+} bind def
+%******************************************************************************
+%
+/dle  {
+  stroke
+  grestore
+} bind def
+%******************************************************************************
+% Move to.
+/mps {
+  newpath
+  moveto
+} bind def
+%******************************************************************************
+%
+% Draw Box Unfilled
+%    x1 y1 x2 y2 dbu
+%
+/dbu  {
+    0 color ne { setLineColor } if
+    newpath
+    moveto
+    dup 0 rlineto
+    0 3 -1 roll
+    rlineto
+    neg 0 rlineto
+    closepath
+    stroke
+  } bind def
+%******************************************************************************
+%
+% Draw Box Filled
+%    x1 y1 x2 y2 dbf
+%
+/dbf  {
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+    newpath
+    x1 y1 bbmoveto
+    x2 y1 bblineto
+    x2 y2 bblineto
+    x1 y2 bblineto
+    closepath
+    gsave
+    0 color ne { setFillColor } if
+    clip fillpath grestore
+  } bind def
+%******************************************************************************
+% Draw Box Solid
+%    x1 y1 x2 y2 dsb
+%
+/dbs  {
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+    newpath
+    x1 y1 moveto
+    x2 y1 lineto
+    x2 y2 lineto
+    x1 y2 lineto
+    closepath
+    gsave
+    0 color ne { setFillColor }
+               { 0 setgray } ifelse
+    fill grestore
+    0 color ne { setLineColor } if stroke
+  } bind def
+
+%******************************************************************************
+% Draw Polygon Begin
+%    x y dpb
+%
+/dpb  {
+    newpath bbmoveto
+  } bind def
+
+%******************************************************************************
+% Draw Polygon Unfilled
+%    x y dpu
+%
+/dpu  {
+      closepath
+      gsave
+      0 color ne { setLineColor } if
+      stroke
+      grestore
+   } bind def
+
+%******************************************************************************
+% Draw Polygon Filled
+%    x y dpf
+%
+/dpf  {
+    closepath
+    gsave
+    0 color ne { setFillColor } if
+    clip fillpath grestore
+  } bind def
+
+%******************************************************************************
+% Draw Polygon Solid
+%    x y dps
+%
+/dps  {
+    closepath
+    gsave
+    0 color ne { setFillColor }
+               { 0 setgray } ifelse
+    fill grestore
+    0 color ne { setLineColor } if stroke
+  } bind def
+
+%******************************************************************************
+% Draw Polygon Vertex
+%    x y dpv
+%
+/dpv  {
+    bblineto
+  } bind def
+
+%******************************************************************************
+% Draw Circle Unfilled
+%    x y radius dcu
+%
+/dcu  {
+    /radius exch def
+    /y exch def
+    /x exch def
+
+    newpath
+    x y radius radius 0 360 ellipse
+    gsave
+    0 color ne { setLineColor } if
+    stroke
+    grestore
+  } bind def
+%******************************************************************************
+% Draw Circle Filled
+%    x y radius dcs
+%
+/dcf  {
+    /radius exch def
+    /y exch def
+    /x exch def
+    /minx x radius sub def
+    /miny y radius sub def
+    /maxx x radius add def
+    /maxy y radius add def
+
+    newpath
+    x y radius radius 0 360 ellipse
+    gsave
+    0 color ne { setFillColor } if
+    clip fillpath
+    grestore
+  } bind def
+
+%******************************************************************************
+% Draw Circle Solid
+%    x y radius dcs
+%
+/dcs  {
+    /radius exch def
+    /y exch def
+    /x exch def
+
+          newpath
+    x y radius radius 0 360 ellipse
+    gsave
+    0 color ne { setFillColor }
+               { 0 setgray } ifelse
+    fill grestore
+    0 color ne {setLineColor} if stroke
+  } bind def
+%******************************************************************************
+% Draw Ellipse Unfilled
+%    x y xradius yradius deu
+%
+/delu  {
+    /yradius exch def
+    /xradius exch def
+    /y exch def
+    /x exch def
+
+    newpath
+    x y xradius yradius 0 360 ellipse
+    gsave
+    0 color ne { setLineColor } if
+    stroke
+    grestore
+  } bind def
+%******************************************************************************
+% Draw Ellipse Filled
+%    x y xradius yradius def
+%
+/delf  {
+    /yradius exch def
+    /xradius exch def
+    /y exch def
+    /x exch def
+    /minx x xradius sub def
+    /miny y yradius sub def
+    /maxx x xradius add def
+    /maxy y yradius add def
+
+    newpath
+    x y xradius yradius 0 360 ellipse
+    gsave
+    0 color ne { setFillColor } if
+    clip fillpath
+    grestore
+  } bind def
+
+%******************************************************************************
+% Draw Ellipse Solid
+%    x y xradius yradius des
+%
+/dels  {
+    /yradius exch def
+    /xradius exch def
+    /y exch def
+    /x exch def
+
+    newpath
+    x y xradius yradius 0 360 ellipse
+    gsave
+    0 color ne { setFillColor }
+               { 0 setgray } ifelse
+
+    fill grestore
+    0 color ne {setLineColor} if stroke
+  } bind def
+%******************************************************************************
+% Draw Arc Unfilled
+%    x y xradius yradius startangle endangle das
+%
+/dau  { newpath ellipse
+        gsave
+        0 color ne { setLineColor } if
+        stroke
+        grestore
+      } bind def
+%******************************************************************************
+% Line Define Code.
+%
+/setlinedash {
+    1 index length 11 gt
+    {exch dup length 11 sub 11 getinterval exch } if
+    setdash
+  } bind def
+
+/lpb    {
+    pop
+    [
+    /offset 0 def
+    /offcount 0 def
+    /oncount 0 def
+  } bind def
+
+/lpon  {
+    /oncount exch def
+    pop
+    oncount
+  } bind def
+
+/lpoff  {
+    /offcount exch def
+    pop
+    oncount 0 eq
+    {/offset offcount def }
+    { offcount } ifelse
+  } bind def
+
+/lpe  {
+    /linewidth exch def
+    pop
+    offset 0 ne
+    { offset } if ] 0 setlinedash
+    linewidth dup 1 eq {pop 0} if setlinewidth
+  } bind def
+
+/sls    { pop } bind def
+
+/ssls  { [] 0 setdash
+          1 setlinewidth
+        } bind def
+
+%******************************************************************************
+% Fill pattern define code.
+%
+/fillpath  {
+    0 color ne { setFillColor } if
+    /str 1 string def
+    /minx minx 66 div
+    truncate 66 mul def
+    /miny miny 66 div
+    truncate 66 mul def
+
+          /fillLine maxx minx sub cvi 66 idiv 1 add string def
+
+          0 1 fillLine length 1 sub {
+            fillLine exch fillChar str cvs cvi 48 add put
+          } for
+
+          minx
+          miny 66 maxy
+            { exch dup 3 -1 roll moveto fillLine show
+          } for pop
+
+    hatchSet 1 eq {0 color ne { setLineColor } if stroke} if
+} bind def
+
+
+/fds  { pop /currchar 30 def} bind def
+/fdf   {
+    exch
+    /char exch def
+    /stipple stippleArray char get def
+    stipple exch currchar
+    exch putinterval
+    stippleArray char stipple put
+    /currchar currchar 2 sub def
+  } bind def
+/fde  {
+    pop
+  } bind def
+/sfp  {
+    /fillChar exch def
+    /hatchSet 0 def
+    fillChar 8 ge {/hatchSet 1 def} if
+    /StippleFont findfont 66 scalefont setfont
+  } bind def
+/setLineColor {
+  lineRed    1000 div
+  lineGreen  1000 div
+  lineBlue   1000 div
+  setrgbcolor
+} bind def
+
+/setFillColor {
+  fillRed    1000 div
+  fillGreen  1000 div
+  fillBlue   1000 div
+  setrgbcolor
+} bind def
+
+/slc {
+  /lineBlue  exch def
+  /lineGreen exch def
+  /lineRed   exch def
+  /color 1 def
+  lineBlue 1000 eq {lineGreen 1000 eq {lineRed 1000 eq {
+    /lineBlue  0 def
+    /lineGreen 0 def
+    /lineRed   0 def
+  } if} if} if
+} bind def
+
+/sfc {
+  /fillBlue  exch def
+  /fillGreen exch def
+  /fillRed   exch def
+  /color 1 def
+  fillBlue 1000 eq {fillGreen 1000 eq {fillRed 1000 eq {
+    /fillBlue  0 def
+    /fillGreen 0 def
+    /fillRed   0 def
+  } if} if} if
+} bind def
+%******************************************************************************
+%
+% End of Cadence ps.prologue
+%
+%******************************************************************************
+/setpacking where
+{
+	pop currpack setpacking
+} if
+%%EndProlog
+/#copies 1 def
+150 150 4600 6350 600 pap
+%%Page: cds 1
+gis
+rotp
+2 1080 6346 3519 clwin
+0 1080 6348 3519 clwin
+0 1080 6348 3519 clwin
+ssls
+1000 0 0 slc
+1000 0 0 sfc
+0 -25 2838 1948 dls
+2838 1944 dlt
+-2 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 3 dlv
+dle
+19 0 2844 1929 dls
+0 -17 2872 1948 dls
+2872 1941 dlt
+1 3 dlv
+2 3 dlv
+3 1 dlv
+3 0 dlv
+dle
+2886 1941 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 3 dlv
+dle
+2922 1948 dlt
+0 -19 dlv
+-1 -4 dlv
+-1 -1 dlv
+-3 -1 dlv
+-3 0 dlv
+-3 1 dlv
+dle
+2922 1944 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+3668 1292 dlt
+-2 -1 dlv
+-1 -4 dlv
+0 -4 dlv
+1 -3 dlv
+2 -1 dlv
+3 1 dlv
+1 2 dlv
+1 6 dlv
+1 3 dlv
+3 1 dlv
+1 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -4 dlv
+-1 -3 dlv
+-2 -1 dlv
+dle
+0 19 3684 1297 dls
+16 0 3665 1324 dls
+3669 1324 dlt
+-3 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+3 1 dlv
+12 0 dlv
+dle
+3669 1337 dlt
+-3 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+3 1 dlv
+12 0 dlv
+dle
+3665 1360 dlt
+12 0 dlv
+3 1 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 4 dlv
+dle
+16 0 3665 1373 dls
+16 13 3665 1381 dls
+16 -13 3665 1394 dls
+25 0 1659 1366 dls
+1662 1366 dlt
+-2 -3 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+2 -2 dlv
+4 -2 dlv
+2 0 dlv
+4 2 dlv
+2 2 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-2 3 dlv
+dle
+0 19 1678 1372 dls
+16 0 1659 1399 dls
+1663 1399 dlt
+-3 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+3 1 dlv
+12 0 dlv
+dle
+1663 1412 dlt
+-3 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+3 1 dlv
+12 0 dlv
+dle
+1659 1435 dlt
+12 0 dlv
+3 1 dlv
+1 3 dlv
+0 3 dlv
+-1 3 dlv
+-3 3 dlv
+dle
+16 0 1659 1448 dls
+16 14 1659 1456 dls
+16 -14 1659 1470 dls
+17 7 5796 1892 dls
+5796 1906 dlt
+17 -7 dlv
+5 -2 dlv
+2 -3 dlv
+1 -2 dlv
+0 -1 dlv
+dle
+0 19 5815 1910 dls
+17 0 5796 1937 dls
+5801 1937 dlt
+-4 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+4 1 dlv
+12 0 dlv
+dle
+5801 1950 dlt
+-4 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+4 1 dlv
+12 0 dlv
+dle
+5796 1973 dlt
+12 0 dlv
+4 1 dlv
+1 3 dlv
+0 3 dlv
+-1 3 dlv
+-4 3 dlv
+dle
+17 0 5796 1986 dls
+17 13 5796 1995 dls
+17 -13 5796 2008 dls
+401 1944 dlt
+0 -2 dlv
+1 -3 dlv
+3 -1 dlv
+21 0 dlv
+dle
+0 9 409 1934 dls
+0 19 428 1948 dls
+17 0 409 1975 dls
+414 1975 dlt
+-4 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+4 1 dlv
+12 0 dlv
+dle
+414 1988 dlt
+-4 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+4 1 dlv
+12 0 dlv
+dle
+409 2011 dlt
+12 0 dlv
+4 1 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-4 4 dlv
+dle
+17 0 409 2024 dls
+17 13 409 2032 dls
+17 -13 409 2045 dls
+0 -17 5396 2746 dls
+5396 2743 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+0 -26 5406 2755 dls
+5415 2746 dlt
+0 -12 dlv
+1 -3 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+3 3 dlv
+dle
+0 -17 5428 2746 dls
+16 0 3665 2188 dls
+3672 2188 dlt
+-4 1 dlv
+-2 2 dlv
+-1 3 dlv
+0 3 dlv
+dle
+0 19 3684 2200 dls
+16 0 3665 2227 dls
+3669 2227 dlt
+-3 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+3 1 dlv
+12 0 dlv
+dle
+3669 2240 dlt
+-3 4 dlv
+-1 2 dlv
+0 4 dlv
+1 2 dlv
+3 1 dlv
+12 0 dlv
+dle
+3665 2263 dlt
+12 0 dlv
+3 1 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 4 dlv
+dle
+16 0 3665 2276 dls
+16 13 3665 2284 dls
+16 -13 3665 2297 dls
+0 -17 2951 2796 dls
+2951 2789 dlt
+1 3 dlv
+2 3 dlv
+3 1 dlv
+3 0 dlv
+dle
+2965 2789 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-3 1 dlv
+-3 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+3001 2796 dlt
+0 -19 dlv
+-1 -4 dlv
+-2 -1 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+3001 2792 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+3017 2804 dlt
+-2 0 dlv
+-2 -1 dlv
+-2 -4 dlv
+0 -20 dlv
+dle
+8 0 3008 2796 dls
+3023 2804 dlt
+2 -1 dlv
+1 1 dlv
+-1 1 dlv
+-2 -1 dlv
+dle
+0 -17 3025 2796 dls
+0 -25 3034 2804 dls
+3043 2789 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-2 2 dlv
+-2 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+1000 1000 1000 slc
+1000 1000 1000 sfc
+2550 2029 dlt
+9 25 dlv
+10 -25 dlv
+dle
+12 0 2553 2037 dls
+0 -25 2589 2054 dls
+2589 2042 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+0 -25 2612 2054 dls
+2612 2042 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+2646 2054 dlt
+-2 -1 dlv
+-2 -2 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -6 dlv
+1 -4 dlv
+2 -2 dlv
+2 -3 dlv
+2 -1 dlv
+5 0 dlv
+2 1 dlv
+3 3 dlv
+1 2 dlv
+1 4 dlv
+0 6 dlv
+-1 3 dlv
+-1 3 dlv
+-3 2 dlv
+-2 1 dlv
+-5 0 dlv
+dle
+7 -7 2650 2034 dls
+0 -16 2553 2006 dls
+2553 1999 dlt
+1 4 dlv
+3 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+2567 1999 dlt
+15 0 dlv
+0 3 dlv
+-1 2 dlv
+-2 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+2603 2006 dlt
+0 -19 dlv
+-1 -3 dlv
+-1 -1 dlv
+-2 -2 dlv
+-4 0 dlv
+-2 2 dlv
+dle
+2603 2003 dlt
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+2612 2015 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -16 2613 2006 dls
+2634 2003 dlt
+-1 2 dlv
+-3 1 dlv
+-4 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+3 -1 dlv
+6 -1 dlv
+2 -1 dlv
+1 -2 dlv
+0 -2 dlv
+-1 -2 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+2644 2015 dlt
+0 -20 dlv
+1 -4 dlv
+2 -1 dlv
+3 0 dlv
+dle
+9 0 2640 2006 dls
+2656 1999 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+0 -16 2679 2006 dls
+2679 1999 dlt
+1 4 dlv
+2 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+0 -25 2713 2015 dls
+2713 2002 dlt
+4 3 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+2735 1999 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+0 -16 2757 2006 dls
+2757 1999 dlt
+2 4 dlv
+2 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+2772 1999 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+4639 2871 dlt
+0 25 dlv
+10 -25 dlv
+10 25 dlv
+0 -25 dlv
+dle
+4673 2888 dlt
+-3 -2 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+1 3 dlv
+0 2 dlv
+-1 4 dlv
+-2 2 dlv
+-3 2 dlv
+-3 0 dlv
+dle
+4703 2884 dlt
+-2 2 dlv
+-3 2 dlv
+-4 0 dlv
+-3 -2 dlv
+-1 -2 dlv
+1 -2 dlv
+2 -2 dlv
+6 -1 dlv
+2 -1 dlv
+2 -2 dlv
+0 -1 dlv
+-2 -3 dlv
+-3 -1 dlv
+-4 0 dlv
+-3 1 dlv
+-1 3 dlv
+dle
+4712 2896 dlt
+0 -20 dlv
+1 -4 dlv
+3 -1 dlv
+2 0 dlv
+dle
+8 0 4709 2888 dls
+4749 2888 dlt
+-2 -2 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+1 3 dlv
+0 2 dlv
+-1 4 dlv
+-3 2 dlv
+-2 2 dlv
+-4 0 dlv
+dle
+4774 2896 dlt
+-2 0 dlv
+-2 -1 dlv
+-2 -4 dlv
+0 -20 dlv
+dle
+8 0 4765 2888 dls
+7 -17 4798 2888 dls
+4813 2888 dlt
+-8 -17 dlv
+-2 -5 dlv
+-2 -2 dlv
+-3 -1 dlv
+-1 0 dlv
+dle
+4824 2888 dlt
+-2 -2 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+1 3 dlv
+0 2 dlv
+-1 4 dlv
+-3 2 dlv
+-2 2 dlv
+-4 0 dlv
+dle
+4842 2888 dlt
+0 -12 dlv
+2 -4 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+4 4 dlv
+dle
+0 -17 4856 2888 dls
+0 -17 4865 2888 dls
+4865 2880 dlt
+1 4 dlv
+3 2 dlv
+2 2 dlv
+4 0 dlv
+dle
+0 -17 4900 2888 dls
+4900 2883 dlt
+3 3 dlv
+3 2 dlv
+3 0 dlv
+3 -2 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+4913 2883 dlt
+3 3 dlv
+3 2 dlv
+3 0 dlv
+3 -2 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+4936 2888 dlt
+0 -12 dlv
+1 -4 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+4 4 dlv
+dle
+0 -17 4949 2888 dls
+13 -17 4957 2888 dls
+-13 -17 4970 2888 dls
+4977 2880 dlt
+15 0 dlv
+0 3 dlv
+-2 2 dlv
+-1 1 dlv
+-2 2 dlv
+-4 0 dlv
+-2 -2 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+5012 2884 dlt
+-1 2 dlv
+-4 2 dlv
+-3 0 dlv
+-4 -2 dlv
+-1 -2 dlv
+1 -2 dlv
+2 -2 dlv
+6 -1 dlv
+3 -1 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -3 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 3 dlv
+dle
+4638 2848 dlt
+5 -16 dlv
+5 16 dlv
+5 -16 dlv
+4 16 dlv
+dle
+4664 2857 dlt
+2 -2 dlv
+1 2 dlv
+-1 1 dlv
+-2 -1 dlv
+dle
+0 -16 4666 2848 dls
+0 -25 4675 2857 dls
+0 -25 4685 2857 dls
+4727 2848 dlt
+0 -19 dlv
+-2 -3 dlv
+-1 -2 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+4727 2845 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+4741 2848 dlt
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+1 4 dlv
+0 2 dlv
+-1 4 dlv
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+dle
+4783 2848 dlt
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+1 4 dlv
+0 2 dlv
+-1 4 dlv
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+dle
+0 -16 4801 2848 dls
+4801 2843 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -11 dlv
+dle
+4844 2857 dlt
+0 -21 dlv
+1 -3 dlv
+2 -1 dlv
+3 0 dlv
+dle
+8 0 4840 2848 dls
+0 -25 4857 2857 dls
+4857 2843 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -11 dlv
+dle
+4878 2857 dlt
+1 -2 dlv
+2 2 dlv
+-2 1 dlv
+-1 -1 dlv
+dle
+0 -16 4879 2848 dls
+4901 2845 dlt
+-1 2 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+2 -1 dlv
+6 -1 dlv
+3 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+4651 2805 dlt
+-1 3 dlv
+-3 1 dlv
+-4 0 dlv
+-4 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+3 -1 dlv
+6 -2 dlv
+2 -1 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -3 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 3 dlv
+dle
+4673 2805 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+0 -25 4681 2817 dls
+4681 2804 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+4703 2802 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+0 -17 4725 2809 dls
+4725 2804 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+2 -4 dlv
+0 -12 dlv
+dle
+4739 2804 dlt
+3 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+2 -4 dlv
+0 -12 dlv
+dle
+0 -17 4774 2809 dls
+4774 2805 dlt
+-2 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 3 dlv
+dle
+4785 2817 dlt
+0 -20 dlv
+1 -4 dlv
+3 -1 dlv
+2 0 dlv
+dle
+9 0 4781 2809 dls
+4797 2817 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -17 4798 2809 dls
+4821 2805 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+4830 2795 dlt
+-1 -2 dlv
+1 -1 dlv
+2 1 dlv
+-2 2 dlv
+dle
+0 800 400 slc
+0 800 400 sfc
+100 0 2244 1689 dls
+100 0 2244 1739 dls
+100 0 2244 1789 dls
+100 0 2244 1839 dls
+101 0 2820 1889 dls
+100 0 2244 1889 dls
+301 476 2344 1639 dbu
+0 -88 3773 1965 dls
+0 -126 3849 1965 dls
+-100 0 3698 1814 dls
+-100 0 3698 1689 dls
+-100 0 3999 1614 dls
+-100 0 3698 1563 dls
+-100 0 3698 1438 dls
+3698 1914 dpb
+3698 1338 dpv
+3899 1438 dpv
+3899 1814 dpv
+dpu
+100 0 1592 1664 dls
+100 0 1592 1814 dls
+100 0 1592 1513 dls
+0 -88 1767 1965 dls
+0 -126 1843 1965 dls
+1692 1914 dpb
+1692 1413 dpv
+1893 1513 dpv
+1893 1814 dpv
+dpu
+100 0 1893 1664 dls
+0 -88 5905 2416 dls
+-100 0 5829 2266 dls
+-100 0 6130 2165 dls
+-100 0 5829 2065 dls
+5829 2366 dpb
+5829 1965 dpv
+6030 2065 dpv
+6030 2266 dpv
+dpu
+100 0 338 2240 dls
+100 0 338 2391 dls
+100 0 338 2090 dls
+0 -87 514 2541 dls
+0 -125 589 2541 dls
+438 2491 dpb
+438 1990 dpv
+639 2090 dpv
+639 2391 dpv
+dpu
+100 0 639 2240 dls
+100 0 4526 2441 dls
+100 0 4526 2491 dls
+100 0 4526 2541 dls
+100 0 5378 2592 dls
+100 0 4526 2592 dls
+100 0 5378 2642 dls
+100 0 4526 2642 dls
+100 0 5378 2692 dls
+100 0 4526 2692 dls
+351 752 4626 2391 dbu
+100 0 3598 2491 dls
+100 0 3598 2642 dls
+100 0 3598 2341 dls
+0 -88 3773 2792 dls
+0 -125 3849 2792 dls
+3698 2742 dpb
+3698 2240 dpv
+3899 2341 dpv
+3899 2642 dpv
+dpu
+100 0 3899 2491 dls
+100 0 1943 2316 dls
+100 0 1943 2366 dls
+100 0 1943 2416 dls
+100 0 2946 2441 dls
+100 0 1943 2466 dls
+100 0 2946 2491 dls
+100 0 1943 2516 dls
+100 0 1943 2566 dls
+100 0 1943 2617 dls
+100 0 1943 2667 dls
+100 0 1943 2742 dls
+526 903 2043 2266 dbu
+0 800 400 slc
+0 800 400 sfc
+0 -25 2546 1898 dls
+2546 1894 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+19 0 2552 1879 dls
+0 -17 2580 1898 dls
+2580 1891 dlt
+1 3 dlv
+2 3 dlv
+3 1 dlv
+3 0 dlv
+dle
+2594 1891 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 3 dlv
+dle
+2630 1898 dlt
+0 -19 dlv
+-1 -4 dlv
+-2 -1 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+2630 1894 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+0 -17 4991 2571 dls
+4991 2567 dlt
+-2 2 dlv
+-3 2 dlv
+-3 0 dlv
+-3 -2 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+0 -25 5001 2579 dls
+5010 2571 dlt
+0 -12 dlv
+1 -4 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 4 dlv
+dle
+0 -17 5023 2571 dls
+0 -17 2440 2570 dls
+2440 2563 dlt
+2 3 dlv
+2 3 dlv
+2 1 dlv
+4 0 dlv
+dle
+2455 2563 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+2490 2570 dlt
+0 -19 dlv
+-1 -4 dlv
+-1 -1 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+2490 2566 dlt
+-2 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+2 2 dlv
+dle
+2507 2578 dlt
+-2 0 dlv
+-3 -1 dlv
+-1 -3 dlv
+0 -21 dlv
+dle
+8 0 2498 2570 dls
+2513 2578 dlt
+1 -1 dlv
+2 1 dlv
+-2 2 dlv
+-1 -2 dlv
+dle
+0 -17 2514 2570 dls
+0 -25 2524 2578 dls
+2532 2563 dlt
+15 0 dlv
+0 2 dlv
+-2 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+3 2 dlv
+dle
+224 749 1000 slc
+224 749 1000 sfc
+0 1279 12 2240 dls
+0 576 12 1664 dls
+12 2240 12 dcs
+326 0 12 2240 dls
+75 0 263 2090 dls
+75 0 263 2391 dls
+0 276 514 2541 dls
+413 2805 dpb
+514 2805 dpv
+521 2812 dpv
+521 2822 dpv
+514 2830 dpv
+413 2830 dpv
+406 2822 dpv
+406 2812 dpv
+dps
+101 0 413 2817 dls
+514 2817 25 dcs
+0 276 589 2541 dls
+514 2805 dpb
+589 2805 dpv
+596 2812 dpv
+596 2822 dpv
+589 2830 dpv
+514 2830 dpv
+506 2822 dpv
+506 2812 dpv
+dps
+75 0 514 2817 dls
+151 0 739 2240 dls
+0 276 890 2240 dls
+1580 0 12 1664 dls
+401 0 1191 1814 dls
+376 0 1216 1513 dls
+25 0 1717 2692 dls
+0 75 1742 2617 dls
+276 0 1491 2968 dls
+0 301 1767 2667 dls
+0 25 1767 1965 dls
+301 0 1491 3043 dls
+0 301 1792 2742 dls
+1053 0 890 2516 dls
+251 0 1692 2566 dls
+251 0 1692 2466 dls
+226 0 1717 2366 dls
+226 0 1717 2316 dls
+201 0 1742 2617 dls
+201 0 1742 2416 dls
+176 0 1767 1990 dls
+176 0 1767 2667 dls
+151 0 1792 2742 dls
+0 225 1943 1990 dls
+1817 2203 dpb
+1943 2203 dpv
+1950 2210 dpv
+1950 2220 dpv
+1943 2228 dpv
+1817 2228 dpv
+1810 2220 dpv
+1810 2210 dpv
+dps
+126 0 1817 2215 dls
+1943 2215 25 dcs
+175 0 1843 1965 dls
+25 0 1993 1664 dls
+0 250 2018 1965 dls
+0 225 2018 1664 dls
+1943 2203 dpb
+2018 2203 dpv
+2026 2210 dpv
+2026 2220 dpv
+2018 2228 dpv
+1943 2228 dpv
+1935 2220 dpv
+1935 2210 dpv
+dps
+75 0 1943 2215 dls
+2018 2215 25 dcs
+150 0 1918 1363 dls
+0 476 2068 1363 dls
+175 0 1918 1313 dls
+0 476 2093 1313 dls
+2018 2203 dpb
+2093 2203 dpv
+2101 2210 dpv
+2101 2220 dpv
+2093 2228 dpv
+2018 2228 dpv
+2011 2220 dpv
+2011 2210 dpv
+dps
+75 0 2018 2215 dls
+200 0 1918 1263 dls
+0 476 2118 1263 dls
+225 0 1918 1212 dls
+0 477 2143 1212 dls
+226 0 2018 1889 dls
+176 0 2068 1839 dls
+151 0 2093 1789 dls
+126 0 2118 1739 dls
+101 0 2143 1689 dls
+100 0 2921 1889 dls
+0 326 3021 1563 dls
+3021 1889 12 dcs
+50 0 3021 1889 dls
+50 0 3046 2491 dls
+0 276 3096 2215 dls
+3096 2491 12 dcs
+201 0 3046 2441 dls
+0 752 3247 1689 dls
+226 0 3096 2491 dls
+0 677 3322 1814 dls
+3322 2491 12 dcs
+125 0 3297 1438 dls
+0 903 3422 1438 dls
+3422 1438 12 dcs
+577 0 3021 1563 dls
+401 0 3197 2642 dls
+351 0 3247 1689 dls
+276 0 3322 2491 dls
+276 0 3322 1814 dls
+176 0 3422 2341 dls
+176 0 3422 1438 dls
+0 226 3773 2792 dls
+0 175 3773 1965 dls
+3623 3005 dpb
+3773 3005 dpv
+3781 3013 dpv
+3781 3023 dpv
+3773 3030 dpv
+3623 3030 dpv
+3615 3023 dpv
+3615 3013 dpv
+dps
+150 0 3623 3018 dls
+3698 2128 dpb
+3773 2128 dpv
+3781 2135 dpv
+3781 2145 dpv
+3773 2153 dpv
+3698 2153 dpv
+3691 2145 dpv
+3691 2135 dpv
+dps
+75 0 3698 2140 dls
+3773 3018 25 dcs
+3773 2140 25 dcs
+0 226 3849 2792 dls
+0 175 3849 1965 dls
+3773 3005 dpb
+3849 3005 dpv
+3856 3013 dpv
+3856 3023 dpv
+3849 3030 dpv
+3773 3030 dpv
+3766 3023 dpv
+3766 3013 dpv
+dps
+76 0 3773 3018 dls
+3773 2128 dpb
+3849 2128 dpv
+3856 2135 dpv
+3856 2145 dpv
+3849 2153 dpv
+3773 2153 dpv
+3766 2145 dpv
+3766 2135 dpv
+dps
+76 0 3773 2140 dls
+3849 3018 25 dcs
+3849 2140 25 dcs
+3849 3005 dpb
+3899 3005 dpv
+3906 3013 dpv
+3906 3023 dpv
+3899 3030 dpv
+3849 3030 dpv
+3841 3023 dpv
+3841 3013 dpv
+dps
+50 0 3849 3018 dls
+3849 2128 dpb
+3924 2128 dpv
+3931 2135 dpv
+3931 2145 dpv
+3924 2153 dpv
+3849 2153 dpv
+3841 2145 dpv
+3841 2135 dpv
+dps
+75 0 3849 2140 dls
+351 0 3999 1614 dls
+0 827 4350 1614 dls
+527 0 3999 2491 dls
+176 0 4350 2441 dls
+76 0 4450 2541 dls
+76 0 4450 2592 dls
+51 0 4475 2692 dls
+4450 2629 dpb
+4526 2629 dpv
+4533 2637 dpv
+4533 2647 dpv
+4526 2654 dpv
+4450 2654 dpv
+4443 2647 dpv
+4443 2637 dpv
+dps
+76 0 4450 2642 dls
+101 0 5478 2642 dls
+0 577 5579 2065 dls
+5579 2642 12 dcs
+5642 0 12 3519 dls
+75 0 5579 2642 dls
+0 877 5654 2642 dls
+5654 2642 12 dcs
+2608 0 3096 2215 dls
+0 51 5704 2215 dls
+251 0 5478 2692 dls
+251 0 5478 2592 dls
+150 0 5579 2065 dls
+75 0 5654 2642 dls
+25 0 5704 2266 dls
+126 0 5779 2491 dls
+0 75 5905 2416 dls
+101 0 6130 2165 dls
+224 749 1000 slc
+224 749 1000 sfc
+471 2568 dlt
+0 -2 dlv
+1 -2 dlv
+4 -2 dlv
+20 0 dlv
+dle
+0 8 479 2559 dls
+0 19 498 2572 dls
+483 2611 dlt
+-3 -1 dlv
+-1 -3 dlv
+0 -4 dlv
+1 -4 dlv
+3 -1 dlv
+2 1 dlv
+1 3 dlv
+2 6 dlv
+1 2 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -3 dlv
+0 -4 dlv
+-1 -4 dlv
+-3 -1 dlv
+dle
+486 2619 dlt
+0 14 dlv
+-2 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+3 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 2 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 3 dlv
+dle
+25 0 471 2641 dls
+474 2670 dlt
+11 -19 dlv
+11 19 dlv
+dle
+476 2682 dlt
+-2 2 dlv
+-3 4 dlv
+25 0 dlv
+dle
+474 2700 dlt
+11 19 dlv
+11 -19 dlv
+dle
+546 2567 dlt
+0 -2 dlv
+1 -3 dlv
+4 -1 dlv
+20 0 dlv
+dle
+0 8 554 2558 dls
+0 19 574 2571 dls
+558 2610 dlt
+-2 -1 dlv
+-2 -4 dlv
+0 -3 dlv
+2 -4 dlv
+2 -1 dlv
+2 1 dlv
+2 3 dlv
+1 6 dlv
+1 2 dlv
+2 1 dlv
+2 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -3 dlv
+-1 -4 dlv
+-2 -1 dlv
+dle
+562 2617 dlt
+0 15 dlv
+-3 0 dlv
+-2 -2 dlv
+-1 -1 dlv
+-2 -2 dlv
+0 -4 dlv
+2 -2 dlv
+2 -3 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 3 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-2 3 dlv
+dle
+25 0 546 2640 dls
+550 2669 dlt
+10 -20 dlv
+11 20 dlv
+dle
+546 2684 dlt
+1 -3 dlv
+4 -3 dlv
+6 -1 dlv
+3 0 dlv
+6 1 dlv
+4 3 dlv
+1 3 dlv
+0 3 dlv
+-1 3 dlv
+-4 2 dlv
+-6 2 dlv
+-3 0 dlv
+-6 -2 dlv
+-4 -2 dlv
+-1 -3 dlv
+0 -3 dlv
+dle
+25 -17 546 2694 dls
+550 2702 dlt
+10 19 dlv
+11 -19 dlv
+dle
+25 0 1909 2019 dls
+1912 2019 dlt
+-2 -2 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -2 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 2 dlv
+1 3 dlv
+0 3 dlv
+-1 3 dlv
+-2 2 dlv
+dle
+0 19 1928 2025 dls
+1912 2064 dlt
+-2 -1 dlv
+-1 -3 dlv
+0 -4 dlv
+1 -4 dlv
+2 -1 dlv
+3 1 dlv
+1 3 dlv
+1 6 dlv
+1 2 dlv
+2 1 dlv
+2 0 dlv
+2 -1 dlv
+1 -3 dlv
+0 -4 dlv
+-1 -4 dlv
+-2 -1 dlv
+dle
+1916 2071 dlt
+0 15 dlv
+-3 0 dlv
+-2 -1 dlv
+-1 -2 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+2 -2 dlv
+4 -2 dlv
+2 0 dlv
+4 2 dlv
+2 2 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-2 3 dlv
+dle
+25 0 1900 2094 dls
+1904 2123 dlt
+11 -19 dlv
+10 19 dlv
+dle
+1905 2135 dlt
+-1 2 dlv
+-4 4 dlv
+25 0 dlv
+dle
+1904 2153 dlt
+11 19 dlv
+10 -19 dlv
+dle
+25 0 1984 2018 dls
+1987 2018 dlt
+-2 -3 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+2 -2 dlv
+4 -2 dlv
+2 0 dlv
+4 2 dlv
+2 2 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-2 3 dlv
+dle
+0 19 2003 2024 dls
+1987 2063 dlt
+-2 -1 dlv
+-1 -4 dlv
+0 -3 dlv
+1 -4 dlv
+2 -1 dlv
+3 1 dlv
+1 2 dlv
+1 6 dlv
+1 3 dlv
+3 1 dlv
+1 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -3 dlv
+-1 -4 dlv
+-2 -1 dlv
+dle
+1991 2070 dlt
+0 15 dlv
+-2 0 dlv
+-3 -2 dlv
+-1 -1 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+2 -3 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 3 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-2 3 dlv
+dle
+25 0 1975 2093 dls
+1979 2122 dlt
+11 -20 dlv
+10 20 dlv
+dle
+1975 2137 dlt
+2 -4 dlv
+3 -2 dlv
+6 -1 dlv
+4 0 dlv
+6 1 dlv
+3 2 dlv
+1 4 dlv
+0 2 dlv
+-1 4 dlv
+-3 2 dlv
+-6 2 dlv
+-4 0 dlv
+-6 -2 dlv
+-3 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+dle
+25 -17 1975 2147 dls
+1979 2155 dlt
+11 19 dlv
+10 -19 dlv
+dle
+3743 1969 dlt
+-3 -1 dlv
+-1 -4 dlv
+0 -4 dlv
+1 -3 dlv
+3 -1 dlv
+2 1 dlv
+1 2 dlv
+1 6 dlv
+2 3 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -4 dlv
+-1 -3 dlv
+-3 -1 dlv
+dle
+0 19 3758 1974 dls
+3743 2013 dlt
+-3 -1 dlv
+-1 -4 dlv
+0 -3 dlv
+1 -4 dlv
+3 -1 dlv
+2 1 dlv
+1 2 dlv
+1 6 dlv
+2 3 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -3 dlv
+-1 -4 dlv
+-3 -1 dlv
+dle
+3746 2020 dlt
+0 15 dlv
+-2 0 dlv
+-3 -2 dlv
+-1 -1 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+3 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 3 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 3 dlv
+dle
+25 0 3731 2043 dls
+3734 2072 dlt
+11 -20 dlv
+11 20 dlv
+dle
+3735 2083 dlt
+-1 3 dlv
+-3 3 dlv
+25 0 dlv
+dle
+3734 2101 dlt
+11 19 dlv
+11 -19 dlv
+dle
+17 0 3739 2812 dls
+3746 2812 dlt
+-3 1 dlv
+-3 3 dlv
+-1 2 dlv
+0 3 dlv
+dle
+0 19 3758 2824 dls
+3743 2863 dlt
+-3 -1 dlv
+-1 -3 dlv
+0 -4 dlv
+1 -4 dlv
+3 -1 dlv
+2 1 dlv
+1 3 dlv
+1 6 dlv
+2 2 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -3 dlv
+0 -4 dlv
+-1 -4 dlv
+-3 -1 dlv
+dle
+3746 2870 dlt
+0 15 dlv
+-2 0 dlv
+-3 -1 dlv
+-1 -2 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+3 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+3 2 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 3 dlv
+dle
+25 0 3731 2893 dls
+3734 2922 dlt
+11 -19 dlv
+11 19 dlv
+dle
+3735 2934 dlt
+-1 2 dlv
+-3 4 dlv
+25 0 dlv
+dle
+3734 2952 dlt
+11 19 dlv
+11 -19 dlv
+dle
+3818 1968 dlt
+-3 -2 dlv
+-1 -3 dlv
+0 -4 dlv
+1 -3 dlv
+3 -2 dlv
+2 2 dlv
+1 2 dlv
+2 6 dlv
+1 2 dlv
+2 2 dlv
+1 0 dlv
+3 -2 dlv
+1 -3 dlv
+0 -4 dlv
+-1 -3 dlv
+-3 -2 dlv
+dle
+0 19 3833 1972 dls
+3818 2012 dlt
+-3 -1 dlv
+-1 -4 dlv
+0 -4 dlv
+1 -3 dlv
+3 -1 dlv
+2 1 dlv
+1 2 dlv
+2 6 dlv
+1 3 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -4 dlv
+-1 -3 dlv
+-3 -1 dlv
+dle
+3821 2019 dlt
+0 14 dlv
+-2 0 dlv
+-2 -1 dlv
+-2 -1 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -2 dlv
+3 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 3 dlv
+1 2 dlv
+0 3 dlv
+-1 3 dlv
+-3 2 dlv
+dle
+25 0 3806 2042 dls
+3809 2070 dlt
+11 -19 dlv
+11 19 dlv
+dle
+3806 2086 dlt
+1 -4 dlv
+4 -2 dlv
+6 -1 dlv
+3 0 dlv
+6 1 dlv
+4 2 dlv
+1 4 dlv
+0 2 dlv
+-1 4 dlv
+-4 2 dlv
+-6 1 dlv
+-3 0 dlv
+-6 -1 dlv
+-4 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+dle
+25 -16 3806 2095 dls
+3809 2104 dlt
+11 19 dlv
+11 -19 dlv
+dle
+17 0 3814 2809 dls
+3821 2809 dlt
+-3 2 dlv
+-3 2 dlv
+-1 2 dlv
+0 4 dlv
+dle
+0 19 3833 2821 dls
+3818 2861 dlt
+-3 -1 dlv
+-1 -4 dlv
+0 -4 dlv
+1 -3 dlv
+3 -1 dlv
+2 1 dlv
+1 2 dlv
+2 6 dlv
+1 3 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -4 dlv
+-1 -3 dlv
+-3 -1 dlv
+dle
+3821 2868 dlt
+0 14 dlv
+-2 0 dlv
+-2 -1 dlv
+-2 -1 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -2 dlv
+3 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 3 dlv
+1 2 dlv
+0 3 dlv
+-1 3 dlv
+-3 2 dlv
+dle
+25 0 3806 2891 dls
+3809 2919 dlt
+11 -19 dlv
+11 19 dlv
+dle
+3806 2935 dlt
+1 -4 dlv
+4 -2 dlv
+6 -1 dlv
+3 0 dlv
+6 1 dlv
+4 2 dlv
+1 4 dlv
+0 2 dlv
+-1 4 dlv
+-4 2 dlv
+-6 1 dlv
+-3 0 dlv
+-6 -1 dlv
+-4 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+dle
+25 -16 3806 2944 dls
+3809 2953 dlt
+11 19 dlv
+11 -19 dlv
+dle
+1000 0 0 slc
+1000 0 0 sfc
+1651 1224 dlt
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+-1 -2 dlv
+dle
+0 -17 1652 1216 dls
+0 -25 1674 1216 dls
+1674 1212 dlt
+-2 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 3 dlv
+dle
+19 0 1680 1197 dls
+1720 1212 dlt
+-1 3 dlv
+-4 1 dlv
+-4 0 dlv
+-3 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+2 -1 dlv
+6 -1 dlv
+3 -2 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -3 dlv
+-4 -1 dlv
+-4 0 dlv
+-3 1 dlv
+-1 3 dlv
+dle
+0 -25 1728 1224 dls
+0 -17 1751 1216 dls
+1751 1212 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+1758 1216 dlt
+7 -17 dlv
+7 17 dlv
+dle
+1778 1209 dlt
+15 0 dlv
+0 2 dlv
+-2 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+19 0 1797 1197 dls
+1824 1209 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+0 -17 1846 1216 dls
+1846 1211 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+0 -25 1675 1267 dls
+1675 1263 dlt
+-3 3 dlv
+-2 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+19 0 1681 1248 dls
+1720 1263 dlt
+-1 3 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+3 -1 dlv
+6 -2 dlv
+2 -1 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -3 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 3 dlv
+dle
+0 -25 1729 1275 dls
+0 -17 1751 1267 dls
+1751 1263 dlt
+-2 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 3 dlv
+dle
+1758 1267 dlt
+8 -17 dlv
+7 17 dlv
+dle
+1779 1260 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+19 0 1798 1248 dls
+1824 1260 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 3 dlv
+dle
+0 -17 1847 1267 dls
+1847 1262 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+1615 1325 dlt
+2 -2 dlv
+1 2 dlv
+-1 1 dlv
+-2 -1 dlv
+dle
+0 -16 1617 1316 dls
+0 -25 1639 1316 dls
+1639 1313 dlt
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+19 0 1645 1297 dls
+0 -16 1673 1316 dls
+1673 1312 dlt
+3 3 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+1686 1312 dlt
+3 3 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+0 -16 1722 1316 dls
+1722 1313 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+1743 1313 dlt
+-1 2 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+3 -1 dlv
+6 -1 dlv
+2 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+1753 1325 dlt
+0 -21 dlv
+1 -3 dlv
+2 -1 dlv
+3 0 dlv
+dle
+8 0 1749 1316 dls
+1765 1309 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+0 -16 1787 1316 dls
+1787 1309 dlt
+2 4 dlv
+2 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+19 0 1799 1297 dls
+1826 1309 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+0 -16 1848 1316 dls
+1848 1312 dlt
+4 3 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+0 -25 1637 1367 dls
+1637 1363 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -2 dlv
+2 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+19 0 1643 1348 dls
+0 -17 1671 1367 dls
+1671 1362 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+1684 1362 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+0 -17 1720 1367 dls
+1720 1363 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+3 2 dlv
+dle
+1741 1363 dlt
+-1 3 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+3 -1 dlv
+6 -1 dlv
+2 -2 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -2 dlv
+-4 -2 dlv
+-3 0 dlv
+-4 2 dlv
+-1 2 dlv
+dle
+1751 1375 dlt
+0 -20 dlv
+1 -3 dlv
+2 -2 dlv
+3 0 dlv
+dle
+8 0 1747 1367 dls
+1763 1360 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+0 -17 1785 1367 dls
+1785 1360 dlt
+2 3 dlv
+2 3 dlv
+2 1 dlv
+4 0 dlv
+dle
+19 0 1797 1348 dls
+1824 1360 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-2 1 dlv
+-2 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+2 2 dlv
+3 2 dlv
+dle
+0 -17 1846 1367 dls
+1846 1362 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+3142 1446 dlt
+14 0 dlv
+-14 -16 dlv
+14 0 dlv
+dle
+3163 1439 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+0 -16 3185 1446 dls
+3185 1439 dlt
+2 4 dlv
+2 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+3206 1446 dlt
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+1 4 dlv
+0 2 dlv
+-1 4 dlv
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+dle
+0 -25 1051 1517 dls
+1051 1514 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+20 0 1056 1498 dls
+0 -25 1084 1526 dls
+1092 1510 dlt
+15 0 dlv
+0 3 dlv
+-2 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+1122 1526 dlt
+-2 0 dlv
+-3 -1 dlv
+-1 -4 dlv
+0 -20 dlv
+dle
+8 0 1113 1517 dls
+1131 1526 dlt
+0 -20 dlv
+1 -4 dlv
+2 -1 dlv
+2 0 dlv
+dle
+8 0 1127 1517 dls
+0 -25 1025 1818 dls
+1025 1814 dlt
+-2 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 3 dlv
+dle
+20 0 1031 1799 dls
+0 -17 1059 1818 dls
+1059 1811 dlt
+1 3 dlv
+2 3 dlv
+3 1 dlv
+3 0 dlv
+dle
+1073 1826 dlt
+1 -1 dlv
+2 1 dlv
+-2 1 dlv
+-1 -1 dlv
+dle
+0 -17 1074 1818 dls
+1097 1818 dlt
+0 -19 dlv
+-1 -4 dlv
+-1 -1 dlv
+-3 -1 dlv
+-3 0 dlv
+-3 1 dlv
+dle
+1097 1814 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+0 -25 1107 1826 dls
+1107 1813 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+1131 1826 dlt
+0 -20 dlv
+1 -4 dlv
+2 -1 dlv
+2 0 dlv
+dle
+8 0 1127 1818 dls
+0 -25 3152 1898 dls
+3152 1894 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+99 2103 dlt
+-2 0 dlv
+-3 -2 dlv
+-1 -3 dlv
+0 -21 dlv
+dle
+8 0 90 2094 dls
+19 0 103 2075 dls
+0 -26 130 2103 dls
+139 2087 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+168 2103 dlt
+-2 0 dlv
+-2 -2 dlv
+-2 -3 dlv
+0 -21 dlv
+dle
+8 0 159 2094 dls
+177 2103 dlt
+0 -21 dlv
+1 -3 dlv
+2 -2 dlv
+3 0 dlv
+dle
+9 0 173 2094 dls
+3454 2141 dlt
+-1 2 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+2 -1 dlv
+6 -1 dlv
+3 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+19 0 3459 2125 dls
+3498 2141 dlt
+-1 2 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+3 -1 dlv
+6 -1 dlv
+2 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+3505 2137 dlt
+15 0 dlv
+0 3 dlv
+-2 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+0 -25 3528 2153 dls
+3557 2149 dlt
+-19 -11 dlv
+19 -10 dlv
+dle
+3569 2148 dlt
+2 1 dlv
+4 4 dlv
+0 -25 dlv
+dle
+3588 2144 dlt
+-1 -1 dlv
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+dle
+3588 2130 dlt
+-1 -1 dlv
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+dle
+3604 2153 dlt
+-3 -1 dlv
+-3 -4 dlv
+-1 -6 dlv
+0 -4 dlv
+1 -6 dlv
+3 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 3 dlv
+1 6 dlv
+0 4 dlv
+-1 6 dlv
+-3 4 dlv
+-3 1 dlv
+-3 0 dlv
+dle
+-17 -25 3614 2153 dls
+3622 2149 dlt
+19 -11 dlv
+-19 -10 dlv
+dle
+7 -17 6271 2174 dls
+6285 2174 dlt
+-7 -17 dlv
+-3 -5 dlv
+-2 -2 dlv
+-2 -1 dlv
+-2 0 dlv
+dle
+0 -25 1572 2220 dls
+1572 2216 dlt
+-2 2 dlv
+-3 2 dlv
+-3 0 dlv
+-3 -2 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+19 0 1578 2200 dls
+1617 2216 dlt
+-1 2 dlv
+-3 2 dlv
+-4 0 dlv
+-4 -2 dlv
+-1 -2 dlv
+1 -2 dlv
+3 -2 dlv
+6 -1 dlv
+2 -1 dlv
+1 -2 dlv
+0 -2 dlv
+-1 -2 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+1625 2212 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 2 dlv
+-3 0 dlv
+-3 -2 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+0 -25 1647 2228 dls
+1676 2224 dlt
+-19 -10 dlv
+19 -11 dlv
+dle
+1688 2223 dlt
+2 1 dlv
+4 4 dlv
+0 -25 dlv
+dle
+1707 2220 dlt
+-1 -2 dlv
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+dle
+1707 2205 dlt
+-1 -1 dlv
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+dle
+1724 2228 dlt
+-4 -1 dlv
+-2 -4 dlv
+-1 -6 dlv
+0 -3 dlv
+1 -6 dlv
+2 -4 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 4 dlv
+1 6 dlv
+0 3 dlv
+-1 6 dlv
+-2 4 dlv
+-4 1 dlv
+-2 0 dlv
+dle
+-16 -25 1733 2228 dls
+1742 2224 dlt
+19 -10 dlv
+-19 -11 dlv
+dle
+1488 2328 dlt
+1 -2 dlv
+1 2 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -16 1489 2319 dls
+0 -16 1498 2319 dls
+1498 2312 dlt
+1 4 dlv
+3 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+1513 2312 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+1548 2319 dlt
+0 -19 dlv
+-1 -3 dlv
+-1 -2 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+1548 2316 dlt
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+19 0 1554 2300 dls
+0 -25 1582 2328 dls
+1582 2316 dlt
+2 2 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+2 -2 dlv
+1 -4 dlv
+0 -2 dlv
+-1 -4 dlv
+-2 -2 dlv
+-3 -1 dlv
+-3 0 dlv
+-3 1 dlv
+-2 2 dlv
+dle
+19 0 1601 2300 dls
+1627 2319 dlt
+5 -16 dlv
+5 16 dlv
+5 -16 dlv
+4 16 dlv
+dle
+0 -16 1655 2319 dls
+1655 2312 dlt
+1 4 dlv
+2 2 dlv
+3 1 dlv
+3 0 dlv
+dle
+0 -17 1496 2370 dls
+1496 2363 dlt
+1 3 dlv
+3 3 dlv
+2 1 dlv
+4 0 dlv
+dle
+1511 2363 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+1546 2370 dlt
+0 -19 dlv
+-1 -4 dlv
+-1 -1 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+1546 2366 dlt
+-2 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+2 2 dlv
+dle
+19 0 1552 2351 dls
+0 -25 1580 2378 dls
+1580 2366 dlt
+2 3 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+2 -3 dlv
+1 -3 dlv
+0 -3 dlv
+-1 -3 dlv
+-2 -2 dlv
+-3 -2 dlv
+-3 0 dlv
+-3 2 dlv
+-2 2 dlv
+dle
+19 0 1599 2351 dls
+1625 2370 dlt
+5 -17 dlv
+5 17 dlv
+5 -17 dlv
+4 17 dlv
+dle
+0 -17 1653 2370 dls
+1653 2363 dlt
+1 3 dlv
+2 3 dlv
+3 1 dlv
+3 0 dlv
+dle
+74 2403 dlt
+-2 0 dlv
+-3 -1 dlv
+-1 -4 dlv
+0 -20 dlv
+dle
+8 0 65 2395 dls
+19 0 78 2375 dls
+0 -17 105 2395 dls
+105 2387 dlt
+1 4 dlv
+3 2 dlv
+2 2 dlv
+4 0 dlv
+dle
+120 2403 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -17 121 2395 dls
+143 2395 dlt
+0 -20 dlv
+-1 -3 dlv
+-1 -1 dlv
+-2 -2 dlv
+-4 0 dlv
+-2 2 dlv
+dle
+143 2391 dlt
+-2 2 dlv
+-2 2 dlv
+-4 0 dlv
+-2 -2 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+0 -25 153 2403 dls
+153 2390 dlt
+4 3 dlv
+2 2 dlv
+3 0 dlv
+3 -2 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+177 2403 dlt
+0 -20 dlv
+1 -4 dlv
+2 -1 dlv
+3 0 dlv
+dle
+9 0 173 2395 dls
+0 -16 1496 2424 dls
+1496 2417 dlt
+1 4 dlv
+3 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+1511 2417 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+1546 2424 dlt
+0 -19 dlv
+-1 -3 dlv
+-1 -2 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+1546 2421 dlt
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+19 0 1552 2405 dls
+0 -16 1593 2424 dls
+1593 2421 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+19 0 1599 2405 dls
+1625 2424 dlt
+5 -16 dlv
+5 16 dlv
+5 -16 dlv
+4 16 dlv
+dle
+0 -16 1653 2424 dls
+1653 2417 dlt
+1 4 dlv
+2 2 dlv
+3 1 dlv
+3 0 dlv
+dle
+0 -17 1519 2475 dls
+1519 2467 dlt
+1 4 dlv
+2 2 dlv
+3 2 dlv
+3 0 dlv
+dle
+1533 2467 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-2 2 dlv
+-4 0 dlv
+-2 -2 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+1569 2475 dlt
+0 -20 dlv
+-1 -3 dlv
+-1 -1 dlv
+-3 -2 dlv
+-3 0 dlv
+-3 2 dlv
+dle
+1569 2471 dlt
+-2 2 dlv
+-3 2 dlv
+-3 0 dlv
+-3 -2 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+19 0 1575 2455 dls
+1601 2475 dlt
+5 -17 dlv
+5 17 dlv
+5 -17 dlv
+4 17 dlv
+dle
+0 -17 1629 2475 dls
+1629 2467 dlt
+1 4 dlv
+2 2 dlv
+3 2 dlv
+3 0 dlv
+dle
+7 -16 5634 2495 dls
+5648 2495 dlt
+-7 -16 dlv
+-2 -5 dlv
+-3 -2 dlv
+-2 -2 dlv
+-1 0 dlv
+dle
+19 0 5652 2476 dls
+5691 2492 dlt
+-1 2 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+3 -1 dlv
+5 -1 dlv
+3 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+5698 2488 dlt
+15 0 dlv
+0 3 dlv
+-2 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+0 -25 5721 2504 dls
+4306 2553 dlt
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+-1 -2 dlv
+dle
+0 -17 4307 2545 dls
+0 -17 4317 2545 dls
+4317 2540 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+4337 2545 dlt
+7 -17 dlv
+7 17 dlv
+dle
+19 0 4355 2526 dls
+4394 2541 dlt
+-1 3 dlv
+-3 1 dlv
+-4 0 dlv
+-4 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+3 -1 dlv
+6 -1 dlv
+2 -2 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -3 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 3 dlv
+dle
+1508 2578 dlt
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+-1 -2 dlv
+dle
+0 -17 1509 2570 dls
+0 -17 1518 2570 dls
+1518 2563 dlt
+2 3 dlv
+2 3 dlv
+2 1 dlv
+4 0 dlv
+dle
+1533 2563 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+1568 2570 dlt
+0 -19 dlv
+-1 -4 dlv
+-1 -1 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+1568 2566 dlt
+-2 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+2 2 dlv
+dle
+20 0 1574 2551 dls
+1601 2570 dlt
+4 -17 dlv
+5 17 dlv
+5 -17 dlv
+5 17 dlv
+dle
+0 -17 1628 2570 dls
+1628 2563 dlt
+1 3 dlv
+3 3 dlv
+2 1 dlv
+4 0 dlv
+dle
+0 -25 5772 2600 dls
+5772 2596 dlt
+2 3 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+3 -3 dlv
+1 -3 dlv
+0 -3 dlv
+-1 -3 dlv
+-3 -3 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+-2 3 dlv
+dle
+4311 2603 dlt
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+-1 -2 dlv
+dle
+0 -17 4312 2595 dls
+0 -17 4322 2595 dls
+4322 2590 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+4342 2595 dlt
+7 -17 dlv
+7 17 dlv
+dle
+19 0 4360 2576 dls
+0 -17 4387 2595 dls
+4387 2588 dlt
+2 4 dlv
+2 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+4136 2654 dlt
+-2 0 dlv
+-2 -1 dlv
+-2 -4 dlv
+0 -20 dlv
+dle
+8 0 4127 2646 dls
+4143 2646 dlt
+0 -12 dlv
+2 -4 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+4 4 dlv
+dle
+0 -17 4157 2646 dls
+0 -17 4166 2646 dls
+4166 2641 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+4202 2642 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+19 0 4207 2627 dls
+4246 2642 dlt
+-1 3 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+3 -1 dlv
+6 -2 dlv
+2 -1 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -3 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 3 dlv
+dle
+4253 2639 dlt
+15 0 dlv
+0 2 dlv
+-2 2 dlv
+-1 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+0 -25 4276 2654 dls
+4305 2651 dlt
+-19 -11 dlv
+19 -11 dlv
+dle
+4314 2648 dlt
+0 1 dlv
+1 3 dlv
+2 1 dlv
+2 1 dlv
+5 0 dlv
+2 -1 dlv
+1 -1 dlv
+2 -3 dlv
+0 -2 dlv
+-2 -2 dlv
+-2 -4 dlv
+-12 -12 dlv
+17 0 dlv
+dle
+4339 2646 dlt
+-1 -1 dlv
+1 -2 dlv
+1 2 dlv
+-1 1 dlv
+dle
+4339 2632 dlt
+-1 -2 dlv
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+dle
+4356 2654 dlt
+-4 -1 dlv
+-2 -4 dlv
+-1 -6 dlv
+0 -3 dlv
+1 -6 dlv
+2 -4 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 4 dlv
+2 6 dlv
+0 3 dlv
+-2 6 dlv
+-2 4 dlv
+-4 1 dlv
+-2 0 dlv
+dle
+-17 -25 4366 2654 dls
+4374 2651 dlt
+19 -11 dlv
+-19 -11 dlv
+dle
+5779 2654 dlt
+-3 0 dlv
+-2 -1 dlv
+-1 -4 dlv
+0 -20 dlv
+dle
+9 0 5769 2646 dls
+0 -25 3139 2654 dls
+3139 2642 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+5785 2692 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+5798 2696 dlt
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+1 3 dlv
+0 3 dlv
+-1 3 dlv
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+dle
+5816 2696 dlt
+0 -12 dlv
+1 -4 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+4 4 dlv
+dle
+0 -17 5829 2696 dls
+5840 2704 dlt
+0 -20 dlv
+1 -4 dlv
+2 -1 dlv
+3 0 dlv
+dle
+8 0 5836 2696 dls
+1462 2704 dlt
+2 -1 dlv
+1 1 dlv
+-1 1 dlv
+-2 -1 dlv
+dle
+0 -16 1464 2695 dls
+0 -16 1473 2695 dls
+1473 2688 dlt
+1 4 dlv
+3 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+1488 2688 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-2 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+1523 2695 dlt
+0 -19 dlv
+-1 -3 dlv
+-1 -1 dlv
+-2 -2 dlv
+-4 0 dlv
+-2 2 dlv
+dle
+1523 2692 dlt
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+19 0 1529 2676 dls
+0 -16 1570 2695 dls
+1570 2692 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+19 0 1576 2676 dls
+1602 2695 dlt
+5 -16 dlv
+5 16 dlv
+4 -16 dlv
+5 16 dlv
+dle
+0 -16 1630 2695 dls
+1630 2688 dlt
+1 4 dlv
+2 2 dlv
+3 1 dlv
+3 0 dlv
+dle
+4363 2692 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+4370 2704 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -16 4371 2695 dls
+0 -16 4381 2695 dls
+4381 2691 dlt
+3 3 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+144 2830 dlt
+-2 0 dlv
+-2 -1 dlv
+-2 -4 dlv
+0 -20 dlv
+dle
+8 0 135 2821 dls
+19 0 148 2802 dls
+187 2818 dlt
+-1 2 dlv
+-3 1 dlv
+-4 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+3 -1 dlv
+6 -1 dlv
+2 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+194 2814 dlt
+15 0 dlv
+0 3 dlv
+-1 2 dlv
+-2 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+0 -25 217 2830 dls
+246 2826 dlt
+-19 -11 dlv
+19 -10 dlv
+dle
+258 2825 dlt
+2 1 dlv
+4 4 dlv
+0 -25 dlv
+dle
+277 2821 dlt
+-1 -1 dlv
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+dle
+277 2807 dlt
+-1 -1 dlv
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+dle
+294 2830 dlt
+-4 -1 dlv
+-2 -4 dlv
+-2 -6 dlv
+0 -4 dlv
+2 -6 dlv
+2 -3 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 3 dlv
+1 6 dlv
+0 4 dlv
+-1 6 dlv
+-2 4 dlv
+-4 1 dlv
+-2 0 dlv
+dle
+-17 -25 303 2830 dls
+312 2826 dlt
+19 -11 dlv
+-19 -10 dlv
+dle
+1082 2968 dlt
+-1 2 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+2 -1 dlv
+6 -1 dlv
+3 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+1089 2964 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+0 -25 1112 2980 dls
+1120 2964 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+1156 2968 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+1165 2980 dlt
+0 -21 dlv
+2 -3 dlv
+2 -1 dlv
+2 0 dlv
+dle
+8 0 1162 2971 dls
+19 0 1175 2952 dls
+0 -25 1203 2980 dls
+1203 2968 dlt
+2 2 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+3 -2 dlv
+1 -4 dlv
+0 -2 dlv
+-1 -4 dlv
+-3 -2 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+-2 2 dlv
+dle
+19 0 1222 2952 dls
+0 -25 1249 2980 dls
+1249 2966 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -11 dlv
+dle
+1271 2980 dlt
+1 -2 dlv
+1 2 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -16 1272 2971 dls
+1300 2976 dlt
+-19 -11 dlv
+19 -10 dlv
+dle
+1312 2975 dlt
+3 1 dlv
+3 4 dlv
+0 -25 dlv
+dle
+1343 2980 dlt
+-12 0 dlv
+-1 -11 dlv
+1 1 dlv
+4 1 dlv
+4 0 dlv
+3 -1 dlv
+3 -2 dlv
+1 -4 dlv
+0 -2 dlv
+-1 -4 dlv
+-3 -2 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 1 dlv
+-1 2 dlv
+dle
+1355 2971 dlt
+-1 -1 dlv
+1 -1 dlv
+2 1 dlv
+-2 1 dlv
+dle
+1355 2957 dlt
+-1 -1 dlv
+1 -1 dlv
+2 1 dlv
+-2 1 dlv
+dle
+1372 2980 dlt
+-4 -2 dlv
+-2 -3 dlv
+-1 -6 dlv
+0 -4 dlv
+1 -6 dlv
+2 -3 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 3 dlv
+2 6 dlv
+0 4 dlv
+-2 6 dlv
+-2 3 dlv
+-4 2 dlv
+-2 0 dlv
+dle
+-17 -25 1382 2980 dls
+1390 2976 dlt
+19 -11 dlv
+-19 -10 dlv
+dle
+0 -17 3372 3022 dls
+3372 3015 dlt
+1 3 dlv
+2 3 dlv
+3 1 dlv
+3 0 dlv
+dle
+19 0 3384 3003 dls
+3423 3018 dlt
+-1 3 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+3 -1 dlv
+6 -1 dlv
+2 -2 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -3 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 3 dlv
+dle
+3430 3015 dlt
+15 0 dlv
+0 2 dlv
+-2 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+0 -25 3453 3030 dls
+3482 3027 dlt
+-19 -11 dlv
+19 -11 dlv
+dle
+3494 3026 dlt
+2 1 dlv
+4 3 dlv
+0 -25 dlv
+dle
+3513 3022 dlt
+-1 -1 dlv
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+dle
+3513 3008 dlt
+-1 -2 dlv
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+dle
+3529 3030 dlt
+-3 -1 dlv
+-3 -3 dlv
+-1 -6 dlv
+0 -4 dlv
+1 -6 dlv
+3 -4 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 4 dlv
+1 6 dlv
+0 4 dlv
+-1 6 dlv
+-3 3 dlv
+-3 1 dlv
+-3 0 dlv
+dle
+-17 -25 3539 3030 dls
+3547 3027 dlt
+19 -11 dlv
+-19 -11 dlv
+dle
+1082 3043 dlt
+-1 2 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+2 -1 dlv
+6 -1 dlv
+3 -1 dlv
+1 -2 dlv
+0 -2 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+1089 3039 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+0 -25 1112 3055 dls
+1120 3039 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+1156 3043 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+1165 3055 dlt
+0 -20 dlv
+2 -4 dlv
+2 -1 dlv
+2 0 dlv
+dle
+8 0 1162 3046 dls
+19 0 1175 3027 dls
+0 -16 1216 3046 dls
+1216 3043 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+19 0 1222 3027 dls
+0 -25 1249 3055 dls
+1249 3042 dlt
+4 3 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+1271 3055 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -16 1272 3046 dls
+1300 3051 dlt
+-19 -11 dlv
+19 -10 dlv
+dle
+1312 3050 dlt
+3 1 dlv
+3 4 dlv
+0 -25 dlv
+dle
+1343 3055 dlt
+-12 0 dlv
+-1 -11 dlv
+1 1 dlv
+4 1 dlv
+4 0 dlv
+3 -1 dlv
+3 -2 dlv
+1 -4 dlv
+0 -2 dlv
+-1 -4 dlv
+-3 -2 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 1 dlv
+-1 3 dlv
+dle
+1355 3046 dlt
+-1 -1 dlv
+1 -1 dlv
+2 1 dlv
+-2 1 dlv
+dle
+1355 3032 dlt
+-1 -1 dlv
+1 -1 dlv
+2 1 dlv
+-2 1 dlv
+dle
+1372 3055 dlt
+-4 -1 dlv
+-2 -4 dlv
+-1 -6 dlv
+0 -4 dlv
+1 -5 dlv
+2 -4 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 4 dlv
+2 5 dlv
+0 4 dlv
+-2 6 dlv
+-2 4 dlv
+-4 1 dlv
+-2 0 dlv
+dle
+-17 -25 1382 3055 dls
+1390 3051 dlt
+19 -11 dlv
+-19 -10 dlv
+dle
+0 -25 2377 1902 dls
+2377 1890 dlt
+-2 2 dlv
+-3 2 dlv
+-3 0 dlv
+-3 -2 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+0 -25 2377 1743 dls
+2377 1740 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+19 0 2383 1724 dls
+2422 1740 dlt
+-1 2 dlv
+-3 1 dlv
+-4 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+3 -1 dlv
+6 -1 dlv
+2 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-3 -2 dlv
+-4 0 dlv
+-4 2 dlv
+-1 2 dlv
+dle
+0 -26 2431 1752 dls
+0 -17 2453 1743 dls
+2453 1740 dlt
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+2 2 dlv
+dle
+2461 1743 dlt
+7 -17 dlv
+7 17 dlv
+dle
+2481 1736 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+19 0 2500 1724 dls
+2526 1736 dlt
+15 0 dlv
+0 2 dlv
+-2 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+3 2 dlv
+dle
+0 -17 2549 1743 dls
+2549 1738 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+2363 1701 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -16 2364 1692 dls
+0 -25 2387 1692 dls
+2387 1689 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+20 0 2392 1673 dls
+2432 1689 dlt
+-1 2 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+2 -1 dlv
+6 -1 dlv
+3 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+0 -25 2440 1701 dls
+0 -16 2463 1692 dls
+2463 1689 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+2470 1692 dlt
+7 -16 dlv
+7 16 dlv
+dle
+2490 1685 dlt
+15 0 dlv
+0 3 dlv
+-1 2 dlv
+-2 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+19 0 2510 1673 dls
+2536 1685 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+0 -16 2558 1692 dls
+2558 1688 dlt
+4 3 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+2 -3 dlv
+0 -12 dlv
+dle
+0 -25 2377 1843 dls
+2377 1840 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+19 0 2383 1824 dls
+0 -16 2410 1843 dls
+2410 1839 dlt
+4 3 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+2 -3 dlv
+0 -12 dlv
+dle
+2424 1839 dlt
+3 3 dlv
+3 1 dlv
+3 0 dlv
+2 -1 dlv
+2 -3 dlv
+0 -12 dlv
+dle
+0 -16 2459 1843 dls
+2459 1840 dlt
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+2481 1840 dlt
+-1 2 dlv
+-4 1 dlv
+-4 0 dlv
+-3 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+2 -1 dlv
+6 -1 dlv
+3 -1 dlv
+1 -2 dlv
+0 -2 dlv
+-1 -2 dlv
+-4 -1 dlv
+-4 0 dlv
+-3 1 dlv
+-1 2 dlv
+dle
+2490 1852 dlt
+0 -20 dlv
+2 -4 dlv
+2 -1 dlv
+2 0 dlv
+dle
+8 0 2487 1843 dls
+2502 1836 dlt
+15 0 dlv
+0 3 dlv
+-2 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+0 -16 2525 1843 dls
+2525 1836 dlt
+1 4 dlv
+3 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+19 0 2537 1824 dls
+2563 1836 dlt
+15 0 dlv
+0 3 dlv
+-2 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+0 -16 2586 1843 dls
+2586 1839 dlt
+4 3 dlv
+2 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+2363 1801 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -17 2364 1793 dls
+0 -25 2387 1793 dls
+2387 1789 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+20 0 2392 1774 dls
+0 -17 2420 1793 dls
+2420 1788 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+2433 1788 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+0 -17 2469 1793 dls
+2469 1789 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+2490 1789 dlt
+-1 3 dlv
+-3 1 dlv
+-4 0 dlv
+-4 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+3 -1 dlv
+6 -2 dlv
+2 -1 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -3 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 3 dlv
+dle
+2500 1801 dlt
+0 -20 dlv
+1 -4 dlv
+3 -1 dlv
+2 0 dlv
+dle
+9 0 2496 1793 dls
+2512 1786 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+0 -17 2535 1793 dls
+2535 1786 dlt
+1 3 dlv
+2 3 dlv
+3 1 dlv
+3 0 dlv
+dle
+19 0 2547 1774 dls
+2573 1786 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+0 -17 2595 1793 dls
+2595 1788 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+2 -4 dlv
+0 -12 dlv
+dle
+0 -25 2798 1898 dls
+2798 1894 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+3773 1803 dlt
+-3 -1 dlv
+-1 -3 dlv
+0 -4 dlv
+1 -4 dlv
+3 -1 dlv
+2 1 dlv
+1 3 dlv
+1 6 dlv
+2 2 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -3 dlv
+0 -4 dlv
+-1 -4 dlv
+-3 -1 dlv
+dle
+3776 1810 dlt
+0 15 dlv
+-2 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+3 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+3 2 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 3 dlv
+dle
+25 0 3761 1833 dls
+3766 1845 dlt
+-2 3 dlv
+-3 3 dlv
+25 0 dlv
+dle
+14 0 3716 1793 dls
+3719 1793 dlt
+-2 -1 dlv
+-1 -2 dlv
+0 -3 dlv
+1 -2 dlv
+2 -2 dlv
+3 -1 dlv
+2 0 dlv
+3 1 dlv
+2 2 dlv
+1 2 dlv
+0 3 dlv
+-1 2 dlv
+-2 1 dlv
+dle
+3823 1756 dlt
+-3 -2 dlv
+-1 -3 dlv
+0 -4 dlv
+1 -3 dlv
+3 -1 dlv
+2 1 dlv
+1 2 dlv
+2 6 dlv
+1 2 dlv
+2 2 dlv
+1 0 dlv
+3 -2 dlv
+1 -3 dlv
+0 -4 dlv
+-1 -3 dlv
+-3 -1 dlv
+dle
+3826 1763 dlt
+0 14 dlv
+-2 0 dlv
+-2 -1 dlv
+-2 -1 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 2 dlv
+1 3 dlv
+0 3 dlv
+-1 3 dlv
+-3 2 dlv
+dle
+25 0 3811 1786 dls
+3811 1801 dlt
+1 -4 dlv
+4 -2 dlv
+6 -1 dlv
+3 0 dlv
+6 1 dlv
+4 2 dlv
+1 4 dlv
+0 2 dlv
+-1 4 dlv
+-4 2 dlv
+-6 2 dlv
+-3 0 dlv
+-6 -2 dlv
+-4 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+dle
+25 -17 3811 1811 dls
+20 0 3726 1658 dls
+3735 1658 dlt
+-2 1 dlv
+-1 2 dlv
+0 3 dlv
+1 2 dlv
+2 2 dlv
+3 1 dlv
+2 0 dlv
+3 -1 dlv
+2 -2 dlv
+1 -2 dlv
+0 -3 dlv
+-1 -2 dlv
+-2 -1 dlv
+dle
+17 7 3865 1581 dls
+3865 1595 dlt
+17 -7 dlv
+5 -2 dlv
+2 -3 dlv
+1 -2 dlv
+0 -1 dlv
+dle
+3719 1543 dlt
+-2 -2 dlv
+-1 -2 dlv
+0 -3 dlv
+1 -2 dlv
+2 -2 dlv
+3 -1 dlv
+2 0 dlv
+3 1 dlv
+2 2 dlv
+1 2 dlv
+0 3 dlv
+-1 2 dlv
+-2 2 dlv
+dle
+20 0 3726 1417 dls
+3735 1417 dlt
+-2 -2 dlv
+-1 -2 dlv
+0 -2 dlv
+1 -2 dlv
+2 -2 dlv
+3 -1 dlv
+2 0 dlv
+3 1 dlv
+2 2 dlv
+1 2 dlv
+0 2 dlv
+-1 2 dlv
+-2 2 dlv
+dle
+1713 1533 dlt
+-2 -2 dlv
+-1 -2 dlv
+0 -3 dlv
+1 -2 dlv
+2 -2 dlv
+3 -1 dlv
+2 0 dlv
+3 1 dlv
+2 2 dlv
+1 2 dlv
+0 3 dlv
+-1 2 dlv
+-2 2 dlv
+dle
+20 0 1712 1665 dls
+1722 1665 dlt
+-2 2 dlv
+-1 2 dlv
+0 3 dlv
+1 2 dlv
+2 2 dlv
+3 1 dlv
+1 0 dlv
+3 -1 dlv
+2 -2 dlv
+1 -2 dlv
+0 -3 dlv
+-1 -2 dlv
+-2 -2 dlv
+dle
+13 0 1718 1806 dls
+1721 1806 dlt
+-2 -2 dlv
+-1 -2 dlv
+0 -3 dlv
+1 -2 dlv
+2 -2 dlv
+3 -1 dlv
+2 0 dlv
+2 1 dlv
+2 2 dlv
+1 2 dlv
+0 3 dlv
+-1 2 dlv
+-2 2 dlv
+dle
+1767 1803 dlt
+-3 -1 dlv
+-1 -3 dlv
+0 -4 dlv
+1 -4 dlv
+3 -1 dlv
+2 1 dlv
+1 3 dlv
+1 6 dlv
+2 2 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -3 dlv
+0 -4 dlv
+-1 -4 dlv
+-3 -1 dlv
+dle
+1770 1810 dlt
+0 15 dlv
+-2 0 dlv
+-3 -1 dlv
+-1 -2 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+3 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+3 2 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 3 dlv
+dle
+25 0 1755 1833 dls
+1760 1845 dlt
+-2 3 dlv
+-3 3 dlv
+25 0 dlv
+dle
+1844 1763 dlt
+-2 -1 dlv
+-1 -4 dlv
+0 -3 dlv
+1 -4 dlv
+2 -1 dlv
+3 1 dlv
+1 3 dlv
+1 6 dlv
+1 2 dlv
+3 1 dlv
+1 0 dlv
+2 -1 dlv
+2 -4 dlv
+0 -3 dlv
+-2 -4 dlv
+-2 -1 dlv
+dle
+1848 1770 dlt
+0 15 dlv
+-2 0 dlv
+-3 -1 dlv
+-1 -2 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+2 -2 dlv
+4 -2 dlv
+2 0 dlv
+4 2 dlv
+2 2 dlv
+2 2 dlv
+0 4 dlv
+-2 2 dlv
+-2 3 dlv
+dle
+26 0 1832 1793 dls
+1832 1809 dlt
+2 -4 dlv
+3 -2 dlv
+6 -2 dlv
+4 0 dlv
+6 2 dlv
+3 2 dlv
+2 4 dlv
+0 2 dlv
+-2 4 dlv
+-3 2 dlv
+-6 1 dlv
+-4 0 dlv
+-6 -1 dlv
+-3 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+dle
+26 -17 1832 1818 dls
+17 7 1859 1631 dls
+1859 1645 dlt
+17 -7 dlv
+5 -2 dlv
+2 -3 dlv
+1 -2 dlv
+0 -1 dlv
+dle
+13 0 5848 2270 dls
+5851 2270 dlt
+-2 -2 dlv
+-1 -2 dlv
+0 -3 dlv
+1 -2 dlv
+2 -2 dlv
+3 -1 dlv
+1 0 dlv
+3 1 dlv
+2 2 dlv
+1 2 dlv
+0 3 dlv
+-1 2 dlv
+-2 2 dlv
+dle
+5904 2265 dlt
+-2 -1 dlv
+-2 -4 dlv
+0 -4 dlv
+2 -3 dlv
+2 -1 dlv
+2 1 dlv
+2 2 dlv
+1 6 dlv
+1 3 dlv
+2 1 dlv
+2 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -4 dlv
+-1 -3 dlv
+-2 -1 dlv
+dle
+5908 2272 dlt
+0 14 dlv
+-3 0 dlv
+-2 -1 dlv
+-1 -1 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -2 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 2 dlv
+1 3 dlv
+0 3 dlv
+-1 3 dlv
+-2 2 dlv
+dle
+25 0 5892 2295 dls
+16 7 5997 2133 dls
+5997 2147 dlt
+16 -7 dlv
+5 -3 dlv
+2 -2 dlv
+2 -2 dlv
+0 -2 dlv
+dle
+21 0 5844 2059 dls
+5854 2059 dlt
+-2 2 dlv
+-1 2 dlv
+0 2 dlv
+1 2 dlv
+2 2 dlv
+3 1 dlv
+2 0 dlv
+3 -1 dlv
+2 -2 dlv
+1 -2 dlv
+0 -2 dlv
+-1 -2 dlv
+-2 -2 dlv
+dle
+460 2109 dlt
+-2 -2 dlv
+-1 -1 dlv
+0 -3 dlv
+1 -2 dlv
+2 -2 dlv
+2 -1 dlv
+2 0 dlv
+3 1 dlv
+2 2 dlv
+1 2 dlv
+0 3 dlv
+-1 1 dlv
+-2 2 dlv
+dle
+20 0 458 2242 dls
+468 2242 dlt
+-2 2 dlv
+-1 2 dlv
+0 2 dlv
+1 2 dlv
+2 2 dlv
+3 1 dlv
+2 0 dlv
+3 -1 dlv
+1 -2 dlv
+1 -2 dlv
+0 -2 dlv
+-1 -2 dlv
+-1 -2 dlv
+dle
+14 0 464 2383 dls
+467 2383 dlt
+-2 -2 dlv
+-1 -2 dlv
+0 -3 dlv
+1 -2 dlv
+2 -2 dlv
+3 -1 dlv
+2 0 dlv
+3 1 dlv
+2 2 dlv
+1 2 dlv
+0 3 dlv
+-1 2 dlv
+-2 2 dlv
+dle
+513 2380 dlt
+-2 -1 dlv
+-2 -4 dlv
+0 -3 dlv
+2 -4 dlv
+2 -1 dlv
+2 1 dlv
+2 3 dlv
+1 5 dlv
+1 3 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -3 dlv
+-1 -4 dlv
+-3 -1 dlv
+dle
+517 2387 dlt
+0 15 dlv
+-3 0 dlv
+-2 -2 dlv
+-1 -1 dlv
+-2 -2 dlv
+0 -4 dlv
+2 -2 dlv
+2 -3 dlv
+4 -1 dlv
+2 0 dlv
+3 1 dlv
+3 3 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 3 dlv
+dle
+25 0 501 2410 dls
+506 2422 dlt
+-1 2 dlv
+-4 4 dlv
+25 0 dlv
+dle
+591 2340 dlt
+-3 -1 dlv
+-1 -4 dlv
+0 -3 dlv
+1 -4 dlv
+3 -1 dlv
+2 1 dlv
+1 2 dlv
+1 6 dlv
+2 3 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -3 dlv
+-1 -4 dlv
+-3 -1 dlv
+dle
+594 2347 dlt
+0 14 dlv
+-2 0 dlv
+-3 -1 dlv
+-1 -1 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+3 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 3 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 2 dlv
+dle
+25 0 579 2370 dls
+579 2385 dlt
+1 -3 dlv
+4 -3 dlv
+5 -1 dlv
+4 0 dlv
+6 1 dlv
+4 3 dlv
+1 3 dlv
+0 3 dlv
+-1 3 dlv
+-4 3 dlv
+-6 1 dlv
+-4 0 dlv
+-5 -1 dlv
+-4 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+dle
+25 -17 579 2395 dls
+17 7 605 2208 dls
+605 2222 dlt
+17 -7 dlv
+5 -2 dlv
+2 -3 dlv
+2 -2 dlv
+0 -1 dlv
+dle
+0 -17 4646 2500 dls
+4646 2492 dlt
+1 4 dlv
+2 2 dlv
+3 2 dlv
+3 0 dlv
+dle
+4658 2446 dlt
+-2 2 dlv
+-3 1 dlv
+-4 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+2 -3 dlv
+2 -1 dlv
+6 -1 dlv
+2 -1 dlv
+2 -3 dlv
+0 -1 dlv
+-2 -2 dlv
+-3 -1 dlv
+-4 0 dlv
+-3 1 dlv
+-2 2 dlv
+dle
+4659 2692 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+4666 2704 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -16 4667 2695 dls
+0 -16 4677 2695 dls
+4677 2691 dlt
+3 3 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+4644 2603 dlt
+2 -1 dlv
+1 1 dlv
+-1 2 dlv
+-2 -2 dlv
+dle
+0 -17 4646 2595 dls
+0 -17 4655 2595 dls
+4655 2590 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+4676 2595 dlt
+7 -17 dlv
+7 17 dlv
+dle
+20 0 4693 2576 dls
+0 -17 4721 2595 dls
+4721 2588 dlt
+1 4 dlv
+2 2 dlv
+3 1 dlv
+3 0 dlv
+dle
+4644 2553 dlt
+2 -1 dlv
+1 1 dlv
+-1 2 dlv
+-2 -2 dlv
+dle
+0 -17 4646 2545 dls
+0 -17 4655 2545 dls
+4655 2540 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+4676 2545 dlt
+7 -17 dlv
+7 17 dlv
+dle
+20 0 4693 2526 dls
+4733 2541 dlt
+-1 3 dlv
+-4 1 dlv
+-4 0 dlv
+-3 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+2 -1 dlv
+6 -1 dlv
+3 -2 dlv
+1 -2 dlv
+0 -1 dlv
+-1 -3 dlv
+-4 -1 dlv
+-4 0 dlv
+-3 1 dlv
+-1 3 dlv
+dle
+4653 2654 dlt
+-3 0 dlv
+-2 -1 dlv
+-1 -4 dlv
+0 -20 dlv
+dle
+9 0 4643 2646 dls
+4660 2646 dlt
+0 -12 dlv
+1 -4 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 4 dlv
+dle
+0 -17 4673 2646 dls
+0 -17 4683 2646 dls
+4683 2641 dlt
+3 4 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+4719 2642 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+19 0 4723 2627 dls
+4763 2642 dlt
+-2 3 dlv
+-3 1 dlv
+-4 0 dlv
+-3 -1 dlv
+-1 -3 dlv
+1 -2 dlv
+2 -1 dlv
+6 -2 dlv
+2 -1 dlv
+2 -2 dlv
+0 -1 dlv
+-2 -3 dlv
+-3 -1 dlv
+-4 0 dlv
+-3 1 dlv
+-1 3 dlv
+dle
+4770 2639 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+0 -25 4793 2654 dls
+4821 2651 dlt
+-19 -11 dlv
+19 -11 dlv
+dle
+4831 2648 dlt
+0 1 dlv
+1 3 dlv
+1 1 dlv
+3 1 dlv
+4 0 dlv
+3 -1 dlv
+1 -1 dlv
+1 -3 dlv
+0 -2 dlv
+-1 -2 dlv
+-3 -4 dlv
+-11 -12 dlv
+16 0 dlv
+dle
+4856 2646 dlt
+-1 -1 dlv
+1 -2 dlv
+1 2 dlv
+-1 1 dlv
+dle
+4856 2632 dlt
+-1 -2 dlv
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+dle
+4873 2654 dlt
+-4 -1 dlv
+-2 -4 dlv
+-2 -6 dlv
+0 -3 dlv
+2 -6 dlv
+2 -4 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 4 dlv
+1 6 dlv
+0 3 dlv
+-1 6 dlv
+-2 4 dlv
+-4 1 dlv
+-2 0 dlv
+dle
+-17 -25 4882 2654 dls
+4890 2651 dlt
+20 -11 dlv
+-20 -11 dlv
+dle
+5298 2692 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+5311 2696 dlt
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+1 3 dlv
+0 3 dlv
+-1 3 dlv
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+dle
+5329 2696 dlt
+0 -12 dlv
+1 -4 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 4 dlv
+dle
+0 -17 5342 2696 dls
+5353 2704 dlt
+0 -20 dlv
+1 -4 dlv
+3 -1 dlv
+2 0 dlv
+dle
+8 0 5350 2696 dls
+0 -25 5343 2600 dls
+5343 2596 dlt
+2 3 dlv
+3 1 dlv
+3 0 dlv
+2 -1 dlv
+3 -3 dlv
+1 -3 dlv
+0 -3 dlv
+-1 -3 dlv
+-3 -3 dlv
+-2 -1 dlv
+-3 0 dlv
+-3 1 dlv
+-2 3 dlv
+dle
+5357 2654 dlt
+-2 0 dlv
+-2 -1 dlv
+-2 -4 dlv
+0 -20 dlv
+dle
+8 0 5348 2646 dls
+3719 2360 dlt
+-2 -2 dlv
+-1 -2 dlv
+0 -3 dlv
+1 -1 dlv
+2 -2 dlv
+3 -1 dlv
+2 0 dlv
+3 1 dlv
+2 2 dlv
+1 1 dlv
+0 3 dlv
+-1 2 dlv
+-2 2 dlv
+dle
+20 0 3718 2493 dls
+3728 2493 dlt
+-2 1 dlv
+-1 2 dlv
+0 3 dlv
+1 2 dlv
+2 2 dlv
+3 1 dlv
+1 0 dlv
+3 -1 dlv
+2 -2 dlv
+1 -2 dlv
+0 -3 dlv
+-1 -2 dlv
+-2 -1 dlv
+dle
+13 0 3724 2633 dls
+3727 2633 dlt
+-2 -1 dlv
+-1 -2 dlv
+0 -3 dlv
+1 -2 dlv
+2 -2 dlv
+3 -1 dlv
+2 0 dlv
+2 1 dlv
+2 2 dlv
+1 2 dlv
+0 3 dlv
+-1 2 dlv
+-2 1 dlv
+dle
+3773 2631 dlt
+-3 -1 dlv
+-1 -4 dlv
+0 -4 dlv
+1 -3 dlv
+3 -1 dlv
+2 1 dlv
+1 2 dlv
+1 6 dlv
+2 3 dlv
+2 1 dlv
+1 0 dlv
+3 -1 dlv
+1 -4 dlv
+0 -4 dlv
+-1 -3 dlv
+-3 -1 dlv
+dle
+3776 2638 dlt
+0 14 dlv
+-2 0 dlv
+-2 -1 dlv
+-2 -1 dlv
+-1 -2 dlv
+0 -4 dlv
+1 -2 dlv
+3 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+3 3 dlv
+1 2 dlv
+0 4 dlv
+-1 2 dlv
+-3 2 dlv
+dle
+25 0 3761 2661 dls
+3766 2673 dlt
+-2 2 dlv
+-3 4 dlv
+25 0 dlv
+dle
+3850 2591 dlt
+-2 -2 dlv
+-1 -3 dlv
+0 -4 dlv
+1 -3 dlv
+2 -1 dlv
+3 1 dlv
+1 2 dlv
+1 6 dlv
+1 2 dlv
+3 2 dlv
+1 0 dlv
+2 -2 dlv
+2 -3 dlv
+0 -4 dlv
+-2 -3 dlv
+-2 -1 dlv
+dle
+3854 2598 dlt
+0 14 dlv
+-2 0 dlv
+-3 -1 dlv
+-1 -1 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -2 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 2 dlv
+2 3 dlv
+0 3 dlv
+-2 3 dlv
+-2 2 dlv
+dle
+26 0 3838 2621 dls
+3838 2636 dlt
+2 -4 dlv
+3 -2 dlv
+6 -1 dlv
+4 0 dlv
+6 1 dlv
+3 2 dlv
+2 4 dlv
+0 2 dlv
+-2 4 dlv
+-3 2 dlv
+-6 2 dlv
+-4 0 dlv
+-6 -2 dlv
+-3 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+dle
+26 -17 3838 2646 dls
+17 7 3865 2459 dls
+3865 2473 dlt
+17 -7 dlv
+5 -3 dlv
+2 -2 dlv
+1 -2 dlv
+0 -2 dlv
+dle
+2062 2328 dlt
+1 -2 dlv
+1 2 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -16 2063 2319 dls
+0 -16 2072 2319 dls
+2072 2312 dlt
+2 4 dlv
+2 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+2087 2312 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+2123 2319 dlt
+0 -19 dlv
+-2 -3 dlv
+-1 -2 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+2123 2316 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+19 0 2129 2300 dls
+0 -25 2156 2328 dls
+2156 2316 dlt
+2 2 dlv
+3 1 dlv
+3 0 dlv
+3 -1 dlv
+2 -2 dlv
+1 -4 dlv
+0 -2 dlv
+-1 -4 dlv
+-2 -2 dlv
+-3 -1 dlv
+-3 0 dlv
+-3 1 dlv
+-2 2 dlv
+dle
+19 0 2175 2300 dls
+2201 2319 dlt
+5 -16 dlv
+5 16 dlv
+5 -16 dlv
+5 16 dlv
+dle
+0 -16 2229 2319 dls
+2229 2312 dlt
+1 4 dlv
+2 2 dlv
+3 1 dlv
+3 0 dlv
+dle
+0 -17 2063 2370 dls
+2063 2363 dlt
+1 3 dlv
+3 3 dlv
+2 1 dlv
+3 0 dlv
+dle
+2077 2363 dlt
+15 0 dlv
+0 2 dlv
+-2 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+3 2 dlv
+dle
+2113 2370 dlt
+0 -19 dlv
+-1 -4 dlv
+-1 -1 dlv
+-3 -1 dlv
+-3 0 dlv
+-3 1 dlv
+dle
+2113 2366 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+19 0 2119 2351 dls
+0 -25 2147 2378 dls
+2147 2366 dlt
+2 3 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+3 -3 dlv
+1 -3 dlv
+0 -3 dlv
+-1 -3 dlv
+-3 -2 dlv
+-2 -2 dlv
+-4 0 dlv
+-2 2 dlv
+-2 2 dlv
+dle
+19 0 2166 2351 dls
+2192 2370 dlt
+5 -17 dlv
+4 17 dlv
+5 -17 dlv
+5 17 dlv
+dle
+0 -17 2219 2370 dls
+2219 2363 dlt
+2 3 dlv
+2 3 dlv
+2 1 dlv
+4 0 dlv
+dle
+0 -16 2063 2424 dls
+2063 2417 dlt
+1 4 dlv
+3 2 dlv
+2 1 dlv
+3 0 dlv
+dle
+2077 2417 dlt
+15 0 dlv
+0 3 dlv
+-2 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+2113 2424 dlt
+0 -19 dlv
+-1 -3 dlv
+-1 -2 dlv
+-3 -1 dlv
+-3 0 dlv
+-3 1 dlv
+dle
+2113 2421 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+19 0 2119 2405 dls
+0 -16 2160 2424 dls
+2160 2421 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+19 0 2166 2405 dls
+2192 2424 dlt
+5 -16 dlv
+4 16 dlv
+5 -16 dlv
+5 16 dlv
+dle
+0 -16 2219 2424 dls
+2219 2417 dlt
+2 4 dlv
+2 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+0 -25 2818 2454 dls
+2818 2442 dlt
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+0 -16 2841 2445 dls
+2841 2442 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+2852 2454 dlt
+0 -21 dlv
+1 -3 dlv
+2 -1 dlv
+3 0 dlv
+dle
+9 0 2848 2445 dls
+0 -16 2878 2445 dls
+2878 2442 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+19 0 2884 2426 dls
+0 -25 2911 2454 dls
+2911 2442 dlt
+3 2 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+3 -2 dlv
+1 -4 dlv
+0 -2 dlv
+-1 -4 dlv
+-3 -2 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+-3 2 dlv
+dle
+2062 2470 dlt
+5 -17 dlv
+4 17 dlv
+5 -17 dlv
+5 17 dlv
+dle
+0 -17 2089 2470 dls
+2089 2463 dlt
+1 3 dlv
+3 3 dlv
+2 1 dlv
+4 0 dlv
+dle
+2104 2478 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -17 2105 2470 dls
+2115 2478 dlt
+0 -20 dlv
+2 -4 dlv
+2 -1 dlv
+2 0 dlv
+dle
+8 0 2112 2470 dls
+2127 2463 dlt
+15 0 dlv
+0 2 dlv
+-1 2 dlv
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+19 0 2147 2451 dls
+2173 2463 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+0 -17 2195 2470 dls
+2195 2465 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+2 -4 dlv
+0 -12 dlv
+dle
+0 -25 2818 2504 dls
+2818 2492 dlt
+-2 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+0 -16 2841 2495 dls
+2841 2492 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+2852 2504 dlt
+0 -21 dlv
+1 -3 dlv
+2 -1 dlv
+3 0 dlv
+dle
+9 0 2848 2495 dls
+0 -16 2878 2495 dls
+2878 2492 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+19 0 2884 2476 dls
+0 -16 2925 2495 dls
+2925 2492 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+0 -25 2076 2528 dls
+2076 2516 dlt
+-2 3 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+0 -17 2099 2520 dls
+2099 2516 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+2110 2528 dlt
+0 -20 dlv
+1 -4 dlv
+2 -1 dlv
+2 0 dlv
+dle
+8 0 2106 2520 dls
+0 -17 2136 2520 dls
+2136 2516 dlt
+-3 3 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -3 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 3 dlv
+dle
+19 0 2142 2501 dls
+2168 2520 dlt
+5 -17 dlv
+5 17 dlv
+4 -17 dlv
+5 17 dlv
+dle
+0 -17 2195 2520 dls
+2195 2513 dlt
+2 3 dlv
+2 3 dlv
+2 1 dlv
+4 0 dlv
+dle
+2210 2528 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -17 2211 2520 dls
+2222 2528 dlt
+0 -20 dlv
+1 -4 dlv
+2 -1 dlv
+3 0 dlv
+dle
+9 0 2218 2520 dls
+2234 2513 dlt
+14 0 dlv
+0 2 dlv
+-1 2 dlv
+-1 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+2 -3 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 3 dlv
+dle
+2062 2578 dlt
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+-1 -2 dlv
+dle
+0 -17 2063 2570 dls
+2071 2570 dlt
+5 -17 dlv
+5 17 dlv
+5 -17 dlv
+4 17 dlv
+dle
+0 -17 2099 2570 dls
+2099 2563 dlt
+1 3 dlv
+2 3 dlv
+3 1 dlv
+3 0 dlv
+dle
+2113 2578 dlt
+1 -1 dlv
+1 1 dlv
+-1 2 dlv
+-1 -2 dlv
+dle
+0 -17 2114 2570 dls
+2125 2578 dlt
+0 -20 dlv
+1 -3 dlv
+3 -2 dlv
+2 0 dlv
+dle
+9 0 2121 2570 dls
+2137 2563 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -3 dlv
+-1 -3 dlv
+0 -3 dlv
+1 -3 dlv
+3 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+2 2 dlv
+dle
+19 0 2156 2551 dls
+2182 2563 dlt
+15 0 dlv
+0 2 dlv
+-2 3 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -3 dlv
+-2 -3 dlv
+0 -3 dlv
+2 -3 dlv
+2 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+3 2 dlv
+dle
+0 -17 2205 2570 dls
+2205 2565 dlt
+4 4 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -4 dlv
+0 -12 dlv
+dle
+2062 2629 dlt
+1 -2 dlv
+1 2 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -17 2063 2620 dls
+0 -17 2072 2620 dls
+2072 2613 dlt
+2 4 dlv
+2 2 dlv
+2 1 dlv
+4 0 dlv
+dle
+2087 2613 dlt
+14 0 dlv
+0 2 dlv
+-1 3 dlv
+-1 1 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+2123 2620 dlt
+0 -19 dlv
+-2 -4 dlv
+-1 -1 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+dle
+2123 2617 dlt
+-3 2 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-2 -2 dlv
+-2 -4 dlv
+0 -2 dlv
+2 -4 dlv
+2 -2 dlv
+2 -2 dlv
+4 0 dlv
+2 2 dlv
+3 2 dlv
+dle
+19 0 2129 2601 dls
+0 -17 2169 2620 dls
+2169 2617 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -2 dlv
+3 0 dlv
+3 2 dlv
+2 2 dlv
+dle
+19 0 2175 2601 dls
+2201 2620 dlt
+5 -17 dlv
+5 17 dlv
+5 -17 dlv
+5 17 dlv
+dle
+0 -17 2229 2620 dls
+2229 2613 dlt
+1 4 dlv
+2 2 dlv
+3 1 dlv
+3 0 dlv
+dle
+2075 2667 dlt
+-1 2 dlv
+-4 1 dlv
+-3 0 dlv
+-4 -1 dlv
+-1 -2 dlv
+1 -3 dlv
+2 -1 dlv
+6 -1 dlv
+3 -1 dlv
+1 -3 dlv
+0 -1 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+2082 2663 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+0 -25 2105 2679 dls
+2113 2663 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-2 1 dlv
+-4 0 dlv
+-2 -1 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+2149 2667 dlt
+-2 2 dlv
+-3 1 dlv
+-3 0 dlv
+-3 -1 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+2158 2679 dlt
+0 -21 dlv
+2 -3 dlv
+2 -1 dlv
+2 0 dlv
+dle
+8 0 2155 2670 dls
+19 0 2168 2651 dls
+0 -25 2195 2679 dls
+2195 2667 dlt
+3 2 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+3 -2 dlv
+1 -4 dlv
+0 -2 dlv
+-1 -4 dlv
+-3 -2 dlv
+-2 -1 dlv
+-4 0 dlv
+-2 1 dlv
+-3 2 dlv
+dle
+19 0 2215 2651 dls
+0 -25 2242 2679 dls
+2242 2666 dlt
+4 3 dlv
+2 1 dlv
+4 0 dlv
+2 -1 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+2264 2679 dlt
+1 -2 dlv
+1 2 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -16 2265 2670 dls
+2293 2675 dlt
+-19 -11 dlv
+19 -10 dlv
+dle
+2305 2674 dlt
+3 1 dlv
+3 4 dlv
+0 -25 dlv
+dle
+2336 2679 dlt
+-12 0 dlv
+-1 -11 dlv
+1 1 dlv
+4 1 dlv
+4 0 dlv
+3 -1 dlv
+3 -2 dlv
+1 -4 dlv
+0 -2 dlv
+-1 -4 dlv
+-3 -2 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 1 dlv
+-1 2 dlv
+dle
+2348 2670 dlt
+-1 -1 dlv
+1 -1 dlv
+2 1 dlv
+-2 1 dlv
+dle
+2348 2656 dlt
+-1 -1 dlv
+1 -1 dlv
+2 1 dlv
+-2 1 dlv
+dle
+2365 2679 dlt
+-4 -2 dlv
+-2 -3 dlv
+-1 -6 dlv
+0 -4 dlv
+1 -6 dlv
+2 -3 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 3 dlv
+2 6 dlv
+0 4 dlv
+-2 6 dlv
+-2 3 dlv
+-4 2 dlv
+-2 0 dlv
+dle
+-17 -25 2375 2679 dls
+2383 2675 dlt
+19 -11 dlv
+-19 -10 dlv
+dle
+2075 2742 dlt
+-1 2 dlv
+-4 2 dlv
+-3 0 dlv
+-4 -2 dlv
+-1 -2 dlv
+1 -2 dlv
+2 -2 dlv
+6 -1 dlv
+3 -1 dlv
+1 -2 dlv
+0 -2 dlv
+-1 -2 dlv
+-4 -1 dlv
+-3 0 dlv
+-4 1 dlv
+-1 2 dlv
+dle
+2082 2738 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-2 2 dlv
+-4 0 dlv
+-2 -2 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+0 -25 2105 2754 dls
+2113 2738 dlt
+14 0 dlv
+0 3 dlv
+-1 2 dlv
+-1 1 dlv
+-2 2 dlv
+-4 0 dlv
+-2 -2 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+2 2 dlv
+dle
+2149 2742 dlt
+-2 2 dlv
+-3 2 dlv
+-3 0 dlv
+-3 -2 dlv
+-2 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+2 -2 dlv
+3 -1 dlv
+3 0 dlv
+3 1 dlv
+2 2 dlv
+dle
+2158 2754 dlt
+0 -20 dlv
+2 -4 dlv
+2 -1 dlv
+2 0 dlv
+dle
+8 0 2155 2746 dls
+19 0 2168 2726 dls
+0 -17 2209 2746 dls
+2209 2742 dlt
+-3 2 dlv
+-2 2 dlv
+-4 0 dlv
+-2 -2 dlv
+-3 -2 dlv
+-1 -4 dlv
+0 -2 dlv
+1 -4 dlv
+3 -2 dlv
+2 -1 dlv
+4 0 dlv
+2 1 dlv
+3 2 dlv
+dle
+19 0 2215 2726 dls
+0 -25 2242 2754 dls
+2242 2741 dlt
+4 3 dlv
+2 2 dlv
+4 0 dlv
+2 -2 dlv
+1 -3 dlv
+0 -12 dlv
+dle
+2264 2754 dlt
+1 -1 dlv
+1 1 dlv
+-1 1 dlv
+-1 -1 dlv
+dle
+0 -17 2265 2746 dls
+2293 2750 dlt
+-19 -10 dlv
+19 -11 dlv
+dle
+2305 2749 dlt
+3 1 dlv
+3 4 dlv
+0 -25 dlv
+dle
+2336 2754 dlt
+-12 0 dlv
+-1 -11 dlv
+1 1 dlv
+4 2 dlv
+4 0 dlv
+3 -2 dlv
+3 -2 dlv
+1 -4 dlv
+0 -2 dlv
+-1 -4 dlv
+-3 -2 dlv
+-3 -1 dlv
+-4 0 dlv
+-4 1 dlv
+-1 1 dlv
+-1 3 dlv
+dle
+2348 2746 dlt
+-1 -2 dlv
+1 -1 dlv
+2 1 dlv
+-2 2 dlv
+dle
+2348 2731 dlt
+-1 -1 dlv
+1 -1 dlv
+2 1 dlv
+-2 1 dlv
+dle
+2365 2754 dlt
+-4 -1 dlv
+-2 -4 dlv
+-1 -6 dlv
+0 -3 dlv
+1 -6 dlv
+2 -4 dlv
+4 -1 dlv
+2 0 dlv
+4 1 dlv
+2 4 dlv
+2 6 dlv
+0 3 dlv
+-2 6 dlv
+-2 4 dlv
+-4 1 dlv
+-2 0 dlv
+dle
+-17 -25 2375 2754 dls
+2383 2750 dlt
+19 -10 dlv
+-19 -11 dlv
+dle
+1000 0 0 slc
+1000 0 0 sfc
+1893 1190 dpb
+1893 1235 dpv
+1920 1235 dpv
+1943 1212 dpv
+1920 1190 dpv
+dps
+1893 1240 dpb
+1893 1285 dpv
+1920 1285 dpv
+1943 1263 dpv
+1920 1240 dpv
+dps
+1893 1290 dpb
+1893 1335 dpv
+1920 1335 dpv
+1943 1313 dpv
+1920 1290 dpv
+dps
+1893 1340 dpb
+1893 1385 dpv
+1920 1385 dpv
+1943 1363 dpv
+1920 1340 dpv
+dps
+3247 1416 dpb
+3247 1461 dpv
+3274 1461 dpv
+3297 1438 dpv
+3274 1416 dpv
+dps
+1165 1491 dpb
+1165 1536 dpv
+1193 1536 dpv
+1216 1513 dpv
+1193 1491 dpv
+dps
+1165 1792 dpb
+1165 1837 dpv
+1193 1837 dpv
+1216 1814 dpv
+1193 1792 dpv
+dps
+3071 1867 dpb
+3071 1912 dpv
+3099 1912 dpv
+3121 1889 dpv
+3099 1867 dpv
+dps
+2234 1679 2254 1699 dbs
+2234 1729 2254 1749 dbs
+2234 1879 2254 1899 dbs
+2234 1829 2254 1849 dbs
+2234 1779 2254 1799 dbs
+2911 1879 2931 1899 dbs
+3763 1955 3783 1975 dbs
+3838 1955 3859 1975 dbs
+3588 1804 3608 1824 dbs
+3588 1679 3608 1699 dbs
+3989 1604 4009 1624 dbs
+3588 1553 3608 1573 dbs
+3588 1428 3608 1448 dbs
+1582 1503 1602 1523 dbs
+1582 1654 1602 1674 dbs
+1582 1804 1602 1824 dbs
+1757 1955 1777 1975 dbs
+1832 1955 1853 1975 dbs
+1983 1654 2003 1674 dbs
+213 2067 dpb
+213 2113 dpv
+240 2113 dpv
+263 2090 dpv
+240 2067 dpv
+dps
+3673 2118 dpb
+3673 2163 dpv
+3701 2163 dpv
+3723 2140 dpv
+3701 2118 dpv
+dps
+6206 2143 dpb
+6206 2188 dpv
+6233 2188 dpv
+6256 2165 dpv
+6233 2143 dpv
+dps
+1792 2193 dpb
+1792 2238 dpv
+1820 2238 dpv
+1843 2215 dpv
+1820 2193 dpv
+dps
+1692 2293 dpb
+1692 2338 dpv
+1720 2338 dpv
+1742 2316 dpv
+1720 2293 dpv
+dps
+1692 2343 dpb
+1692 2388 dpv
+1720 2388 dpv
+1742 2366 dpv
+1720 2343 dpv
+dps
+213 2368 dpb
+213 2413 dpv
+240 2413 dpv
+263 2391 dpv
+240 2368 dpv
+dps
+5895 2406 5915 2426 dbs
+5719 2256 5739 2276 dbs
+6120 2155 6140 2175 dbs
+5719 2055 5739 2075 dbs
+1692 2393 dpb
+1692 2439 dpv
+1720 2439 dpv
+1742 2416 dpv
+1720 2393 dpv
+dps
+1667 2444 dpb
+1667 2489 dpv
+1695 2489 dpv
+1717 2466 dpv
+1695 2444 dpv
+dps
+5754 2469 dpb
+5754 2514 dpv
+5782 2514 dpv
+5804 2491 dpv
+5782 2469 dpv
+dps
+328 2080 348 2100 dbs
+328 2230 348 2251 dbs
+328 2381 348 2401 dbs
+504 2531 524 2551 dbs
+579 2531 599 2551 dbs
+729 2230 749 2251 dbs
+4425 2519 dpb
+4425 2564 dpv
+4453 2564 dpv
+4475 2541 dpv
+4453 2519 dpv
+dps
+1667 2544 dpb
+1667 2589 dpv
+1695 2589 dpv
+1717 2566 dpv
+1695 2544 dpv
+dps
+5704 2569 dpb
+5704 2614 dpv
+5732 2614 dpv
+5754 2592 dpv
+5732 2569 dpv
+dps
+4425 2569 dpb
+4425 2614 dpv
+4453 2614 dpv
+4475 2592 dpv
+4453 2569 dpv
+dps
+5704 2619 dpb
+5704 2664 dpv
+5732 2664 dpv
+5754 2642 dpv
+5732 2619 dpv
+dps
+3171 2619 dpb
+3171 2664 dpv
+3199 2664 dpv
+3222 2642 dpv
+3199 2619 dpv
+dps
+4425 2619 dpb
+4425 2664 dpv
+4453 2664 dpv
+4475 2642 dpv
+4453 2619 dpv
+dps
+5704 2669 dpb
+5704 2714 dpv
+5732 2714 dpv
+5754 2692 dpv
+5732 2669 dpv
+dps
+4425 2669 dpb
+4425 2714 dpv
+4453 2714 dpv
+4475 2692 dpv
+4453 2669 dpv
+dps
+1667 2669 dpb
+1667 2714 dpv
+1695 2714 dpv
+1717 2692 dpv
+1695 2669 dpv
+dps
+4516 2682 4536 2702 dbs
+4516 2632 4536 2652 dbs
+4516 2581 4536 2602 dbs
+4516 2531 4536 2551 dbs
+4516 2481 4536 2501 dbs
+4516 2431 4536 2451 dbs
+5468 2682 5488 2702 dbs
+5468 2632 5488 2652 dbs
+5468 2581 5488 2602 dbs
+3588 2331 3608 2351 dbs
+3588 2481 3608 2501 dbs
+3588 2632 3608 2652 dbs
+3763 2782 3783 2802 dbs
+3838 2782 3859 2802 dbs
+3989 2481 4009 2501 dbs
+1933 2306 1953 2326 dbs
+1933 2356 1953 2376 dbs
+1933 2556 1953 2576 dbs
+1933 2607 1953 2627 dbs
+1933 2456 1953 2476 dbs
+1933 2657 1953 2677 dbs
+1933 2732 1953 2752 dbs
+1933 2506 1953 2526 dbs
+1933 2406 1953 2426 dbs
+3036 2431 3056 2451 dbs
+3036 2481 3056 2501 dbs
+363 2795 dpb
+363 2840 dpv
+391 2840 dpv
+413 2817 dpv
+391 2795 dpv
+dps
+1441 2945 dpb
+1441 2990 dpv
+1469 2990 dpv
+1491 2968 dpv
+1469 2945 dpv
+dps
+3598 2995 dpb
+3598 3040 dpv
+3625 3040 dpv
+3648 3018 dpv
+3625 2995 dpv
+dps
+1441 3020 dpb
+1441 3065 dpv
+1469 3065 dpv
+1491 3043 dpv
+1469 3020 dpv
+dps
+0 1080 6349 3520 clwin
+gfs
+%%Trailer
+%%EOF

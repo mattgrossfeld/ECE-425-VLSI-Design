@@ -1,0 +1,17 @@
+
+********************************************************************************
+Product   : Virtuoso(R) DEF Out 
+Program   : @(#)$CDS: defout version 6.1.7-64b 07/05/2016 21:07 (sjfhw308) $
+SubVersion: sub-version  IC6.1.7-64b.500.5 
+Started at: 02-May-2019  17:19:25
+User Name : grossfe2
+Host Name : linux-06.ews.illinois.edu
+Directory : /home/grossfe2/ece425.work
+DB Version: 	20160705 (SJ)
+CADENCE Design Systems, Inc.
+********************************************************************************
+Running: defout -lib ece425mp2 -cell datapath -view layout -def /home/grossfe2/ece425.work/am2901.def -ver 5.7
+
+Elapsed Time: 2.1s
+
+defout translation completed (errors: 0, warnings: 0).

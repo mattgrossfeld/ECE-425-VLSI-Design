@@ -1,0 +1,20 @@
+simVerilogNetlistFileList = '(
+    (("ece425mp1" "adder_8bit") 
+	("cds4/netlist" "cds4/map" "schematic")
+    ) 
+    (("ece425mp1" "fullAdder_backup") 
+	("cds5/netlist" "cds5/map" "schematic")
+    ) 
+    (("ece425mp1" "nand2") 
+	("cds1/netlist" "cds1/map" "schematic")
+    ) 
+    (("ece425mp1" "xor2") 
+	("cds0/netlist" "cds0/map" "schematic")
+    )
+)
+simVerilogNetlistFileLibList = '("ece425mp1")
+simVerilogNetlistFileCellList = '(("ece425mp1" 
+	("xor2" "nand2" "fullAdder_backup" "adder_8bit")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

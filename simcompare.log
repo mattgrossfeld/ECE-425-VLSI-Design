@@ -1,0 +1,25 @@
+simcompare 15.20-s008: (c) Copyright 2007-2016 Cadence Design Systems, Inc.
+sc> #
+sc> # This file, "compare.rule", contains commands to run simcompare
+sc> #
+sc> 
+sc> 
+sc> # You are comparing the following databases
+sc> #
+sc> golden /class/ece425/mp2/datapath_gold/datapath_gold.trn
+sc> test /home/grossfe2/ece425.work/datapath_run1/shm.db/shm.db.trn
+sc> 
+sc> # The clock comparison uses following configurations :
+sc> #
+sc> 
+sc> clkdef clk1 test.cp
+sc> clkcompare clk1 . -setup 0 -hold 0 -negedge -sample 0
+*E,SVE_COMPARISON_E: While attempting compare: The golden expression
+cannot be a module in this release: .
+
+sc> # You have chosen the following reporting options :
+sc> #
+sc> 
+sc> report -all  -detail summary  -output /home/grossfe2/ece425.work/datapath_run1/compare.out
+sc> save /home/grossfe2/ece425.work/datapath_run1/diff.db.out
+Simcompare exit(2): Runtime errors!

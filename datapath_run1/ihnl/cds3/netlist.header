@@ -1,0 +1,18 @@
+// Library - ece425mp1, Cell - aoi22, View - schematic
+// LAST TIME SAVED: Feb 10 21:57:10 2019
+// NETLIST TIME: Mar 29 09:29:53 2019
+`timescale 1ns / 1ns 
+
+module aoi22 ( y, a, b, c, d );
+
+output  y;
+
+input  a, b, c, d;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "aoi22";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

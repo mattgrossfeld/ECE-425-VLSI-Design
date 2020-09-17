@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      grossfe2
+HostName                       linux-a1.ews.illinois.edu
+ProcessIdentifier              29910
+ProcessCreationTime_UTC        1553383409
+ProcessCreationTime_Readable   Sat Mar 23 18:23:29 2019 CDT
+AppIdentifier                  /software/cadence-Aug2016/IC617/tools.lnx86/dfII/bin/64bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       Not specified
+FilePathUsedToEditLock         /home/grossfe2/ece425.work/ece425mp2/add/physConfig/physExpand.cfg
+TimeEditLocked                 Sat Mar 23 18:26:49 2019 CDT

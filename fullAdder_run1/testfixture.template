@@ -1,0 +1,23 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  cout, sum;
+
+reg  a, b, c;
+
+
+
+fullAdder top(cout, sum, a, b, c); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /home/grossfe2/ece425.work/fullAdder_run1/testfixture.verilog file
+`include "/home/grossfe2/ece425.work/fullAdder_run1/testfixture.verilog"
+
+`endif
+
+endmodule 

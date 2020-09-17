@@ -1,0 +1,26 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "aoi22"
+  repList "behavioral functional schematic symbol"
+  stopList "behavioral functional symbol"
+  globalList "gnd! vdd!"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/home/grossfe2/ece425.work/aoi22_run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( net
+( "vdd!" "cds_globals.vdd_" )
+( "gnd!" "cds_globals.gnd_" )
+ )
+( model
+( "ece425mp1/aoi22/schematic" "aoi22" )
+ )
+( "aoi22" "ihnl/cds0/map" )
+ )

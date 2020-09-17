@@ -1,0 +1,282 @@
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+51ns
+
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = ireg_wr;
+21ns
+
+
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+20ns
+
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = cp;
+20ns
+
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+20ns 
+
+
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = ireg_wr;
+20ns
+
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+20ns 
+
+
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = cp;
+20ns
+
+
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+10ns
+
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = ireg_wr;
+10ns
+
+
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+10ns
+
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = cp;
+
+
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+
+
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = ((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = iq_master_en;
+assign reg_a_wr = cp;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = ~((~i[8] & ~i[7] & ~i[6]) | (i[8] & ~i[7] & ~i[6]) | (i[8] & i[7] & ~i[6])) & cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = (i[8] | i[7]) & cp;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = ireg_wr;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = ~(i[8] | i[7]) & cp;
+assign reg_b_wr = cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = (i[8] | i[7]) & cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = ireg_wr;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = ~(i[8] | i[7]) & cp;
+ 
+assign q_slave_en = cp;
+assign reg_a_wr = cp;
+assign reg_b_wr = cp;
+ 

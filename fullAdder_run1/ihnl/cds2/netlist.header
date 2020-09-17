@@ -1,0 +1,18 @@
+// Library - ece425mp1, Cell - halfAdder, View - schematic
+// LAST TIME SAVED: Mar  4 21:23:58 2019
+// NETLIST TIME: Mar  4 21:46:45 2019
+`timescale 1ns / 1ns 
+
+module halfAdder ( cout, sum, a, b );
+
+output  cout, sum;
+
+input  a, b;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "halfAdder";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

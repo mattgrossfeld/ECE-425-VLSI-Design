@@ -1,0 +1,4 @@
+nor2 I1 ( net9, A, B);
+inv I0 ( Y, net9);
+
+endmodule

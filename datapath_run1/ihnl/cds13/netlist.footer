@@ -1,0 +1,26 @@
+bitslice I0 ( c[3], f[3], p[3], q3_out, y[3], c[2], d[3], f[2], f3_in,
+     f_sel[1:0], func_sel[2:0], inv_r, inv_s, iq_master_en,
+     iq_slave_en, ireg_a_wr, ireg_b_wr, ireg_wr, net113, q_master_en,
+     q3_in, q_sel[1:0], q_slave_en, r_sel[1:0], reg_a_wr, reg_b_wr,
+     reg_wr, s_sel[1:0], select_a_hi[15:0], select_b_hi[15:0], y_sel,
+     zero);
+bitslice I1 ( c[2], f[2], p[2], net113, y[2], c[1], d[2], f[1], f[3],
+     f_sel[1:0], func_sel[2:0], inv_r, inv_s, iq_master_en,
+     iq_slave_en, ireg_a_wr, ireg_b_wr, ireg_wr, net98, q_master_en,
+     q3_out, q_sel[1:0], q_slave_en, r_sel[1:0], reg_a_wr, reg_b_wr,
+     reg_wr, s_sel[1:0], select_a_hi[15:0], select_b_hi[15:0], y_sel,
+     zero);
+bitslice I2 ( c[1], f[1], p[1], net98, y[1], c[0], d[1], f[0], f[2],
+     f_sel[1:0], func_sel[2:0], inv_r, inv_s, iq_master_en,
+     iq_slave_en, ireg_a_wr, ireg_b_wr, ireg_wr, q0_out, q_master_en,
+     net113, q_sel[1:0], q_slave_en, r_sel[1:0], reg_a_wr, reg_b_wr,
+     reg_wr, s_sel[1:0], select_a_hi[15:0], select_b_hi[15:0], y_sel,
+     zero);
+bitslice I3 ( c[0], f[0], p[0], q0_out, y[0], cin, d[0], f0_in, f[1],
+     f_sel[1:0], func_sel[2:0], inv_r, inv_s, iq_master_en,
+     iq_slave_en, ireg_a_wr, ireg_b_wr, ireg_wr, q0_in, q_master_en,
+     net98, q_sel[1:0], q_slave_en, r_sel[1:0], reg_a_wr, reg_b_wr,
+     reg_wr, s_sel[1:0], select_a_hi[15:0], select_b_hi[15:0], y_sel,
+     zero);
+
+endmodule

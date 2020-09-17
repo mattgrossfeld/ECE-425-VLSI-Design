@@ -1,0 +1,9 @@
+( ( defbus
+( "func_sel" 2 0  "func_sel" 2 0  )
+ )
+( net
+( "func_sel<0>" "func_sel[0]" )
+( "func_sel<1>" "func_sel[1]" )
+( "func_sel<2>" "func_sel[2]" )
+ )
+ )

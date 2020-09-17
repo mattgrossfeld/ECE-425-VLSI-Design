@@ -1,0 +1,38 @@
+INFO (ABS-19020): Starting @(#)$CDS: ui version 6.1.7-64b 07/05/2016 20:10 (sjfhw313) $, sub-version  IC6.1.7-64b.500.5 , on  3.18.26
+INFO (ABS-19023): This is the OpenAccess variant of Abstract Generator.
+COMMAND_OVER 
+t
+COMMAND_OVER 
+t
+t
+INFO (ABS-10500): Library ece425mp1 Opening /home/grossfe2/ece425.work/ece425mp1
+INFO (ABS-10011): Verifying Technology Data ...
+*Error* (ABS-20005): There are insufficient metal layers defined in the current design. You must define at least two metal layers in the 'validLayers' subsection of the 'LEFDefaultRouteSpec' constraint group in the technology file and these layers must have the layer function 'metal' in the functions section. Then update the technology file and attach it again.
+
+*Error* (ABS-20007): There are no vias specified in the technology file. Ensure that the selected constraint group has a ValidVias section or at least one via is specified in the standardViaDefs subsection of the viaDefs section in the technology file. In addition, ensure that the function argument is set to 'cut' for the via in the functions subsection of the layerRules section .
+
+*WARNING* (TECH-2000000): techReopenTechFile: File '/software/ncsu-cdk-1.6.0.beta/lib/NCSU_TechLib_tsmc03d/tech.db' is not writable.
+*WARNING* (ABS-20040): Failed to create the pactive , boundary layer-purpose pair in the technology file. Ensure that you have permissions to write to the technology file. If you have readonly technology data then set 'ReadOnlyTechnology' option to true.
+INFO (ABS-20042): Cannot save the technology file. Ensure that you have permissions to write to the technology file. 
+*WARNING* (TECH-2000000): techReopenTechFile: File '/software/ncsu-cdk-1.6.0.beta/lib/NCSU_TechLib_tsmc03d/tech.db' is not writable.
+*WARNING* (ABS-20040): Failed to create the nactive , boundary layer-purpose pair in the technology file. Ensure that you have permissions to write to the technology file. If you have readonly technology data then set 'ReadOnlyTechnology' option to true.
+INFO (ABS-20042): Cannot save the technology file. Ensure that you have permissions to write to the technology file. 
+*WARNING* (TECH-2000000): techReopenTechFile: File '/software/ncsu-cdk-1.6.0.beta/lib/NCSU_TechLib_tsmc03d/tech.db' is not writable.
+*WARNING* (ABS-20040): Failed to create the nwell , boundary layer-purpose pair in the technology file. Ensure that you have permissions to write to the technology file. If you have readonly technology data then set 'ReadOnlyTechnology' option to true.
+INFO (ABS-20042): Cannot save the technology file. Ensure that you have permissions to write to the technology file. 
+INFO (ABS-10012): Layer summary: 0 metal layer(s), 0 via layer(s), 4 poly layer(s), and 0 diff layer(s) found
+INFO (ABS-20023): Via summary: 0 valid via(s) found
+INFO (ABS-20024): There are errors in the technology file that need to be resolved before proceeding to the abstract generation steps.
+COMMAND_OVER 
+t
+t
+INFO (ABS-10508): Library ece425mp1 closing /home/grossfe2/ece425.work/ece425mp1
+INFO (ABS-10515): Library ece425mp1 closed
+INFO (ABS-10529): Abstract Generation finished for Library ece425mp1 
+COMMAND_OVER 
+t
+t
+INFO (DB-170018): (dbPanic) dumping stack
+libvirtuos_sh.so:voStackTrace+73()
+abstract:dbPanic+843()
+libvirtuos_sh.so:voDoAbortFuncs+44()

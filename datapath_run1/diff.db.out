@@ -1,0 +1,6 @@
+version {data 2.0}
+comment {data {simcompare 15.20-s008 Fri Mar 29 17:20:16 2019}}
+database {logicalname g pathname /class/ece425/mp2/datapath_gold/datapath_gold.trn fullpathname {"/class/ece425/mp2/datapath_gold/datapath_gold.dsn"::} originalpathname {} precision -9 displayprecision -9}
+database {logicalname t pathname /home/grossfe2/ece425.work/datapath_run1/shm.db/shm.db.trn fullpathname {"/home/grossfe2/ece425.work/datapath_run1/shm.db/shm.db.dsn"::} originalpathname {} precision -9 displayprecision -9}
+parameters {precision -9 displayprecision -9 maxerrors 10 totalerrors 100 sequencetime no numerrors 0 gdblogname g tdblogname t}
+clkdef {name clk1 clkexpr test.cp edge 01}

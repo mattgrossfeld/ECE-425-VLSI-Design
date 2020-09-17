@@ -1,0 +1,79 @@
+*INFO* (LO-1026): Successfully checked out tokens for Layout_Migrate.
+Copy hierarchy ece425mp1/adder_8bit/layout to ece425mp1/adder_8bit/migrate
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer NACTIVE.
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer ACTIVE.
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer ACTIVE.
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer NACTIVE.
+*WARNING* (LO-2073): No yield member constraint group defined in VLMDefaultSetup; reading foundry rules.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer NACTIVE.
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer ACTIVE.
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer ACTIVE.
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer NACTIVE.
+*WARNING* (LO-2073): No yield member constraint group defined in VLMDefaultSetup; reading foundry rules.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+
+Step "Preprocess" is running...Sat Feb 23 18:52:59 2019
+
+Backup hierarchy ece425mp1/adder_8bit/migrate to ece425mp1/adder_8bit/vlm_save
+Step "Preprocess" completed  Sat Feb 23 18:53:01 2019
+
+Total CPU time for step Preprocess: 2 seconds
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer NACTIVE.
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer ACTIVE.
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer ACTIVE.
+*WARNING* (LO-2103): Cannot merge planes for layer NWELL and layer NACTIVE.
+*WARNING* (LO-2073): No yield member constraint group defined in VLMDefaultSetup; reading foundry rules.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minExtensionDistance ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and ACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+*WARNING* (LO-2080): Rule minSpacing ignored, since layers NWELL and NACTIVE are not on the same plane.
+When using .qtt technology files, add missing layers in the planes section or simplify layer function to use only layers found in one plane.
+
+Step "Create holding cells" is running...Sat Feb 23 18:53:01 2019
+
+Step "Create holding cells" failed  Sat Feb 23 18:53:01 2019
+
+Total CPU time for step Create holding cells: 0 seconds

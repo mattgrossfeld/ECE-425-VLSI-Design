@@ -1,0 +1,5 @@
+inv I0 ( net4, d);
+tx_gate I52 ( net5, net4, en, ien);
+bitcell I51 ( q, net5);
+
+endmodule

@@ -1,0 +1,5 @@
+halfAdder I2 ( net15, s, net11, c);
+halfAdder I1 ( net12, net11, a, b);
+nand2 I3 ( c_out, net12, net15);
+
+endmodule

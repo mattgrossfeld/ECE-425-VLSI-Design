@@ -1,0 +1,45 @@
+// Library - ece425mp2, Cell - bitslice, View - schematic
+// LAST TIME SAVED: Mar 29 17:07:20 2019
+// NETLIST TIME: Mar 29 17:07:35 2019
+`timescale 1ns / 1ns 
+
+module bitslice ( cout, f, p, q, y, cin, d, f_left, f_right, f_sel,
+     func_sel, inv_r, inv_s, iq_master_en, iq_slave_en, ireg_a_wr,
+     ireg_b_wr, ireg_wr, q_left, q_master_en, q_right, q_sel,
+     q_slave_en, r_sel, reg_a_wr, reg_b_wr, reg_wr, s_sel, select_a_hi,
+     select_b_hi, y_sel, zero );
+
+output  cout, f, p, q, y;
+
+input  cin, d, f_left, f_right, inv_r, inv_s, iq_master_en,
+     iq_slave_en, ireg_a_wr, ireg_b_wr, ireg_wr, q_left, q_master_en,
+     q_right, q_slave_en, reg_a_wr, reg_b_wr, reg_wr, y_sel, zero;
+
+input [15:0]  select_b_hi;
+input [2:0]  func_sel;
+input [15:0]  select_a_hi;
+input [1:0]  f_sel;
+input [1:0]  s_sel;
+input [1:0]  q_sel;
+input [1:0]  r_sel;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "bitslice";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+alu alu ( cout, f, p, cin, func_sel[2:0], inv_r, inv_s, net027,
+     net028);
+regfile regfile ( net16, net15, net13, ireg_a_wr, ireg_b_wr, ireg_wr,
+     reg_a_wr, reg_b_wr, select_a_hi[15:0], select_b_hi[15:0], reg_wr);
+q_reg q_reg ( q, net025, iq_master_en, iq_slave_en, q_master_en,
+     q_slave_en);
+mux31 f_mux ( net13, f_right, f, f_left, f_sel[0], f_sel[1]);
+mux31 q_mux ( net025, q_right, f, q_left, q_sel[0], q_sel[1]);
+mux31 r_mux ( net027, d, net16, zero, r_sel[0], r_sel[1]);
+mux41 s_mux ( net028, net16, net15, q, zero, s_sel[0], s_sel[1]);
+mux21 y_mux ( y, net16, f, y_sel);
+
+endmodule

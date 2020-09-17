@@ -1,0 +1,4 @@
+xor2 I2 ( sum, a, b);
+nand2 I3 ( carry, a, b);
+
+endmodule

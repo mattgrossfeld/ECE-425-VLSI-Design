@@ -1,0 +1,30 @@
+// Library - ece425mp1, Cell - xor2, View - schematic
+// LAST TIME SAVED: Feb 10 20:45:37 2019
+// NETLIST TIME: Feb 27 21:03:38 2019
+`timescale 1ns / 1ns 
+
+module xor2 ( y, a, b );
+
+output  y;
+
+input  a, b;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "xor2";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+pfet M4 ( y, net16, cdsNet0);
+pfet M3 ( net16, cds_globals.vdd_, b);
+pfet M2 ( net16, cds_globals.vdd_, a);
+pfet M1 ( cdsNet0, net22, b);
+pfet M0 ( net22, cds_globals.vdd_, a);
+nfet M9 ( net21, cds_globals.gnd_, b);
+nfet M8 ( y, net21, a);
+nfet M7 ( y, cds_globals.gnd_, cdsNet0);
+nfet M6 ( cdsNet0, cds_globals.gnd_, b);
+nfet M5 ( cdsNet0, cds_globals.gnd_, a);
+
+endmodule

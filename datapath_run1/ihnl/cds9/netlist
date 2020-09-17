@@ -1,0 +1,47 @@
+// Library - ece425mp2, Cell - regfile, View - schematic
+// LAST TIME SAVED: Mar 28 21:14:25 2019
+// NETLIST TIME: Mar 29 09:29:53 2019
+`timescale 1ns / 1ns 
+
+module regfile ( data_a, data_b, data_write, ireg_a_wr, ireg_b_wr,
+     iwrite_en, reg_a_wr, reg_b_wr, select_a_hi, select_b_hi, write_en
+     );
+
+output  data_a, data_b;
+
+input  data_write, ireg_a_wr, ireg_b_wr, iwrite_en, reg_a_wr, reg_b_wr,
+     write_en;
+
+input [15:0]  select_b_hi;
+input [15:0]  select_a_hi;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "regfile";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+inv I56 ( net057, net051);
+inv I55 ( net051, data_write);
+latch I49 ( data_b, net052, reg_b_wr, ireg_b_wr);
+latch I54 ( data_a, net059, reg_a_wr, ireg_a_wr);
+tx_gate I48 ( net052, net057, write_en, iwrite_en);
+regbit I41 ( net059, net052, select_a_hi[6], select_b_hi[6]);
+regbit I36 ( net059, net052, select_a_hi[11], select_b_hi[11]);
+regbit I34 ( net059, net052, select_a_hi[13], select_b_hi[13]);
+regbit I33 ( net059, net052, select_a_hi[14], select_b_hi[14]);
+regbit I47 ( net059, net052, select_a_hi[0], select_b_hi[0]);
+regbit I44 ( net059, net052, select_a_hi[3], select_b_hi[3]);
+regbit I38 ( net059, net052, select_a_hi[9], select_b_hi[9]);
+regbit I39 ( net059, net052, select_a_hi[8], select_b_hi[8]);
+regbit I35 ( net059, net052, select_a_hi[12], select_b_hi[12]);
+regbit I37 ( net059, net052, select_a_hi[10], select_b_hi[10]);
+regbit I45 ( net059, net052, select_a_hi[2], select_b_hi[2]);
+regbit I46 ( net059, net052, select_a_hi[1], select_b_hi[1]);
+regbit I42 ( net059, net052, select_a_hi[5], select_b_hi[5]);
+regbit I43 ( net059, net052, select_a_hi[4], select_b_hi[4]);
+regbit I40 ( net059, net052, select_a_hi[7], select_b_hi[7]);
+regbit I32 ( net059, net052, select_a_hi[15], select_b_hi[15]);
+
+endmodule

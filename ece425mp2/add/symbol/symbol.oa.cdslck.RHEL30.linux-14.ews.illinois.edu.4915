@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      grossfe2
+HostName                       linux-14.ews.illinois.edu
+ProcessIdentifier              4915
+ProcessCreationTime_UTC        1553211770
+ProcessCreationTime_Readable   Thu Mar 21 18:42:50 2019 CDT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/grossfe2/ece425.work/ece425mp2/add/symbol/symbol.oa.cdslck
+TimeEditLocked                 Thu Mar 21 18:45:42 2019 CDT
